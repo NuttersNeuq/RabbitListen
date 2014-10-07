@@ -36,7 +36,6 @@ import android.widget.Toast;
 
 import com.hare.activity.R;
 import com.lfl.model.OnlineWordInfo;
-import com.lfl.model.SentenceInfo;
 import com.lfl.model.WordInfo;
 import com.lfl.opensl.audio.OSLESMediaPlayer;
 import com.lfl.utils.AppConstant;
