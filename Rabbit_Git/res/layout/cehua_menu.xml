@@ -3,14 +3,13 @@
     android:id="@+id/slideMenu_linearLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#00bad2"
     android:orientation="vertical" >
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingBottom="10dp"
-        android:background="#eaedef" >
+        android:background="#4300bad2"
+        android:paddingBottom="10dp" >
 
         <ImageView
             android:id="@+id/cehua_touxiang_imageView"
@@ -44,263 +43,270 @@
             android:textColor="#455569" />
     </RelativeLayout>
 
-    <RelativeLayout
-        android:id="@+id/cehua_danciben_relativeLayout"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:background="@drawable/lfl_cehua_selector"
-        android:clickable="true"
-        android:gravity="center_vertical"
-        android:paddingBottom="10dp"
-        android:paddingLeft="20dp"
-        android:paddingTop="10dp" >
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="#00bad2" >
+
+        <RelativeLayout
+            android:id="@+id/cehua_danciben_relativeLayout"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/lfl_cehua_selector"
+            android:clickable="true"
+            android:gravity="center_vertical"
+            android:paddingBottom="10dp"
+            android:paddingLeft="20dp"
+            android:paddingTop="10dp" >
+
+            <ImageView
+                android:id="@+id/imageView1"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:contentDescription="@null"
+                android:src="@drawable/play_text" />
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/imageView1"
+                android:layout_marginLeft="21dp"
+                android:layout_toRightOf="@+id/imageView1"
+                android:text="单词本"
+                android:textColor="#ffffff"
+                android:textSize="17sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="15dp"
+                android:src="@drawable/cehua_sanjiao" />
+        </RelativeLayout>
 
         <ImageView
-            android:id="@+id/imageView1"
-            android:layout_width="25dp"
-            android:layout_height="25dp"
-            android:contentDescription="@null"
-            android:src="@drawable/play_text" />
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:src="#10000000" />
 
-        <TextView
-            android:id="@+id/textView1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignBottom="@+id/imageView1"
-            android:layout_marginLeft="21dp"
-            android:layout_toRightOf="@+id/imageView1"
-            android:text="单词本"
-            android:textColor="#ffffff"
-            android:textSize="17sp"
-            android:textStyle="bold" />
+        <RelativeLayout
+            android:id="@+id/cehua_shoucangdejuzi_relativeLayout"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/lfl_cehua_selector"
+            android:clickable="true"
+            android:gravity="center_vertical"
+            android:paddingBottom="10dp"
+            android:paddingLeft="20dp"
+            android:paddingTop="10dp" >
 
-        <ImageView
-            android:layout_width="15dp"
-            android:layout_height="15dp"
-            android:layout_alignParentRight="true"
-            android:layout_centerVertical="true"
-            android:layout_marginRight="15dp"
-            android:src="@drawable/cehua_sanjiao" />
-    </RelativeLayout>
+            <ImageView
+                android:id="@+id/imageView1"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:contentDescription="@null"
+                android:src="@drawable/celan_like" />
 
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:src="#10000000" />
+            <ImageView
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="14dp"
+                android:src="@drawable/cehua_sanjiao" />
 
-    <RelativeLayout
-        android:id="@+id/cehua_shoucangdejuzi_relativeLayout"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:background="@drawable/lfl_cehua_selector"
-        android:clickable="true"
-        android:gravity="center_vertical"
-        android:paddingBottom="10dp"
-        android:paddingLeft="20dp"
-        android:paddingTop="10dp" >
-
-        <ImageView
-            android:id="@+id/imageView1"
-            android:layout_width="25dp"
-            android:layout_height="25dp"
-            android:contentDescription="@null"
-            android:src="@drawable/celan_like" />
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="20dp"
+                android:layout_toRightOf="@+id/imageView1"
+                android:text="收藏的句子"
+                android:textColor="#ffffff"
+                android:textSize="17sp"
+                android:textStyle="bold" />
+        </RelativeLayout>
 
         <ImageView
-            android:layout_width="15dp"
-            android:layout_height="15dp"
-            android:layout_alignParentRight="true"
-            android:layout_centerVertical="true"
-            android:layout_marginRight="14dp"
-            android:src="@drawable/cehua_sanjiao" />
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:src="#10000000" />
 
-        <TextView
-            android:id="@+id/textView1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
-            android:layout_marginLeft="20dp"
-            android:layout_toRightOf="@+id/imageView1"
-            android:text="收藏的句子"
-            android:textColor="#ffffff"
-            android:textSize="17sp"
-            android:textStyle="bold" />
-    </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/cehua_wodetingliku_relativeLayout"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/lfl_cehua_selector"
+            android:clickable="true"
+            android:gravity="center_vertical"
+            android:paddingBottom="10dp"
+            android:paddingLeft="20dp"
+            android:paddingTop="10dp" >
 
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:src="#10000000" />
+            <ImageView
+                android:id="@+id/imageView1"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:contentDescription="@null"
+                android:src="@drawable/cehua_wodetingliku" />
 
-    <RelativeLayout
-        android:id="@+id/cehua_wodetingliku_relativeLayout"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:background="@drawable/lfl_cehua_selector"
-        android:clickable="true"
-        android:gravity="center_vertical"
-        android:paddingBottom="10dp"
-        android:paddingLeft="20dp"
-        android:paddingTop="10dp" >
+            <ImageView
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="15dp"
+                android:src="@drawable/cehua_sanjiao" />
 
-        <ImageView
-            android:id="@+id/imageView1"
-            android:layout_width="25dp"
-            android:layout_height="25dp"
-            android:contentDescription="@null"
-            android:src="@drawable/cehua_wodetingliku" />
-
-        <ImageView
-            android:layout_width="15dp"
-            android:layout_height="15dp"
-            android:layout_alignParentRight="true"
-            android:layout_centerVertical="true"
-            android:layout_marginRight="15dp"
-            android:src="@drawable/cehua_sanjiao" />
-
-        <TextView
-            android:id="@+id/textView1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
-            android:layout_marginLeft="23dp"
-            android:layout_toRightOf="@+id/imageView1"
-            android:text="我的听力库"
-            android:textColor="#ffffff"
-            android:textSize="17sp"
-            android:textStyle="bold" />
-    </RelativeLayout>
-
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:src="#10000000" />
-
-    <RelativeLayout
-        android:id="@+id/cehua_jianguoshu_relativeLayout"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:background="@drawable/lfl_cehua_selector"
-        android:clickable="true"
-        android:gravity="center_vertical"
-        android:paddingBottom="10dp"
-        android:paddingLeft="20dp"
-        android:paddingTop="10dp" >
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="23dp"
+                android:layout_toRightOf="@+id/imageView1"
+                android:text="我的听力库"
+                android:textColor="#ffffff"
+                android:textSize="17sp"
+                android:textStyle="bold" />
+        </RelativeLayout>
 
         <ImageView
-            android:id="@+id/imageView1"
-            android:layout_width="25dp"
-            android:layout_height="25dp"
-            android:contentDescription="@null"
-            android:src="@drawable/cehua_talk" />
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:src="#10000000" />
+
+        <RelativeLayout
+            android:id="@+id/cehua_jianguoshu_relativeLayout"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/lfl_cehua_selector"
+            android:clickable="true"
+            android:gravity="center_vertical"
+            android:paddingBottom="10dp"
+            android:paddingLeft="20dp"
+            android:paddingTop="10dp" >
+
+            <ImageView
+                android:id="@+id/imageView1"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:contentDescription="@null"
+                android:src="@drawable/cehua_talk" />
+
+            <ImageView
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="15dp"
+                android:src="@drawable/cehua_sanjiao" />
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="23dp"
+                android:layout_toRightOf="@+id/imageView1"
+                android:text="讨论组"
+                android:textColor="#ffffff"
+                android:textSize="17sp"
+                android:textStyle="bold" />
+        </RelativeLayout>
 
         <ImageView
-            android:layout_width="15dp"
-            android:layout_height="15dp"
-            android:layout_alignParentRight="true"
-            android:layout_centerVertical="true"
-            android:layout_marginRight="15dp"
-            android:src="@drawable/cehua_sanjiao" />
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:src="#10000000" />
 
-        <TextView
-            android:id="@+id/textView1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
-            android:layout_marginLeft="23dp"
-            android:layout_toRightOf="@+id/imageView1"
-            android:text="讨论组"
-            android:textColor="#ffffff"
-            android:textSize="17sp"
-            android:textStyle="bold" />
-    </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/cehua_fankui_relativeLayout"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/lfl_cehua_selector"
+            android:clickable="true"
+            android:gravity="center_vertical"
+            android:paddingBottom="10dp"
+            android:paddingLeft="20dp"
+            android:paddingTop="10dp" >
 
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:src="#10000000" />
+            <ImageView
+                android:id="@+id/imageView1"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:contentDescription="@null"
+                android:src="@drawable/cehua_send" />
 
-    <RelativeLayout
-        android:id="@+id/cehua_fankui_relativeLayout"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:background="@drawable/lfl_cehua_selector"
-        android:clickable="true"
-        android:gravity="center_vertical"
-        android:paddingBottom="10dp"
-        android:paddingLeft="20dp"
-        android:paddingTop="10dp" >
+            <ImageView
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="15dp"
+                android:src="@drawable/cehua_sanjiao" />
 
-        <ImageView
-            android:id="@+id/imageView1"
-            android:layout_width="25dp"
-            android:layout_height="25dp"
-            android:contentDescription="@null"
-            android:src="@drawable/cehua_send" />
-
-        <ImageView
-            android:layout_width="15dp"
-            android:layout_height="15dp"
-            android:layout_alignParentRight="true"
-            android:layout_centerVertical="true"
-            android:layout_marginRight="15dp"
-            android:src="@drawable/cehua_sanjiao" />
-
-        <TextView
-            android:id="@+id/cehua_menu_feedback"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
-            android:layout_marginLeft="23dp"
-            android:layout_toRightOf="@+id/imageView1"
-            android:text="反馈"
-            android:textColor="#ffffff"
-            android:textSize="17sp"
-            android:textStyle="bold" />
-    </RelativeLayout>
-
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:src="#10000000" />
-
-    <RelativeLayout
-        android:id="@+id/cehua_dengchu_relativeLayout"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:background="@drawable/lfl_cehua_selector"
-        android:clickable="true"
-        android:gravity="center_vertical"
-        android:paddingBottom="10dp"
-        android:paddingLeft="20dp"
-        android:paddingTop="10dp" >
+            <TextView
+                android:id="@+id/cehua_menu_feedback"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="23dp"
+                android:layout_toRightOf="@+id/imageView1"
+                android:text="反馈"
+                android:textColor="#ffffff"
+                android:textSize="17sp"
+                android:textStyle="bold" />
+        </RelativeLayout>
 
         <ImageView
-            android:id="@+id/imageView1"
-            android:layout_width="25dp"
-            android:layout_height="25dp"
-            android:contentDescription="@null"
-            android:src="@drawable/cehua_logout" />
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:src="#10000000" />
 
-        <TextView
-            android:id="@+id/textView1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignBottom="@+id/imageView1"
-            android:layout_marginLeft="23dp"
-            android:layout_toRightOf="@+id/imageView1"
-            android:text="退出登录"
-            android:textColor="#ffffff"
-            android:textSize="17sp"
-            android:textStyle="bold" />
+        <RelativeLayout
+            android:id="@+id/cehua_dengchu_relativeLayout"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/lfl_cehua_selector"
+            android:clickable="true"
+            android:gravity="center_vertical"
+            android:paddingBottom="10dp"
+            android:paddingLeft="20dp"
+            android:paddingTop="10dp" >
 
-        <ImageView
-            android:layout_width="15dp"
-            android:layout_height="15dp"
-            android:layout_alignParentRight="true"
-            android:layout_centerVertical="true"
-            android:layout_marginRight="15dp"
-            android:src="@drawable/cehua_sanjiao" />
-    </RelativeLayout>
+            <ImageView
+                android:id="@+id/imageView1"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:contentDescription="@null"
+                android:src="@drawable/cehua_logout" />
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/imageView1"
+                android:layout_marginLeft="23dp"
+                android:layout_toRightOf="@+id/imageView1"
+                android:text="退出登录"
+                android:textColor="#ffffff"
+                android:textSize="17sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="15dp"
+                android:src="@drawable/cehua_sanjiao" />
+        </RelativeLayout>
+    </LinearLayout>
 
 </LinearLayout>
