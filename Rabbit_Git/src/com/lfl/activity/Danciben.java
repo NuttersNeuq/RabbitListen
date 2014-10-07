@@ -2,6 +2,8 @@ package com.lfl.activity;
 
 import java.io.InputStream;
 import java.net.HttpURLConnection;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.HashMap;
 import java.util.List;
 
@@ -34,6 +36,7 @@ import android.widget.Toast;
 
 import com.hare.activity.R;
 import com.lfl.model.OnlineWordInfo;
+import com.lfl.model.SentenceInfo;
 import com.lfl.model.WordInfo;
 import com.lfl.opensl.audio.OSLESMediaPlayer;
 import com.lfl.utils.AppConstant;
@@ -83,10 +86,10 @@ public class Danciben extends Activity
 					mediaPlayer.releaseAudioPlayer();
 				}
 			});
-			
+
 			jieshiBlankLayout.setOnClickListener(new OnClickListener()
 			{
-				
+
 				@Override
 				public void onClick(View v)
 				{
@@ -221,6 +224,16 @@ public class Danciben extends Activity
 				{
 					if (wordInfos.size() != 0)
 					{
+						Comparator<WordInfo> comparator = new Comparator<WordInfo>()
+						{
+
+							@Override
+							public int compare(WordInfo lhs, WordInfo rhs)
+							{
+								return lhs.getWord().compareTo(rhs.getWord());
+							}
+						};
+						Collections.sort(wordInfos, comparator);
 						blankLayout.setLayoutParams(new LinearLayout.LayoutParams(0, 0));
 						listView.setAdapter(new MyAdapter());
 						getWordsMeaningAndPron();
