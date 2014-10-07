@@ -438,8 +438,6 @@ public class Fanting_paihang extends ListActivity
 					public void onClick(View v)
 					{
 						View menuView = menuWindow.getContentView();
-						final PopupWindow menuWindow = new PopupWindow(menuView,
-								RelativeLayout.LayoutParams.MATCH_PARENT, RelativeLayout.LayoutParams.MATCH_PARENT);
 
 						LinearLayout downloadLayout = (LinearLayout) menuView
 								.findViewById(R.id.fanting_listitem_menu_download_linearlayout);

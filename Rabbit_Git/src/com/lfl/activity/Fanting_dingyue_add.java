@@ -23,6 +23,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.PopupWindow;
 import android.widget.LinearLayout.LayoutParams;
+import android.widget.PopupWindow.OnDismissListener;
 import android.widget.ListView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
@@ -45,6 +46,8 @@ public class Fanting_dingyue_add extends ListActivity
 	private List<CourseInfo> courseInfos;
 	private List<Mp3Info> mp3Infos;
 	private Context mContext;
+	private PopupWindow backgroundWindow;
+	private PopupWindow menuWindow;
 	private int selectedCourseItem = -1;
 
 	private boolean isOnTheMainScreen = true;
@@ -230,6 +233,26 @@ public class Fanting_dingyue_add extends ListActivity
 		setContentView(R.layout.fanting_dingyue_add_dingyue);
 
 		mContext = this;
+		
+		View menuBackgroundView = getLayoutInflater().inflate(R.layout.popupmenu_black_background, null);
+		View menuView = getLayoutInflater().inflate(R.layout.fanting_listitem_menu_collected, null);
+
+		backgroundWindow = new PopupWindow(menuBackgroundView, LinearLayout.LayoutParams.MATCH_PARENT,
+				LinearLayout.LayoutParams.MATCH_PARENT);
+		menuWindow = new PopupWindow(menuView, RelativeLayout.LayoutParams.MATCH_PARENT,
+				RelativeLayout.LayoutParams.MATCH_PARENT);
+		menuWindow.setAnimationStyle(R.style.AnimBottom);
+		backgroundWindow.setAnimationStyle(R.style.AnimPopupMenuBackground);
+		
+		menuWindow.setOnDismissListener(new OnDismissListener()
+		{
+
+			@Override
+			public void onDismiss()
+			{
+				backgroundWindow.dismiss();
+			}
+		});
 
 		fetchCourseXML();
 	}
@@ -614,14 +637,11 @@ public class Fanting_dingyue_add extends ListActivity
 						@Override
 						public void onClick(View v)
 						{
-							View menuView = getLayoutInflater().inflate(R.layout.fanting_listitem_menu_collected, null);
+							View menuView = menuWindow.getContentView();
 
 							TextView shoucangTextView = (TextView) menuView
 									.findViewById(R.id.fanting_listitem_menu_shoucang_textview);
 							shoucangTextView.setText("ÊÕ²Ø´ËÌýÁ¦");
-
-							final PopupWindow menuWindow = new PopupWindow(menuView,
-									RelativeLayout.LayoutParams.MATCH_PARENT, RelativeLayout.LayoutParams.MATCH_PARENT);
 
 							LinearLayout downloadLayout = (LinearLayout) menuView
 									.findViewById(R.id.fanting_listitem_menu_download_linearlayout);
@@ -906,8 +926,8 @@ public class Fanting_dingyue_add extends ListActivity
 								}
 							});
 
-							menuWindow.showAtLocation(v, Gravity.CENTER, 0, 0);
-
+							backgroundWindow.showAtLocation(v, Gravity.CENTER, 0, 0);
+							menuWindow.showAtLocation(v, Gravity.BOTTOM, 0, 0);
 						}
 					});
 				}

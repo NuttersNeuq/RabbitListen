@@ -18,7 +18,7 @@
         android:layout_width="match_parent"
         android:layout_height="3dp"
         android:layout_above="@+id/menu_content"
-        android:background="#42c0fb"
+        android:background="#00bad2"
         android:contentDescription="@null" />
 
     <LinearLayout
