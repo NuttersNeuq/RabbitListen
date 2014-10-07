@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f8f8f8"
+    android:descendantFocusability="blocksDescendants"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/question_list_titleTV"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:maxHeight="20dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="15dp"
+        android:singleLine="true"
+        android:text="怎样使用Take up？"
+        android:textColor="#000000"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/question_list_contentTV"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:maxHeight="50dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="7dp"
+        android:text="陪你走到底，只要你愿意"
+        android:textColor="#423e3e"
+        android:textSize="12sp" />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:background="#f8f8f8"
+        android:layout_marginTop="15dp" >
+
+        <TextView
+            android:id="@+id/question_list_timeTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="3dp"
+            android:layout_toRightOf="@+id/question_list_nicknameTV"
+            android:text="1天前"
+            android:textColor="#c5c4c4"
+            android:textSize="11sp" />
+
+        <TextView
+            android:id="@+id/question_list_rcountTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_toLeftOf="@+id/question_list_replyTV"
+            android:layout_marginRight="3dp"
+            android:text="10"
+            android:textColor="#adcdd5"
+            android:textSize="11sp" />
+
+        <TextView
+            android:id="@+id/question_list_fcountTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginRight="3dp"
+            android:layout_toLeftOf="@+id/question_list_followTV"
+            android:text="5"
+           android:textColor="#adcdd5"
+            android:textSize="11sp" />
+
+        <TextView
+            android:id="@+id/question_list_followTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginRight="25dp"
+            android:layout_toLeftOf="@+id/question_list_rcountTV"
+            android:text="关注"
+           android:textColor="#adcdd5"
+            android:textSize="11sp" />
+
+        <TextView
+            android:id="@+id/question_list_replyTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginRight="15dp"
+            android:text="回复"
+            android:textColor="#adcdd5"
+            android:textSize="11sp" />
+
+        <TextView
+            android:id="@+id/question_list_nicknameTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="20dp"
+            android:text="奔跑的大象"
+            android:textColor="#adcdd5"
+            android:textSize="11sp" />
+    </RelativeLayout>
+    <TextView 
+        android:layout_width="match_parent"
+        android:layout_height="0.8dp"
+        android:background="#d5d4d0"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="5dp"
+        />
+
+</LinearLayout>

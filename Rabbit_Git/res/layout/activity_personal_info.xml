@@ -1,0 +1,425 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#ffffff"
+    android:orientation="vertical"
+    tools:context="nut.activity.PersonalInfoActivity" >
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="180dp" >
+
+                <TextView
+                    android:id="@+id/personal_info_motoTV"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_below="@+id/personal_info_portraitIV"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="20dp"
+                    android:gravity="center_vertical"
+                    android:text="竭尽全力才能看起来毫不费力"
+                    android:textSize="15sp" />
+
+                <ImageView
+                    android:id="@+id/personal_info_portraitIV"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@android:drawable/stat_notify_sync"/>
+
+                <TextView
+                    android:id="@+id/personal_info_nicknameTV"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/personal_info_portraitIV"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_toRightOf="@+id/personal_info_portraitIV"
+                    android:text="奔跑的大象"
+                    android:textColor="#000000"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/personal_info_transverse_lineTV"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_alignLeft="@+id/personal_info_nicknameTV"
+                    android:layout_below="@+id/personal_info_nicknameTV"
+                    android:layout_marginTop="8dp"
+                    android:background="#d5d4d0" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@+id/personal_info_motoTV"
+                    android:layout_alignLeft="@+id/personal_info_transverse_lineTV"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@+id/personal_info_nicknameTV" >
+
+                    <Button
+                        android:id="@+id/personal_info_fanedBT"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:background="@null"
+                        android:text="48"
+                        android:textColor="#000000"
+                        android:textSize="15sp" />
+
+                    <Button
+                        android:id="@+id/personal_info_study_labelBT"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBaseline="@+id/personal_info_fanBT"
+                        android:layout_alignBottom="@+id/personal_info_fanBT"
+                        android:layout_alignParentRight="true"
+                        android:background="@null"
+                        android:text="15"
+                        android:textColor="#000000"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/personal_info_fanedTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignRight="@+id/personal_info_fanedBT"
+                        android:layout_below="@+id/personal_info_fanedBT"
+                        android:layout_marginRight="16dp"
+                        android:text="关注"
+                        android:textColor="#d5d4d0" />
+
+                    <Button
+                        android:id="@+id/personal_info_fanBT"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_above="@+id/personal_info_fanedTV"
+                        android:layout_centerHorizontal="true"
+                        android:background="@null"
+                        android:text="42"
+                        android:textColor="#000000"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/personal_info_vertical_barTV2"
+                        android:layout_width="0.5dp"
+                        android:layout_height="50dp"
+                        android:layout_alignBottom="@+id/personal_info_fanedTV"
+                        android:layout_toRightOf="@+id/personal_info_fanedBT"
+                        android:background="#d5d4d0" />
+
+                    <TextView
+                        android:id="@+id/personal_info_fanTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/personal_info_fanBT"
+                        android:layout_centerHorizontal="true"
+                        android:text="粉丝"
+                        android:textColor="#d5d4d0" />
+
+                    <TextView
+                        android:id="@+id/personal_info_study_labelTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBaseline="@+id/personal_info_fanTV"
+                        android:layout_alignBottom="@+id/personal_info_fanTV"
+                        android:layout_alignLeft="@+id/personal_info_study_labelBT"
+                        android:layout_marginLeft="17dp"
+                        android:text="标签"
+                        android:textColor="#d5d4d0" />
+
+                    <TextView
+                        android:id="@+id/personal_info_vertical_barTV1"
+                        android:layout_width="0.5dp"
+                        android:layout_height="50dp"
+                        android:layout_alignBottom="@+id/personal_info_fanTV"
+                        android:layout_alignLeft="@+id/personal_info_study_labelBT"
+                        android:layout_centerVertical="true"
+                        android:background="#d5d4d0" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="15dp"
+                android:background="#d5d4d0" />
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="90dp" >
+
+                <ImageView
+                    android:id="@+id/personal_info_moerduoIV"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:src="@drawable/moerduo" />
+
+                <TextView
+                    android:id="@+id/personal_info_moerduo_timefromTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/personal_info_moerduo_timewordTV"
+                    android:layout_below="@+id/personal_info_moerduo_timewordTV"
+                    android:layout_marginTop="11dp"
+                    android:text="从August 2,2014"
+                    android:textColor="#d9d9d9"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/personal_info_moerduo_timewordTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_alignTop="@+id/personal_info_moerduoIV"
+                    android:layout_centerHorizontal="true"
+                    android:gravity="center_vertical"
+                    android:text="磨耳朵总时长"
+                    android:textColor="#000000"
+                    android:textSize="23sp" />
+
+                <TextView
+                    android:id="@+id/personal_info_moerduo_timeminsTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/personal_info_moerduo_timefromTV"
+                    android:layout_alignBottom="@+id/personal_info_moerduo_timefromTV"
+                    android:layout_alignParentRight="true"
+                    android:text="minutes"
+                    android:layout_marginRight="10dp"
+                    android:textColor="#42c0fb"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <RelativeLayout
+                    android:layout_width="68dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/personal_info_moerduo_timewordTV"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="10dp"
+                    android:gravity="center" >
+                    <TextView
+                    	android:id="@+id/personal_info_moerduo_timeallTV"
+                   		android:text="4"
+                   		android:textColor="#42c0fb"
+                    	android:textSize="35sp"
+                    	android:layout_width="wrap_content"
+                    	android:layout_height="wrap_content"
+                    	android:textStyle="bold" />
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="0.5dp"
+                android:background="#d5d4d0" />
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="90dp"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/personal_info_resist_dayswordTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginRight="15dp"
+                    android:text="坚持天数"
+                    android:textColor="#bebdbd" />
+
+                <TextView
+                    android:id="@+id/personal_info_moerduo_timetodaywordTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/personal_info_resist_dayswordTV"
+                    android:layout_alignBottom="@+id/personal_info_resist_dayswordTV"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="15dp"
+                    android:text="今日磨耳朵时间"
+                    android:textColor="#bebdbd" />
+
+                <TextView
+                    android:id="@+id/personal_info_moerduo_timetodayTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignRight="@+id/personal_info_moerduo_timetodaywordTV"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginRight="5dp"
+                    android:text="42min"
+                    android:textColor="#42c0fb"
+                    android:textSize="35sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/personal_info_jingting_countTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/personal_info_moerduo_timetodayTV"
+                    android:layout_alignBottom="@+id/personal_info_moerduo_timetodayTV"
+                    android:layout_alignRight="@+id/personal_info_jingting_countwordTV"
+                    android:text="8+6"
+                    android:textColor="#42c0fb"
+                    android:textSize="35sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/personal_info_jingting_countwordTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/personal_info_moerduo_timetodaywordTV"
+                    android:layout_alignBottom="@+id/personal_info_moerduo_timetodaywordTV"
+                    android:layout_marginLeft="25dp"
+                    android:layout_toRightOf="@+id/personal_info_moerduo_timetodaywordTV"
+                    android:text="精听篇数"
+                    android:textColor="#bebdbd" />
+
+                <TextView
+                    android:id="@+id/personal_info_fanting_countwordTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/personal_info_resist_dayswordTV"
+                    android:layout_alignBottom="@+id/personal_info_resist_dayswordTV"
+                    android:layout_marginRight="25dp"
+                    android:layout_toLeftOf="@+id/personal_info_resist_dayswordTV"
+                    android:text="范听篇数"
+                    android:textColor="#bebdbd" />
+
+                <TextView
+                    android:id="@+id/personal_info_fanting_countTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/personal_info_jingting_countTV"
+                    android:layout_alignBottom="@+id/personal_info_jingting_countTV"
+                    android:layout_alignRight="@+id/personal_info_fanting_countwordTV"
+                    android:layout_marginRight="12dp"
+                    android:text="16"
+                    android:textColor="#42c0fb"
+                    android:textSize="35sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/personal_info_resist_daysTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/personal_info_fanting_countTV"
+                    android:layout_alignBottom="@+id/personal_info_fanting_countTV"
+                    android:layout_alignRight="@+id/personal_info_resist_dayswordTV"
+                    android:layout_marginRight="12dp"
+                    android:text="15"
+                    android:textColor="#42c0fb"
+                    android:textSize="35sp"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="0.5dp"
+                android:background="#d5d4d0" />
+
+            <LinearLayout
+                android:id="@+id/personal_info_graphicalLL"
+                android:layout_width="fill_parent"
+                android:layout_height="250dp"
+                android:orientation="vertical" >
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="0.5dp"
+                android:background="#d5d4d0" />
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="140dp" >
+
+                <TextView
+                    android:id="@+id/personal_info_realyearTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/personal_info_realdayTV"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="25dp"
+                    android:text="chapater 2014"
+                    android:textColor="#d5d4d0"
+                    android:textSize="22sp" />
+
+                <TextView
+                    android:id="@+id/personal_info_realdayTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                 	android:layout_marginTop="25dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="21dp"
+                    android:text="page 240 of 365"
+                    android:textColor="#d5d4d0"
+                    android:textSize="22sp" />
+
+                <TextView
+                    android:id="@+id/personal_info_myeffortwordTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/personal_info_realyearTV"
+                    android:layout_alignBottom="@+id/personal_info_realyearTV"
+                    android:layout_marginLeft="50dp"
+                    android:layout_toRightOf="@+id/personal_info_realyearTV"
+                    android:text="我的努力"
+                    android:textColor="#d5d4d0"
+                    android:textSize="25sp" />
+
+                <Button
+                    android:id="@+id/personal_info_share_or_followBT"
+                    android:layout_width="105dp"
+                    android:layout_height="35dp"
+                    android:layout_toRightOf="@+id/personal_info_realdayTV"
+                    android:layout_alignLeft="@+id/personal_info_myeffortwordTV"
+                    android:layout_alignTop="@+id/personal_info_realdayTV"
+                    android:text="分享"
+                    android:textColor="#ffffff"
+                   	android:background="@drawable/selector_fabiao" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="15dp"
+                android:background="#d5d4d0" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="120dp"
+                android:orientation="vertical" >
+                <ListView 
+                    android:id="@+id/personal_info_listLV"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    ></ListView>              
+            </LinearLayout>
+            
+			<TextView
+                android:layout_width="fill_parent"
+                android:layout_height="15dp"
+                android:background="#d5d4d0" />
+			
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

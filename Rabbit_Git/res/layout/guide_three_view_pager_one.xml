@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <CheckBox
+                android:id="@+id/guide_three_label0"
+                android:layout_width="150dp"
+                android:layout_height="100dp"
+                android:background="@drawable/selector_label_american"
+                android:button="@null" />
+
+            <CheckBox
+                android:id="@+id/guide_three_label1"
+                android:layout_width="150dp"
+                android:layout_height="100dp"
+                android:background="@drawable/selector_label_economy"
+                android:button="@null" />
+
+            <CheckBox
+                android:id="@+id/guide_three_label2"
+                android:layout_width="150dp"
+                android:layout_height="100dp"
+                android:background="@drawable/selector_label_art"
+                android:button="@null" />
+
+            <CheckBox
+                android:id="@+id/guide_three_label3"
+                android:layout_width="150dp"
+                android:layout_height="100dp"
+                android:background="@drawable/selector_label_science"
+                android:button="@null" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <CheckBox
+                android:id="@+id/guide_three_label4"
+                android:layout_width="150dp"
+                android:layout_height="100dp"
+                android:background="@drawable/selector_label_postgraduate"
+                android:button="@null" />
+
+            <CheckBox
+                android:id="@+id/guide_three_label5"
+                android:layout_width="150dp"
+                android:layout_height="100dp"
+                android:background="@drawable/selector_label_english_series"
+                android:button="@null" />
+
+            <CheckBox
+                android:id="@+id/guide_three_label6"
+                android:layout_width="150dp"
+                android:layout_height="100dp"
+                android:background="@drawable/selector_label_football"
+                android:button="@null" />
+
+            <CheckBox
+                android:id="@+id/guide_three_label7"
+                android:layout_width="150dp"
+                android:layout_height="100dp"
+                android:background="@drawable/selector_label_music"
+                android:button="@null" />
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="#f8f8f8"
+    android:descendantFocusability="blocksDescendants"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="48dp"
+        android:layout_marginTop="5dp"
+        android:background="#f8f8f8"
+        android:padding="2dp" >
+
+        <ImageView
+            android:id="@+id/blog_detail_ans_portraitIV"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:background="@android:drawable/stat_notify_sync"/>
+
+        <TextView
+            android:id="@+id/blog_detail_ans_timeTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/blog_detail_ans_portraitIV"
+            android:layout_alignLeft="@+id/blog_detail_ans_nicknameTV"
+            android:text="2014-5-20 17:00"
+            android:textColor="#adcdd5"
+            android:textSize="10sp" />
+
+        <TextView
+            android:id="@+id/blog_detail_ans_nicknameTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/blog_detail_ans_timeTV"
+            android:layout_marginBottom="0.5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/blog_detail_ans_portraitIV"
+            android:text="学英语的猩猩"
+            android:textColor="#000000"
+            android:textSize="18sp" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/blog_detail_ans_contentTV"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="45dp"
+        android:layout_marginTop="15dp"
+        android:inputType="textMultiLine"
+        android:text="一枚猩猩报道，联系听力这件事情，猩猩最热情了。曾经有人跟我说过，不能把这个世界让你鄙视的人。所以，我开始好好学习英语了"
+        android:textColor="#423e3e" />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="30dp"
+        android:layout_marginTop="20dp"
+        android:background="#f8f8f8" >
+
+        <ImageButton
+            android:id="@+id/blog_detail_ans_zanBT"
+            android:layout_width="40dp"
+            android:layout_height="28dp"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20dp"
+            android:layout_toLeftOf="@+id/blog_detail_ans_replyBT"
+            android:background="@drawable/selector_forbutton2"
+            android:src="@drawable/like" />
+
+        <ImageButton
+            android:id="@+id/blog_detail_ans_replyBT"
+            android:layout_width="40dp"
+            android:layout_height="28dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/selector_forbutton2"
+            android:src="@drawable/reply_new" />
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="0.8dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="45dp"
+        android:layout_marginTop="8dp"
+        android:background="#d5d4d0" />
+
+</LinearLayout>

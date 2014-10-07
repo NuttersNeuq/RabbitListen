@@ -1,0 +1,15 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="#f8f8f8"
+    android:layout_height="match_parent" >
+
+	<com.lz.mylistview.MyListView 
+	    android:id="@+id/note_listLV"
+	    android:layout_width="fill_parent"
+	    android:divider="@null"
+	    android:layout_height="fill_parent"/>
+    
+    
+ 
+</LinearLayout>

@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="#f8f8f8"
+    android:descendantFocusability="blocksDescendants"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#dcdcdc"
+        android:padding="2dp" >
+
+        <ImageView
+            android:id="@+id/blog_detail_portraitIV"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="8dp"
+            android:background="@null"/>
+
+        <TextView
+            android:id="@+id/blog_detail_nicknameTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/blog_detail_portraitIV"
+            android:layout_marginLeft="15dp"
+            android:layout_toRightOf="@+id/blog_detail_portraitIV"
+            android:text="测试用户"
+            android:textColor="#000000"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/blog_detail_timeTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/blog_detail_nicknameTV"
+            android:layout_below="@+id/blog_detail_nicknameTV"
+            android:layout_marginTop="1dp"
+            android:text="2小时前"
+            android:textColor="#b5b5b5"
+            android:textSize="10sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:text="楼主"
+            android:textColor="#b5b5b5" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/blog_detail_titleTV"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:text="寻求听友一枚"
+            android:textColor="#000000"
+            android:textSize="18sp" />
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="0.8dp"
+            android:layout_marginTop="15dp"
+            android:background="#d5d4d0" />
+
+        <TextView
+            android:id="@+id/blog_detail_contentTV"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="15dp"
+            android:inputType="textMultiLine"
+            android:text="英语血正在准备四级，想寻求听友一枚，互相监督"
+            android:textColor="#423e3e" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="0.8dp"
+        android:layout_marginTop="15dp"
+        android:background="#d5d4d0" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="45dp"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/blog_detail_zanBT"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:background="@drawable/selector_forbutton"
+            android:text="赞"
+            android:textColor="#423e3e"
+            android:textSize="13sp" />
+
+        <TextView
+            android:layout_width="0.8dp"
+            android:layout_height="fill_parent"
+            android:background="#d5d4d0" />
+
+        <Button
+            android:id="@+id/blog_detail_replyBT"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:background="@drawable/selector_forbutton"
+            android:text="回复楼主"
+            android:textColor="#423e3e"
+            android:textSize="13sp" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="0.8dp"
+        android:background="#d5d4d0" />
+
+</LinearLayout>

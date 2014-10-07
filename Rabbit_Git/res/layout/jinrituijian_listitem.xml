@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:descendantFocusability="blocksDescendants"
+    android:orientation="horizontal" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp" >
+
+        <ImageView
+            android:id="@+id/jinrituijian_listItem_jindu_imageView"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:contentDescription="@null"
+            android:src="@drawable/jingting_jindu_0" />
+
+        <TextView
+            android:id="@+id/jinrituijian_listItem_basedOn_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/jinrituijian_listItem_jindu_imageView"
+            android:layout_toRightOf="@+id/jinrituijian_listItem_jindu_imageView"
+            android:text="Based on"
+            android:textColor="#979797"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/jinrituijian_listItem_basis_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/jinrituijian_listItem_jindu_imageView"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@+id/jinrituijian_listItem_basedOn_textView"
+            android:text="你的爱好 「足球」"
+            android:textColor="#979797"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/jinrituijian_listItem_duration_textView"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:background="#F1F0EE"
+            android:gravity="center"
+            android:text="03:11"
+            android:textColor="#4dad78" />
+
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:src="#EFEEEB" />
+
+        <TextView
+            android:id="@+id/jinrituijian_listItem_title_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/jinrituijian_listItem_basedOn_textView"
+            android:layout_below="@+id/imageView1"
+            android:layout_marginTop="5dp"
+            android:layout_toLeftOf="@+id/jinrituijian_listItem_duration_textView"
+            android:ellipsize="end"
+            android:paddingRight="10dp"
+            android:singleLine="true"
+            android:text="The Best Man Speech"
+            android:textColor="#4dad78"
+            android:textSize="17sp" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/llayout_right"
+        android:layout_width="180dp"
+        android:layout_height="60dp"
+        android:background="#DFDDD6"
+        android:baselineAligned="false"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:id="@+id/jinrituijian_listItem_jing_linearlayout"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/lfl_cehua_selector"
+            android:gravity="center" >
+
+            <Button
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:background="@null"
+                android:focusable="false"
+                android:text="精"
+                android:textColor="#777777"
+                android:textSize="19sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/jinrituijian_listItem_shoucang_linearlayout"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/lfl_cehua_selector"
+            android:gravity="center" >
+
+            <Button
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:background="@drawable/jingting_cehua_menu_shoucang"
+                android:focusable="false" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/jinrituijian_listItem_shanchu_linearlayout"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/lfl_cehua_selector"
+            android:gravity="center" >
+
+            <Button
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:background="@drawable/jingting_cehua_menu_shanchu"
+                android:focusable="false" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

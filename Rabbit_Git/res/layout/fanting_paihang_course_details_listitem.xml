@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:descendantFocusability="blocksDescendants"
+    android:orientation="horizontal" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <TextView
+            android:id="@+id/fanting_paihang_course_details_listitem_title_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="11dp"
+            android:layout_toLeftOf="@+id/fanting_paihang_course_details_listitem_menu_button_linearlayout"
+            android:ellipsize="end"
+            android:paddingRight="10dp"
+            android:singleLine="true"
+            android:text="The Best Man Speech"
+            android:textColor="#000000"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/fanting_paihang_course_details_listitem_duration_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/fanting_paihang_course_details_listitem_title_textview"
+            android:layout_below="@+id/fanting_paihang_course_details_listitem_title_textview"
+            android:layout_marginTop="5dp"
+            android:paddingBottom="10dp"
+            android:text="03:11"
+            android:textColor="#979797"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/fanting_paihang_course_details_listitem_size_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/fanting_paihang_course_details_listitem_duration_textview"
+            android:layout_alignBottom="@+id/fanting_paihang_course_details_listitem_duration_textview"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@+id/fanting_paihang_course_details_listitem_duration_textview"
+            android:text="5.20MB"
+            android:textColor="#979797"
+            android:textSize="12sp" />
+
+        <LinearLayout
+            android:id="@+id/fanting_paihang_course_details_listitem_menu_button_linearlayout"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/lfl_cehua_selector"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingRight="10dp" >
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="15dp"
+                android:background="@drawable/fanting_tuijian_listitem_menu"
+                android:contentDescription="@null" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/fanting_paihang_course_details_listitem_difficulty_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/fanting_paihang_course_details_listitem_size_textview"
+            android:layout_alignBottom="@+id/fanting_paihang_course_details_listitem_size_textview"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/fanting_paihang_course_details_listitem_size_textview"
+            android:text="中级"
+            android:textColor="#41557d"
+            android:textSize="12sp" />
+    </RelativeLayout>
+
+</LinearLayout>

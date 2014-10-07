@@ -1,0 +1,33 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <EditText
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="15dp"
+        android:id="@+id/note_post_titleET"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:background="@null"
+        android:ems="10"
+        android:hint="一句话概括你的笔记，必填" />
+    <TextView
+        android:layout_marginTop="10dp"
+        android:layout_width="fill_parent"
+        android:layout_height="0.3dp"
+        android:background="#55000000" />
+
+    <EditText
+        android:layout_marginLeft="5dp"
+        android:minHeight="100dp"
+        android:layout_marginTop="15dp"
+        android:id="@+id/note_post_contentET"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:hint="笔记内容:" >
+    </EditText>
+
+</LinearLayout>

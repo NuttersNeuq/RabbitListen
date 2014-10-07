@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="70dp"
+    android:descendantFocusability="blocksDescendants"
+    android:orientation="horizontal"
+    android:paddingBottom="5dp"
+    android:paddingLeft="5dp"
+    android:paddingRight="0dp"
+    android:paddingTop="5dp" >
+
+    <ImageView
+        android:id="@+id/standard_mp3_listitem_imageview"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:contentDescription="@null"
+        android:src="@drawable/fanting_tuijian_listitem_debug_pic" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <TextView
+            android:id="@+id/standard_mp3_title_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="11dp"
+            android:layout_toLeftOf="@+id/standard_mp3_listitem_menu_imageview"
+            android:ellipsize="end"
+            android:paddingRight="5dp"
+            android:singleLine="true"
+            android:text="The Best Man Speech"
+            android:textColor="#000000"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/standard_mp3_listitem_duration_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/standard_mp3_title_textview"
+            android:layout_below="@+id/standard_mp3_title_textview"
+            android:layout_marginTop="5dp"
+            android:text="03:11"
+            android:textColor="#979797"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/standard_mp3_listitem_difficulty_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/standard_mp3_listitem_size_textview"
+            android:layout_alignBottom="@+id/standard_mp3_listitem_size_textview"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@+id/standard_mp3_listitem_size_textview"
+            android:text="Lev 4.5"
+            android:textColor="#41557d"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/standard_mp3_listitem_size_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/standard_mp3_listitem_duration_textview"
+            android:layout_alignBottom="@+id/standard_mp3_listitem_duration_textview"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@+id/standard_mp3_listitem_duration_textview"
+            android:text="5.20MB"
+            android:textColor="#979797"
+            android:textSize="12sp" />
+
+        <ImageView
+            android:id="@+id/standard_mp3_listitem_menu_imageview"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:paddingBottom="12dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="12dp"
+            android:src="@drawable/fanting_tuijian_listitem_menu" />
+    </RelativeLayout>
+
+</LinearLayout>

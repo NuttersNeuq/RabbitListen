@@ -1,0 +1,102 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#f8f8f8" >
+
+
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="120dp"
+                android:background="#95bfcd" >
+
+                <ImageButton
+                    android:id="@+id/tree_noteBT"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/selector_forbutton"
+                    android:src="@drawable/tree_note" />
+
+                <ImageButton
+                    android:id="@+id/tree_blogBT"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/selector_forbutton"
+                    android:src="@drawable/tree_question" />
+
+                <ImageButton
+                    android:id="@+id/tree_questionBT"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/selector_forbutton"
+                    android:src="@drawable/tree_blog" />
+
+                <TextView
+                    android:id="@+id/tree_questionTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tree_questionBT"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="5dp"
+                    android:text="问答"
+                    android:textColor="#ffffff" />
+
+                <TextView
+                    android:id="@+id/tree_noteTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/tree_questionTV"
+                    android:layout_alignBottom="@+id/tree_questionTV"
+                    android:layout_alignRight="@+id/tree_noteBT"
+                    android:layout_marginRight="18dp"
+                    android:layout_marginTop="5dp"
+                    android:text="笔记"
+                    android:textColor="#ffffff" />
+
+                <TextView
+                    android:id="@+id/tree_blogTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/tree_questionTV"
+                    android:layout_alignBottom="@+id/tree_questionTV"
+                    android:layout_alignRight="@+id/tree_blogBT"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="5dp"
+                    android:text="广场"
+                    android:textColor="#ffffff" />
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="0.1dp"
+                android:background="#d5d4d0" />
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:background="#f8f8f8" >
+
+                <ListView
+                    android:id="@+id/notify_listLV"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent" />
+            </RelativeLayout>
+        </LinearLayout>
+
+
+</LinearLayout>

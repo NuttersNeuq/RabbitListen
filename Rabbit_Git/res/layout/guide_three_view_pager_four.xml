@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <CheckBox
+                android:id="@+id/guide_three_label24"
+                android:layout_width="150dp"
+                android:layout_height="100dp"
+                android:background="@drawable/selector_label_lecture"
+                android:button="@null" />
+
+            <CheckBox
+                android:id="@+id/guide_three_label25"
+                android:layout_width="150dp"
+                android:layout_height="100dp"
+                android:background="@drawable/selector_label_life"
+                android:button="@null" />
+
+            <CheckBox
+                android:id="@+id/guide_three_label26"
+                android:layout_width="150dp"
+                android:layout_height="100dp"
+                android:background="@drawable/selector_label_love"
+                android:button="@null" />
+
+            <CheckBox
+                android:id="@+id/guide_three_label27"
+                android:layout_width="150dp"
+                android:layout_height="100dp"
+                android:background="@drawable/selector_label_military"
+                android:button="@null" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <CheckBox
+                android:id="@+id/guide_three_label28"
+                android:layout_width="150dp"
+                android:layout_height="100dp"
+                android:background="@drawable/selector_label_motivation"
+                android:button="@null" />
+
+            <CheckBox
+                android:id="@+id/guide_three_label29"
+                android:layout_width="150dp"
+                android:layout_height="100dp"
+                android:background="@drawable/selector_label_novel"
+                android:button="@null" />
+
+            <CheckBox
+                android:id="@+id/guide_three_label30"
+                android:layout_width="150dp"
+                android:layout_height="100dp"
+                android:background="@drawable/selector_label_poems"
+                android:button="@null" />
+
+            <CheckBox
+                android:id="@+id/guide_three_label31"
+                android:layout_width="150dp"
+                android:layout_height="100dp"
+                android:background="@drawable/selector_label_meiju"
+                android:button="@null" />
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

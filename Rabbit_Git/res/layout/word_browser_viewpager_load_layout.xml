@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical"
+    android:paddingBottom="15dp"
+    android:paddingLeft="20dp"
+    android:paddingRight="20dp"
+    android:paddingTop="30dp" >
+
+    <TextView
+        android:id="@+id/word_textview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="horizon"
+        android:textColor="#1b1b1b"
+        android:textSize="25sp" />
+
+    <TextView
+        android:id="@+id/meaning_textview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="词库尚在建立中"
+        android:textColor="#777777"
+        android:textSize="17sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:layout_marginTop="15dp"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="3dp"
+            android:contentDescription="@null"
+            android:src="@drawable/danciben_jieshi_popupview_horn" />
+
+        <TextView
+            android:id="@+id/sentence_and_translation_textview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Some days the sunsets would be purple and pink. And some days they were a blazing orange setting fire to the clouds on the horizon.落日时而泛着微醺的紫红，时而迸发出橙色的余晖瞬间布满天边的晚霞。"
+            android:textColor="#777777"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/position_textview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/tao_map"
+        android:drawablePadding="5dp"
+        android:singleLine="true"
+        android:text="Filpped"
+        android:textColor="#a2a1a1"
+        android:textSize="13sp" />
+
+</LinearLayout>

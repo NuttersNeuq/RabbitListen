@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="#f8f8f8"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/note_list_titleTV"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:maxHeight="20dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="15dp"
+        android:singleLine="true"
+        android:text="Take Up的用法"
+        android:textColor="#000000"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/note_list_contentTV"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:maxHeight="50dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="7dp"
+        android:textSize="12sp"
+        android:text="1.开始从事When did he take up football?他是什么时候开始踢足球的？\r\n2.占用；获取The work took up all his time.那工作花费了他所有的时间。"
+        android:textColor="#423e3e"/>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="15dp" >
+
+        <TextView
+            android:id="@+id/note_list_nicknameTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:text="奔跑的大象"
+            android:textColor="#a1c6d0"
+            android:textSize="11sp" />
+
+        <TextView
+            android:id="@+id/note_list_timeTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="3dp"
+            android:layout_toRightOf="@+id/note_list_nicknameTV"
+            android:text="1天前"
+            android:textColor="#c5c4c4"
+            android:textSize="11sp" />
+
+        <TextView
+            android:id="@+id/note_list_zTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="4dp"
+            android:text="赞"
+            android:textColor="#adcdd5"
+            android:textSize="11sp" />
+
+        <TextView
+            android:id="@+id/note_list_zcountTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_toLeftOf="@+id/note_list_zTV"
+            android:text="10"
+            android:textColor="#adcdd5"
+            android:textSize="11sp" />
+    </RelativeLayout>
+        <TextView 
+        android:layout_width="match_parent"
+        android:layout_height="0.8dp"
+        android:background="#d5d4d0"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="5dp"
+        />
+
+</LinearLayout>

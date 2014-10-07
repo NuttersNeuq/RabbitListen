@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/play_gaosimohu" >
+
+    <TextView
+        android:id="@+id/new_player_cehua_layout_title_textview"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:background="#17000000"
+        android:gravity="center"
+        android:text="VOCABULARY"
+        android:textColor="#ffffff"
+        android:textSize="25sp" />
+
+    <com.lfl.utils.SlideListView
+        android:id="@+id/danciben_listview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/linearLayout1"
+        android:layout_below="@+id/new_player_cehua_layout_title_textview" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/play_playbacklong"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/new_player_cehua_shengci_textview"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:text="生词"
+            android:textColor="#62dee6"
+            android:textSize="20sp" />
+
+        <ImageView
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="#d6d4d4"
+            android:contentDescription="@null" />
+
+         <TextView
+            android:id="@+id/new_player_cehua_nanju_textview"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:text="难句"
+            android:textColor="#ffffff"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+</RelativeLayout>

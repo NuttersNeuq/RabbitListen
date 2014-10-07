@@ -1,0 +1,31 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/guide_bg"
+    tools:context=".GuideTwoActivity" >
+    <TextView
+        android:layout_width="match_parent" 
+        android:layout_height="wrap_content"
+        android:textSize="25sp"
+        android:textColor="#ffffff"
+        android:text="我们可能会在一起\n度过一段很长的时光\n或许美好或许艰难\n在此期间，坚果一只都会\n陪伴在你身边，帮助你。\n所以...\n坚果想要了解你的爱好。"
+        android:paddingLeft="45dp"
+        android:lineSpacingExtra="15dp"
+        android:layout_centerVertical="true"
+        />
+    <Button 
+        android:id="@+id/guide_two_nextBT"
+	    android:layout_width="260dp"
+	    android:layout_height="45dp"
+	    android:textSize="25sp"
+	    android:textColor="#ffffff"
+	    android:text="OK"
+	    android:textStyle="bold"
+	    android:layout_centerHorizontal="true"
+	    android:background="@drawable/selector_fabiao"
+	    android:layout_alignParentBottom="true"
+	    android:layout_marginBottom="20dp"
+        />
+
+</RelativeLayout>

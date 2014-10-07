@@ -1,0 +1,71 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/guide_bg"
+    tools:context=".GuideThreeActivity" >
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/guide_three_viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center" />
+
+    <LinearLayout
+        android:id="@+id/guide_three_dotsLL"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="18dp"
+        android:orientation="horizontal" >
+
+        <View
+            android:id="@+id/guide_three_dot_0"
+            android:layout_width="5dip"
+            android:layout_height="5dip"
+            android:layout_marginLeft="2dip"
+            android:layout_marginRight="2dip"
+            android:background="@drawable/dot_focused" />
+
+        <View
+            android:id="@+id/guide_three_dot_1"
+            android:layout_width="5dip"
+            android:layout_height="5dip"
+            android:layout_marginLeft="2dip"
+            android:layout_marginRight="2dip"
+            android:background="@drawable/dot_normal" />
+
+        <View
+            android:id="@+id/guide_three_dot_2"
+            android:layout_width="5dip"
+            android:layout_height="5dip"
+            android:layout_marginLeft="2dip"
+            android:layout_marginRight="2dip"
+            android:background="@drawable/dot_normal" />
+
+        <View
+            android:id="@+id/guide_three_dot_3"
+            android:layout_width="5dip"
+            android:layout_height="5dip"
+            android:layout_marginLeft="2dip"
+            android:layout_marginRight="2dip"
+            android:background="@drawable/dot_normal" />
+
+        <View
+            android:id="@+id/guide_three_dot_4"
+            android:layout_width="5dip"
+            android:layout_height="5dip"
+            android:layout_marginLeft="2dip"
+            android:layout_marginRight="2dip"
+            android:background="@drawable/dot_normal" />
+                <View
+            android:id="@+id/guide_three_dot_5"
+            android:layout_width="5dip"
+            android:layout_height="5dip"
+            android:layout_marginLeft="2dip"
+            android:layout_marginRight="2dip"
+            android:background="@drawable/dot_normal" />
+    </LinearLayout>
+
+</RelativeLayout>

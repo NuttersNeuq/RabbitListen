@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <ImageView
+        android:id="@+id/menu_background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/menu_content"
+        android:layout_alignParentTop="true"
+        android:background="#00000000"
+        android:contentDescription="@null" />
+
+    <LinearLayout
+        android:id="@+id/menu_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#ffffff"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:id="@+id/tingliku_jingting_menu_del_linearlayout"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:layout_width="55dp"
+                android:layout_height="match_parent"
+                android:contentDescription="@null"
+                android:padding="11dp"
+                android:alpha="0.65"
+                android:src="@drawable/jingting_cehua_menu_duihao" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingLeft="5dp" >
+
+                <TextView
+                    android:id="@+id/tingliku_jingting_menu_del_textview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="直接完成"
+                    android:textColor="#5a5a5a"
+                    android:textSize="17sp" />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:contentDescription="@null"
+                    android:src="#D5D4D0" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/tingliku_jingting_menu_shoucang_linearlayout"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:layout_width="55dp"
+                android:layout_height="match_parent"
+                android:contentDescription="@null"
+                android:padding="11dp"
+                android:src="@drawable/fanting_listitem_menu_collect" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingLeft="5dp" >
+
+                <TextView
+                    android:id="@+id/fanting_listitem_menu_shoucang_textview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="收藏"
+                    android:textColor="#5a5a5a"
+                    android:textSize="17sp" />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:contentDescription="@null"
+                    android:src="#D5D4D0" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/tingliku_jingting_menu_share_linearlayout"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:layout_width="55dp"
+                android:layout_height="match_parent"
+                android:contentDescription="@null"
+                android:padding="12dp"
+                android:src="@drawable/fanting_listitem_menu_share" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingLeft="5dp" >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="分享"
+                    android:textColor="#5a5a5a"
+                    android:textSize="17sp" />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:contentDescription="@null"
+                    android:src="#D5D4D0" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/tingliku_jingting_menu_reset_linearlayout"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:layout_width="55dp"
+                android:layout_height="match_parent"
+                android:contentDescription="@null"
+                android:padding="12dp"
+                android:src="@drawable/tingliku_jingting_reset_progress" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingLeft="5dp" >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="进度重置"
+                    android:textColor="#5a5a5a"
+                    android:textSize="17sp" />
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

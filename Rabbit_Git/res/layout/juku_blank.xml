@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/juku_blank_linearlayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical" >
+
+    <ImageView
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:alpha="0.3"
+        android:contentDescription="@null"
+        android:src="@drawable/juku_blank_icon" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="你可以在播放听力时收藏句子"
+        android:textColor="#0B0B0B"
+        android:textSize="20sp" />
+
+</LinearLayout>

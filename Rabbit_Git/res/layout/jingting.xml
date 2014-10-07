@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#a5c8e9"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:id="@+id/jingting_shangtiao_relativelayout"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:background="#30000000"
+            android:gravity="center_vertical" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="今日精听"
+                android:textColor="#ffffff"
+                android:textSize="25sp" />
+
+            <ImageView
+                android:id="@+id/jingting_headset_imageview"
+                android:layout_width="68dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:paddingBottom="10dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:paddingTop="10dp"
+                android:background="@drawable/lfl_cehua_selector"
+                android:src="@drawable/headset" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingBottom="20dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="5dp"
+            android:paddingTop="20dp" >
+
+            <ImageView
+                android:id="@+id/jingting_touxiang_imageview"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:contentDescription="@null"
+                android:src="@drawable/jingting_touxiang" />
+
+            <TextView
+                android:id="@+id/jingting_objective_textview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:paddingLeft="10dp"
+                android:paddingRight="20dp"
+                android:singleLine="false"
+                android:text="Practise now and live in the rest of life as a English master."
+                android:textColor="#41557d"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:src="#10000000" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingBottom="15dp"
+            android:paddingLeft="20dp"
+            android:paddingTop="15dp" >
+
+            <TextView
+                android:id="@+id/jingting_reviewAmount_textView"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@drawable/jingting_ellipse"
+                android:gravity="center"
+                android:text="2"
+                android:textColor="#c6648a" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="20dp"
+                android:text="此刻回味坚果的美味！"
+                android:textColor="#41557d" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <com.lfl.utils.SlideListView
+        android:id="@+id/jingting_slideListView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:divider="#00000000"
+        android:dividerHeight="0dp"
+        android:listSelector="@android:color/transparent" />
+
+</LinearLayout>

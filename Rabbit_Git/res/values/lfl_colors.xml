@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <drawable name="cehualan_selected_color">#40ffffff</drawable>
+     <drawable name="popupwindow_selected_color">#17000000</drawable>
+     <drawable name="cailiaoshanchu_act_color_selected">#a042c0fb</drawable>
+     <drawable name="cailiaoshanchu_act_color">#42c0fb</drawable>
+</resources>

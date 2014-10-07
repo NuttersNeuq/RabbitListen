@@ -1,0 +1,199 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/register_bg"
+    tools:context=".RegisterActivity" >
+
+    <TextView
+        android:id="@+id/register_wordTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="70dp"
+        android:text="创建账户"
+        android:textColor="#eeffffff"
+        android:textSize="25sp" />
+
+    <RelativeLayout
+        android:id="@+id/register_usernameRL"
+        android:layout_width="280dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/register_wordTV"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="30dp"
+        android:background="#88000000" >
+
+        <EditText
+            android:id="@+id/register_usernameET"
+            android:paddingLeft="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textColor="#ffffff"
+            android:textColorHint="#ffffff"
+            android:textCursorDrawable="@null"
+            android:singleLine="true"
+            android:digits="0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ_"
+            android:ems="10"
+            android:hint="用户名"
+            android:background="@null" />
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="13dp"
+            android:contentDescription="@null"
+            android:src="@drawable/login_user_id_bar_icon" />
+    </RelativeLayout>
+    
+        <RelativeLayout
+        android:id="@+id/register_nicknameRL"
+        android:layout_width="280dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/register_usernameRL"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"
+        android:background="#88000000" >
+
+        <EditText
+            android:id="@+id/register_nicknameET"
+            android:paddingLeft="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textColor="#ffffff"
+            android:textColorHint="#ffffff"
+            android:textCursorDrawable="@null"
+             android:singleLine="true"
+            android:ems="10"
+            android:hint="昵称"
+            android:background="@null" />
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="13dp"
+            android:contentDescription="@null"
+            android:src="@drawable/login_user_id_bar_icon" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/register_emailRL"
+        android:layout_width="280dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/register_nicknameRL"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"
+        android:background="#88000000" >
+
+        <EditText
+            android:id="@+id/register_emailET"
+            android:paddingLeft="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textColor="#ffffff"
+            android:textColorHint="#ffffff"
+            android:textCursorDrawable="@null"
+             android:singleLine="true"
+             android:digits="0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ_@."
+            android:hint="邮箱"
+            android:background="@null" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="13dp"
+            android:contentDescription="@null"
+            android:src="@drawable/register_email_bar_icon" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/register_passwordRL"
+        android:layout_width="280dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/register_emailRL"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"
+        android:background="#88000000" >
+
+        <EditText
+            android:id="@+id/register_passwordET"
+            android:paddingLeft="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:password="true"
+            android:textColor="#ffffff"
+            android:hint="密码"
+            android:ems="10"
+            android:textCursorDrawable="@null"
+             android:singleLine="true"
+            android:textColorHint="#ffffff"
+            android:digits="0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ_"
+            android:background="@null" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="13dp"
+            android:contentDescription="@null"
+            android:src="@drawable/login_password_bar_icon" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/register_confirm_passwordRL"
+        android:layout_width="280dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/register_passwordRL"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"
+        android:background="#88000000" >
+
+        <EditText
+            android:paddingLeft="10dp"
+            android:id="@+id/register_confirm_passwordET"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textColor="#ffffff"
+            android:hint="确认密码"
+            android:ems="10"
+            android:password="true"
+            android:textColorHint="#ffffff"
+            android:textCursorDrawable="@null"
+            android:digits="0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ_"
+             android:singleLine="true"
+            android:background="@null" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="13dp"
+            android:contentDescription="@null"
+            android:src="@drawable/login_password_bar_icon" />
+        
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/register_registerBT"
+        android:layout_width="120dp"
+        android:layout_height="35dp"
+        android:layout_below="@+id/register_confirm_passwordRL"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/selector_register"
+        android:text="注册"
+        android:textColor="#ffffff" />
+
+</RelativeLayout>

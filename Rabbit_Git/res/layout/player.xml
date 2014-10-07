@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/play_gaosimohu" >
+
+    <RelativeLayout
+        android:id="@+id/player_control_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/play_playbacklong"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/player_forward_control_button"
+            android:layout_width="33dp"
+            android:layout_height="20dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="39dp"
+            android:layout_toRightOf="@+id/player_start_pause_control_button"
+            android:background="@drawable/play_playbuttonhou"
+            android:contentDescription="@null" />
+
+        <Button
+            android:id="@+id/player_backward_control_button"
+            android:layout_width="33dp"
+            android:layout_height="20dp"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="39dp"
+            android:layout_toLeftOf="@+id/player_start_pause_control_button"
+            android:background="@drawable/play_playbuttonqian"
+            android:contentDescription="@null" />
+
+        <Button
+            android:id="@+id/player_single_sentence_repeat_control_button"
+            android:layout_width="23dp"
+            android:layout_height="23dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="16dp"
+            android:background="@drawable/bofang_danju" />
+
+        <LinearLayout
+            android:id="@+id/player_gendu_linearlayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/play_microback"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/player_fenxiang_button"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginLeft="7dp"
+                android:background="@drawable/play_share" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/player_start_pause_control_button"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/player_pause" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/shangtiao_linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/play_shangtiao"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="5"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingRight="10dp"
+            android:paddingTop="10dp" >
+
+            <LinearLayout
+                android:id="@+id/player_exit_linearlayout"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="end"
+                android:background="@drawable/lfl_cehua_selector"
+                android:orientation="horizontal"
+                android:paddingLeft="10dp" >
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="25dp"
+                    android:background="@drawable/play_back" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/player_title_textview"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="15"
+                android:ellipsize="end"
+                android:gravity="center_horizontal"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:singleLine="true"
+                android:text="Loading ... "
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="#ffffff" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <Button
+                    android:id="@+id/player_danciben_button"
+                    android:layout_width="20dp"
+                    android:layout_height="25dp"
+                    android:background="@drawable/play_text" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="5"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingTop="10dp" >
+
+            <TextView
+                android:id="@+id/player_audio_current_position_textview"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:text="00:00"
+                android:textColor="#ffffff" />
+
+            <SeekBar
+                android:id="@+id/player_seekbar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:maxHeight="15dp"
+                android:minHeight="10dp"
+                android:progressDrawable="@drawable/seek_img"
+                android:thumb="@drawable/thumb"
+                android:thumbOffset="0dp" />
+
+            <TextView
+                android:id="@+id/player_media_duration_textview"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="left"
+                android:text="00:00"
+                android:textColor="#ffffff" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="5"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="16dp"
+            android:paddingRight="18dp"
+            android:paddingTop="5dp" >
+
+            <Button
+                android:id="@+id/player_change_language_button"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@null"
+                android:text="双"
+                android:textColor="#ffffff"
+                android:textSize="20sp" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="8"
+                android:gravity="center" >
+
+                <TextView
+                    android:id="@+id/player_play_speed_textview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="1x"
+                    android:textColor="#ffffff"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.7"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <Button
+                    android:id="@+id/player_download_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:background="@drawable/play_download" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <ListView
+        android:id="@android:id/list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/player_control_bar"
+        android:layout_below="@+id/shangtiao_linearLayout" >
+    </ListView>
+
+</RelativeLayout>

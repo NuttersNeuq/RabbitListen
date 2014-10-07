@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <CheckBox
+                android:id="@+id/guide_three_label32"
+                android:layout_width="150dp"
+                android:layout_height="100dp"
+                android:background="@drawable/selector_label_shopping"
+                android:button="@null" />
+
+            <CheckBox
+                android:id="@+id/guide_three_label33"
+                android:layout_width="150dp"
+                android:layout_height="100dp"
+                android:background="@drawable/selector_label_social"
+                android:button="@null" />
+
+            <CheckBox
+                android:id="@+id/guide_three_label34"
+                android:layout_width="150dp"
+                android:layout_height="100dp"
+                android:background="@drawable/selector_label_spoken"
+                android:button="@null" />
+
+            <CheckBox
+                android:id="@+id/guide_three_label35"
+                android:layout_width="150dp"
+                android:layout_height="100dp"
+                android:background="@drawable/selector_label_sports"
+                android:button="@null" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <CheckBox
+                android:id="@+id/guide_three_label36"
+                android:layout_width="150dp"
+                android:layout_height="100dp"
+                android:background="@drawable/selector_label_ted"
+                android:button="@null" />
+
+            <CheckBox
+                android:id="@+id/guide_three_label37"
+                android:layout_width="150dp"
+                android:layout_height="100dp"
+                android:background="@drawable/selector_label_tofel"
+                android:button="@null" />
+
+            <CheckBox
+                android:id="@+id/guide_three_label38"
+                android:layout_width="150dp"
+                android:layout_height="100dp"
+                android:background="@drawable/selector_label_travel"
+                android:button="@null" />
+
+            <CheckBox
+                android:id="@+id/guide_three_label39"
+                android:layout_width="150dp"
+                android:layout_height="100dp"
+                android:background="@drawable/selector_label_school"
+                android:button="@null" />
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

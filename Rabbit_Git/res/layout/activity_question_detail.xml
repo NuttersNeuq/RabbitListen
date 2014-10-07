@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/question_detailRL"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f8f8f8"
+    android:clickable="true" >
+
+    <com.lz.mylistview.MyListView
+        android:id="@+id/question_detailLV"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:divider="@null" />
+
+    <RelativeLayout
+        android:id="@+id/question_detail_replyLL"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/hold"
+        android:padding="4dp"
+        android:background="@drawable/popupwindow_grey_background"
+        android:visibility="gone" >
+
+        <EditText
+            android:id="@+id/question_detail_reply_contentET"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minHeight="40dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_toLeftOf="@+id/question_detail_reply_buttonBT"
+            android:background="@drawable/reply_bar_shape"
+            android:textColorHint="#ffa5a6a8"
+            android:textSize="14.0sp" >
+        </EditText>
+
+        <Button
+            android:id="@+id/question_detail_reply_buttonBT"
+            android:layout_width="60dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/selector_fabiao"
+            android:text="发表"
+            android:textColor="#ffffff" />
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/hold"
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="-1dp" />
+
+</RelativeLayout>

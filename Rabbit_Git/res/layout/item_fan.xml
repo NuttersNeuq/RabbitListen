@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:paddingTop="5dp"
+    android:paddingBottom="5dp"
+    android:descendantFocusability="blocksDescendants"
+    android:layout_height="60dp" >
+
+    <ImageButton
+        android:id="@+id/fan_portraitIB"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:background="@null"
+        android:layout_marginLeft="5dp"/>
+
+    <TextView
+        android:id="@+id/fan_motoTV"
+        android:layout_width="wrap_content"
+        android:layout_height="26dp"
+        android:layout_alignBottom="@+id/fan_portraitIB"
+        android:layout_marginLeft="16dp"
+        android:layout_toRightOf="@+id/fan_portraitIB"
+        android:gravity="center_vertical"
+        android:text="竭尽全力才能毫不费力"
+        android:textColor="#acacac" />
+
+    <TextView
+        android:id="@+id/fan_nicknameTV"
+        android:layout_width="wrap_content"
+        android:layout_height="26dp"
+        android:layout_alignLeft="@+id/fan_motoTV"
+        android:layout_alignTop="@+id/fan_portraitIB"
+        android:gravity="center_vertical"
+        android:text="柠檬汁"
+        android:textColor="#000000" />
+
+    <ImageView
+        android:id="@+id/fan_triangelIV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="15dp"
+        android:src="@drawable/triangel" />
+
+</RelativeLayout>

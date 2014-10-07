@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:descendantFocusability="blocksDescendants"
+    android:orientation="horizontal" >
+
+    <!-- 菜单大小由inflater动态改变以适应contentlayout大小 -->
+
+    <LinearLayout
+        android:id="@+id/juku_listitem_contentlayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/juku_listitem_time_textview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#F3F3F3"
+            android:padding="5dp"
+            android:text="2014年8月11日"
+            android:textColor="#a2a1a1"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/juku_listitem_sentence_textview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="10dp"
+            android:paddingLeft="30dp"
+            android:paddingRight="10dp"
+            android:paddingTop="10dp"
+            android:text="The most important days in your life are the day you are born, and the day you find out why"
+            android:textColor="#000000"
+            android:textSize="20sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingBottom="5dp"
+            android:paddingLeft="30dp" >
+
+            <ImageView
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:src="@drawable/juku_listitem_location" />
+
+            <TextView
+                android:id="@+id/juku_listitem_position_textview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="《世界名人演讲》 Mark Twain"
+                android:textColor="#a2a1a1"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:paddingLeft="30dp"
+            android:src="#DFDDD6" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llayout_right"
+        android:layout_width="150dp"
+        android:layout_height="match_parent"
+        android:background="#DFDDD6"
+        android:baselineAligned="false"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/juku_listitem_translation_button"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:textSize="25sp"
+                android:textColor="#7D7D7E"
+                android:text="译"
+                android:background="@null" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/juku_listitem_share_button"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@drawable/juku_listitem_share" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/juku_listitem_delete_button"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@drawable/jingting_cehua_menu_shanchu" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

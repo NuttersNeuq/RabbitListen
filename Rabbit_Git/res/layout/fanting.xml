@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TabHost xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@android:id/tabhost"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <FrameLayout
+            android:id="@android:id/tabcontent"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <TabWidget
+            android:id="@android:id/tabs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0"
+            android:visibility="gone" />
+
+        <RadioGroup
+            android:id="@+id/fanting_tab_radiogroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="0dp"
+            android:layout_gravity="bottom"
+            android:background="#A1C6D0"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <RadioButton
+                android:id="@+id/fanting_tuijian_radiobutton"
+                style="@style/fanting_tab_style"
+                android:layout_marginTop="2dp"
+                android:drawableTop="@drawable/fanting_tab_tuijian_selected"
+                android:textColor="#ffffff"
+                android:text="推荐" />
+
+            <RadioButton
+                android:id="@+id/fanting_dingyue_radiobutton"
+                style="@style/fanting_tab_style"
+                android:layout_marginTop="2dp"
+                android:drawableTop="@drawable/fanting_tab_dingyue"
+                android:text="订阅" />
+
+            <RadioButton
+                android:id="@+id/fanting_paihang_radiobutton"
+                style="@style/fanting_tab_style"
+                android:layout_marginTop="2dp"
+                android:drawableTop="@drawable/fanting_tab_paihang"
+                android:text="排行榜" />
+
+            <RadioButton
+                android:id="@+id/fanting_search_radiobutton"
+                style="@style/fanting_tab_style"
+                android:layout_marginTop="2dp"
+                android:drawableTop="@drawable/fanting_tab_search"
+                android:text="搜索" />
+        </RadioGroup>
+    </LinearLayout>
+
+</TabHost>

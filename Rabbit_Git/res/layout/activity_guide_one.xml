@@ -1,0 +1,32 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/guide_bg"
+    tools:context=".GuideOneActvity" >
+    <TextView 
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:id="@+id/guide_one_nicknameTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="你好哇，奔跑的大象\n很高兴见到你!"
+        android:lineSpacingExtra="15dp"
+        android:textSize="25sp"
+        android:textColor="#ffffff"
+        android:layout_marginTop="150dp"
+        android:layout_alignParentTop="true"
+        />
+	<Button 
+	    android:id="@+id/guide_one_nextBT"
+	    android:layout_width="260dp"
+	    android:layout_height="45dp"
+	    android:textSize="25sp"
+	    android:textColor="#ffffff"
+	    android:text="你好，坚果。"
+	    android:layout_centerHorizontal="true"
+	    android:background="@drawable/selector_fabiao"
+	    android:layout_alignParentBottom="true"
+	    android:layout_marginBottom="20dp"
+	    />
+</RelativeLayout>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="70dp"
+    android:descendantFocusability="blocksDescendants"
+    android:orientation="horizontal"
+    android:paddingBottom="5dp"
+    android:paddingTop="5dp" >
+
+    <TextView
+        android:id="@+id/fanting_paihang_listitem_rank_textview"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:gravity="center"
+        android:text="8"
+        android:textColor="#42c0fb"
+        android:textSize="25sp" />
+
+    <ImageView
+        android:id="@+id/fanting_paihang_listitem_imageview"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:background="@drawable/pic_loading"
+        android:contentDescription="@null" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <TextView
+            android:id="@+id/fanting_paihang_title_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="11dp"
+            android:ellipsize="end"
+            android:paddingRight="10dp"
+            android:singleLine="true"
+            android:text="Nation Public Radio"
+            android:textColor="#000000"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/fanting_paihang_listitem_course_amount_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/fanting_paihang_title_textview"
+            android:layout_below="@+id/fanting_paihang_title_textview"
+            android:text="听力篇数：10"
+            android:textColor="#979797"
+            android:textSize="12sp" />
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:descendantFocusability="blocksDescendants"
+    android:orientation="horizontal" >
+
+    <!-- 菜单大小由inflater动态改变以适应contentlayout大小 -->
+
+    <LinearLayout
+        android:id="@+id/danciben_act_listitem_contentlayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/danciben_act_listitem_capital_textview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#F3F3F3"
+            android:padding="5dp"
+            android:text="A"
+            android:textColor="#a2a1a1"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/danciben_act_listitem_content_textview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="10dp"
+            android:paddingLeft="30dp"
+            android:paddingRight="10dp"
+            android:paddingTop="10dp"
+            android:text="Destination"
+            android:textColor="#000000"
+            android:textSize="20sp" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:paddingLeft="30dp"
+            android:src="#DFDDD6" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llayout_right"
+        android:layout_width="100dp"
+        android:layout_height="match_parent"
+        android:background="#DFDDD6"
+        android:baselineAligned="false"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/danciben_act_listitem_duihao_button"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@drawable/jingting_cehua_menu_duihao" />
+    </LinearLayout>
+
+</LinearLayout>

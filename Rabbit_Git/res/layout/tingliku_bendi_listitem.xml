@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:descendantFocusability="blocksDescendants"
+    android:orientation="horizontal" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <TextView
+            android:id="@+id/tingliku_bendi_listitem_title_textview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="11dp"
+            android:ellipsize="end"
+            android:paddingRight="10dp"
+            android:singleLine="true"
+            android:text="The Best Man Speech"
+            android:textColor="#000000"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/tingliku_bendi_listitem_duration_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/tingliku_bendi_listitem_title_textview"
+            android:layout_below="@+id/tingliku_bendi_listitem_title_textview"
+            android:layout_marginTop="5dp"
+            android:text="03:11"
+            android:textColor="#979797"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tingliku_bendi_listitem_difficulty_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/tingliku_bendi_listitem_size_textview"
+            android:layout_alignBottom="@+id/tingliku_bendi_listitem_size_textview"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@+id/tingliku_bendi_listitem_size_textview"
+            android:text="中级"
+            android:textColor="#41557d"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tingliku_bendi_listitem_size_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/tingliku_bendi_listitem_duration_textview"
+            android:layout_alignBottom="@+id/tingliku_bendi_listitem_duration_textview"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@+id/tingliku_bendi_listitem_duration_textview"
+            android:text="5.20MB"
+            android:textColor="#979797"
+            android:textSize="12sp" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/llayout_right"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:background="#DFDDD6"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/tingliku_bendi_listitem_delete_button"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:background="@drawable/jingting_cehua_menu_shanchu" />
+    </LinearLayout>
+
+</LinearLayout>

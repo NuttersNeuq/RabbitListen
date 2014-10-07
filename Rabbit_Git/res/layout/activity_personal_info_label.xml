@@ -1,0 +1,518 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#e7e7e7"
+    tools:context=".PersonalInfoLabel" >
+
+<!--     <RelativeLayout
+        android:id="@+id/personal_info_label_searchLL"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentTop="true"
+        android:background="#c6c6c6" >
+
+        <EditText
+            android:layout_width="350dp"
+            android:layout_height="30dp"
+            android:layout_centerInParent="true"
+            android:background="@drawable/reply_bar_shape"
+            android:hint="寻找你感兴趣的话题" />
+        
+    </RelativeLayout> -->
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/personal_info_label_searchLL" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical" >
+
+            <CheckBox
+                android:layout_width="350dp"
+                android:layout_height="37dp"
+                android:layout_marginTop="20dp"
+                android:id="@+id/personal_info_label0"
+                android:background="@drawable/selector_personal_info_label_bg"
+                android:button="@null"
+                android:paddingLeft="15dp"
+                android:text="美国"
+                android:textColor="#ffffff"
+                android:textSize="18sp" />
+
+            <CheckBox
+                android:id="@+id/personal_info_label1"
+                android:layout_width="350dp"
+                android:layout_height="37dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/selector_personal_info_label_bg"
+                android:button="@null"
+                android:paddingLeft="15dp"
+                android:text="经济"
+                android:textColor="#ffffff"
+                android:textSize="18sp" />
+
+            <CheckBox
+                android:id="@+id/personal_info_label2"
+                android:layout_width="350dp"
+                android:layout_height="37dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/selector_personal_info_label_bg"
+                android:button="@null"
+                android:paddingLeft="15dp"
+                android:text="艺术"
+                android:textColor="#ffffff"
+                android:textSize="18sp" />
+
+            <CheckBox
+                android:id="@+id/personal_info_label3"
+                android:layout_width="350dp"
+                android:layout_height="37dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/selector_personal_info_label_bg"
+                android:button="@null"
+                android:paddingLeft="15dp"
+                android:text="科学"
+                android:textColor="#ffffff"
+                android:textSize="18sp" />
+
+            <CheckBox
+                android:id="@+id/personal_info_label4"
+                android:layout_width="350dp"
+                android:layout_height="37dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/selector_personal_info_label_bg"
+                android:button="@null"
+                android:paddingLeft="15dp"
+                android:text="考研"
+                android:textColor="#ffffff"
+                android:textSize="18sp" />
+
+            <CheckBox
+                android:id="@+id/personal_info_label5"
+                android:layout_width="350dp"
+                android:layout_height="37dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/selector_personal_info_label_bg"
+                android:button="@null"
+                android:paddingLeft="15dp"
+                android:text="英剧"
+                android:textColor="#ffffff"
+                android:textSize="18sp" />
+
+            <CheckBox
+                android:id="@+id/personal_info_label6"
+                android:layout_width="350dp"
+                android:layout_height="37dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/selector_personal_info_label_bg"
+                android:button="@null"
+                android:paddingLeft="15dp"
+                android:text="足球"
+                android:textColor="#ffffff"
+                android:textSize="18sp" />
+
+            <CheckBox
+                android:id="@+id/personal_info_label7"
+                android:layout_width="350dp"
+                android:layout_height="37dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/selector_personal_info_label_bg"
+                android:button="@null"
+                android:paddingLeft="15dp"
+                android:text="音乐"
+                android:textColor="#ffffff"
+                android:textSize="18sp" />
+
+            <CheckBox
+                android:id="@+id/personal_info_label8"
+                android:layout_width="350dp"
+                android:layout_height="37dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/selector_personal_info_label_bg"
+                android:button="@null"
+                android:paddingLeft="15dp"
+                android:text="娱乐"
+                android:textColor="#ffffff"
+                android:textSize="18sp" />
+
+            <CheckBox
+                android:id="@+id/personal_info_label9"
+                android:layout_width="350dp"
+                android:layout_height="37dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/selector_personal_info_label_bg"
+                android:button="@null"
+                android:paddingLeft="15dp"
+                android:text="篮球"
+                android:textColor="#ffffff"
+                android:textSize="18sp" />
+
+            <CheckBox
+                android:id="@+id/personal_info_label10"
+                android:layout_width="350dp"
+                android:layout_height="37dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/selector_personal_info_label_bg"
+                android:button="@null"
+                android:paddingLeft="15dp"
+                android:text="汽车"
+                android:textColor="#ffffff"
+                android:textSize="18sp" />
+
+            <CheckBox
+                android:id="@+id/personal_info_label11"
+                android:layout_width="350dp"
+                android:layout_height="37dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/selector_personal_info_label_bg"
+                android:button="@null"
+                android:paddingLeft="15dp"
+                android:text="四级"
+                android:textColor="#ffffff"
+                android:textSize="18sp" />
+
+            <CheckBox
+                android:id="@+id/personal_info_label12"
+                android:layout_width="350dp"
+                android:layout_height="37dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/selector_personal_info_label_bg"
+                android:button="@null"
+                android:paddingLeft="15dp"
+                android:text="六级"
+                android:textColor="#ffffff"
+                android:textSize="18sp" />
+
+            <CheckBox
+                android:id="@+id/personal_info_label13"
+                android:layout_width="350dp"
+                android:layout_height="37dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/selector_personal_info_label_bg"
+                android:button="@null"
+                android:paddingLeft="15dp"
+                android:text="中国"
+                android:textColor="#ffffff"
+                android:textSize="18sp" />
+
+            <CheckBox
+                android:id="@+id/personal_info_label14"
+                android:layout_width="350dp"
+                android:layout_height="37dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/selector_personal_info_label_bg"
+                android:button="@null"
+                android:paddingLeft="15dp"
+                android:text="商务"
+                android:textColor="#ffffff"
+                android:textSize="18sp" />
+
+            <CheckBox
+                android:id="@+id/personal_info_label15"
+                android:layout_width="350dp"
+                android:layout_height="37dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/selector_personal_info_label_bg"
+                android:button="@null"
+                android:paddingLeft="15dp"
+                android:text="数码"
+                android:textColor="#ffffff"
+                android:textSize="18sp" />
+
+            <CheckBox
+                android:id="@+id/personal_info_label16"
+                android:layout_width="350dp"
+                android:layout_height="37dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/selector_personal_info_label_bg"
+                android:button="@null"
+                android:paddingLeft="15dp"
+                android:text="教育"
+                android:textColor="#ffffff"
+                android:textSize="18sp" />
+
+            <CheckBox
+                android:id="@+id/personal_info_label17"
+                android:layout_width="350dp"
+                android:layout_height="37dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/selector_personal_info_label_bg"
+                android:button="@null"
+                android:paddingLeft="15dp"
+                android:text="时尚"
+                android:textColor="#ffffff"
+                android:textSize="18sp" />
+
+            <CheckBox
+                android:id="@+id/personal_info_label18"
+                android:layout_width="350dp"
+                android:layout_height="37dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/selector_personal_info_label_bg"
+                android:button="@null"
+                android:paddingLeft="15dp"
+                android:text="饮食"
+                android:textColor="#ffffff"
+                android:textSize="18sp" />
+
+            <CheckBox
+                android:id="@+id/personal_info_label19"
+                android:layout_width="350dp"
+                android:layout_height="37dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/selector_personal_info_label_bg"
+                android:button="@null"
+                android:paddingLeft="15dp"
+                android:text="游戏"
+                android:textColor="#ffffff"
+                android:textSize="18sp" />
+
+            <CheckBox
+                android:id="@+id/personal_info_label20"
+                android:layout_width="350dp"
+                android:layout_height="37dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/selector_personal_info_label_bg"
+                android:button="@null"
+                android:paddingLeft="15dp"
+                android:text="历史"
+                android:textColor="#ffffff"
+                android:textSize="18sp" />
+
+            <CheckBox
+                android:id="@+id/personal_info_label21"
+                android:layout_width="350dp"
+                android:layout_height="37dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/selector_personal_info_label_bg"
+                android:button="@null"
+                android:paddingLeft="15dp"
+                android:text="雅思"
+                android:textColor="#ffffff"
+                android:textSize="18sp" />
+
+            <CheckBox
+                android:id="@+id/personal_info_label22"
+                android:layout_width="350dp"
+                android:layout_height="37dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/selector_personal_info_label_bg"
+                android:button="@null"
+                android:paddingLeft="15dp"
+                android:text="国际"
+                android:textColor="#ffffff"
+                android:textSize="18sp" />
+
+            <CheckBox
+                android:id="@+id/personal_info_label23"
+                android:layout_width="350dp"
+                android:layout_height="37dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/selector_personal_info_label_bg"
+                android:button="@null"
+                android:paddingLeft="15dp"
+                android:text="网络"
+                android:textColor="#ffffff"
+                android:textSize="18sp" />
+
+            <CheckBox
+                android:id="@+id/personal_info_label24"
+                android:layout_width="350dp"
+                android:layout_height="37dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/selector_personal_info_label_bg"
+                android:button="@null"
+                android:paddingLeft="15dp"
+                android:text="演讲"
+                android:textColor="#ffffff"
+                android:textSize="18sp" />
+
+            <CheckBox
+                android:id="@+id/personal_info_label25"
+                android:layout_width="350dp"
+                android:layout_height="37dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/selector_personal_info_label_bg"
+                android:button="@null"
+                android:paddingLeft="15dp"
+                android:text="生活"
+                android:textColor="#ffffff"
+                android:textSize="18sp" />
+
+            <CheckBox
+                android:id="@+id/personal_info_label26"
+                android:layout_width="350dp"
+                android:layout_height="37dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/selector_personal_info_label_bg"
+                android:button="@null"
+                android:paddingLeft="15dp"
+                android:text="情感"
+                android:textColor="#ffffff"
+                android:textSize="18sp" />
+
+            <CheckBox
+                android:id="@+id/personal_info_label27"
+                android:layout_width="350dp"
+                android:layout_height="37dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/selector_personal_info_label_bg"
+                android:button="@null"
+                android:paddingLeft="15dp"
+                android:text="军事"
+                android:textColor="#ffffff"
+                android:textSize="18sp" />
+
+            <CheckBox
+                android:id="@+id/personal_info_label28"
+                android:layout_width="350dp"
+                android:layout_height="37dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/selector_personal_info_label_bg"
+                android:button="@null"
+                android:paddingLeft="15dp"
+                android:text="励志"
+                android:textColor="#ffffff"
+                android:textSize="18sp" />
+
+            <CheckBox
+                android:id="@+id/personal_info_label29"
+                android:layout_width="350dp"
+                android:layout_height="37dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/selector_personal_info_label_bg"
+                android:button="@null"
+                android:paddingLeft="15dp"
+                android:text="小说"
+                android:textColor="#ffffff"
+                android:textSize="18sp" />
+            
+
+            <CheckBox
+                android:id="@+id/personal_info_label30"
+                android:layout_width="350dp"
+                android:layout_height="37dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/selector_personal_info_label_bg"
+                android:button="@null"
+                android:paddingLeft="15dp"
+                android:text="诗歌"
+                android:textColor="#ffffff"
+                android:textSize="18sp" />
+
+            <CheckBox
+                android:id="@+id/personal_info_label31"
+                android:layout_width="350dp"
+                android:layout_height="37dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/selector_personal_info_label_bg"
+                android:button="@null"
+                android:paddingLeft="15dp"
+                android:text="美剧"
+                android:textColor="#ffffff"
+                android:textSize="18sp" />
+
+            <CheckBox
+                android:id="@+id/personal_info_label32"
+                android:layout_width="350dp"
+                android:layout_height="37dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/selector_personal_info_label_bg"
+                android:button="@null"
+                android:paddingLeft="15dp"
+                android:text="购物"
+                android:textColor="#ffffff"
+                android:textSize="18sp" />
+
+            <CheckBox
+                android:id="@+id/personal_info_label33"
+                android:layout_width="350dp"
+                android:layout_height="37dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/selector_personal_info_label_bg"
+                android:button="@null"
+                android:paddingLeft="15dp"
+                android:text="社会"
+                android:textColor="#ffffff"
+                android:textSize="18sp" />
+
+            <CheckBox
+                android:id="@+id/personal_info_label34"
+                android:layout_width="350dp"
+                android:layout_height="37dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/selector_personal_info_label_bg"
+                android:button="@null"
+                android:paddingLeft="15dp"
+                android:text="口语"
+                android:textColor="#ffffff"
+                android:textSize="18sp" />
+
+            <CheckBox
+                android:id="@+id/personal_info_label35"
+                android:layout_width="350dp"
+                android:layout_height="37dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/selector_personal_info_label_bg"
+                android:button="@null"
+                android:paddingLeft="15dp"
+                android:text="体育"
+                android:textColor="#ffffff"
+                android:textSize="18sp" />
+
+            <CheckBox
+                android:id="@+id/personal_info_label36"
+                android:layout_width="350dp"
+                android:layout_height="37dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/selector_personal_info_label_bg"
+                android:button="@null"
+                android:paddingLeft="15dp"
+                android:text="TED"
+                android:textColor="#ffffff"
+                android:textSize="18sp" />
+
+            <CheckBox
+                android:id="@+id/personal_info_label37"
+                android:layout_width="350dp"
+                android:layout_height="37dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/selector_personal_info_label_bg"
+                android:button="@null"
+                android:paddingLeft="15dp"
+                android:text="托福"
+                android:textColor="#ffffff"
+                android:textSize="18sp" />
+
+            <CheckBox
+                android:id="@+id/personal_info_label38"
+                android:layout_width="350dp"
+                android:layout_height="37dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/selector_personal_info_label_bg"
+                android:button="@null"
+                android:paddingLeft="15dp"
+                android:text="旅行"
+                android:textColor="#ffffff"
+                android:textSize="18sp" />
+
+            <CheckBox
+                android:id="@+id/personal_info_label39"
+                android:layout_width="350dp"
+                android:layout_height="37dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/selector_personal_info_label_bg"
+                android:button="@null"
+                android:paddingLeft="15dp"
+                android:text="校园"
+                android:textColor="#ffffff"
+                android:textSize="18sp" />
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

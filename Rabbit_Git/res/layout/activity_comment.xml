@@ -1,0 +1,220 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#9dc8d7"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".CommentActivity" >
+
+
+    <RelativeLayout
+        android:id="@+id/comment_areaRL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#f1f0ed" >
+        <LinearLayout 
+            android:id="@+id/comment_info_areaLL"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:gravity="center_vertical">
+            <ImageView 
+                android:layout_marginLeft="10dp"
+                android:src="@drawable/portrait1"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                />
+            <TextView 
+                android:layout_marginLeft="15dp"
+                android:text="阿狸的故事"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#454444"
+                />
+        </LinearLayout>
+        
+            <TextView 
+                android:layout_below="@id/comment_info_areaLL"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#d5d4d0"
+        />
+
+        <RelativeLayout
+            android:layout_below="@+id/comment_info_areaLL"
+            android:id="@+id/comment_difficulty_areaRL"
+            android:layout_width="match_parent"
+            android:layout_height="60dp" >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@+id/comment_difficulty_state_wordTV"
+                android:orientation="horizontal" >
+
+                <Button
+                    android:id="@+id/comment_star1BT"
+                    android:layout_width="27dp"
+                    android:layout_height="27dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="2dp"
+                    android:background="@drawable/star_empty" />
+
+                <Button
+                    android:id="@+id/comment_star2BT"
+                    android:layout_width="27dp"
+                    android:layout_height="27dp"
+                    android:layout_marginRight="2dp"
+                    android:background="@drawable/star_empty" />
+
+                <Button
+                    android:id="@+id/comment_star3BT"
+                    android:layout_width="27dp"
+                    android:layout_height="27dp"
+                    android:layout_marginRight="2dp"
+                    android:background="@drawable/star_empty" />
+
+                <Button
+                    android:id="@+id/comment_star4BT"
+                    android:layout_width="27dp"
+                    android:layout_height="27dp"
+                    android:layout_marginRight="2dp"
+                    android:background="@drawable/star_empty" />
+
+                <Button
+                    android:id="@+id/comment_star5BT"
+                    android:layout_width="27dp"
+                    android:layout_height="27dp"
+                    android:layout_marginRight="2dp"
+                    android:background="@drawable/star_empty" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/comment_difficulty_state_wordTV"
+                style="bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:text="难度评价"
+                android:textColor="#000000"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/comment_difficultyTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:text="非常难"
+                android:textColor="#b4b4b4" />
+        </RelativeLayout>
+                
+        <TextView 
+                android:layout_below="@id/comment_difficulty_areaRL"
+       			android:layout_width="match_parent"
+        		android:layout_height="0.5dp"
+       			android:background="#d5d4d0"
+        />
+
+        <RelativeLayout
+            android:layout_below="@id/comment_difficulty_areaRL"
+            android:id="@+id/comment_liking_areaRL"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:gravity="center_vertical" >
+
+            <TextView
+                android:id="@+id/comment_liking_state_wordTV"
+                style="bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:text="喜欢程度"
+                android:textColor="#000000"
+                android:textSize="18sp" />
+
+            <TextView
+                 android:id="@+id/comment_likeTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:text="很差"
+                android:textColor="#b4b4b4" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/comment_liking_state_wordTV"
+                android:orientation="horizontal" >
+
+                <Button
+                    android:id="@+id/comment_heart1BT"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="4dp"
+                    android:background="@drawable/heart_empty" />
+
+                <Button
+                    android:id="@+id/comment_heart2BT"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginRight="4dp"
+                    android:background="@drawable/heart_empty" />
+
+                <Button
+                    android:id="@+id/comment_heart3BT"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginRight="4dp"
+                    android:background="@drawable/heart_empty" />
+
+                <Button
+                    android:id="@+id/comment_heart4BT"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginRight="4dp"
+                    android:background="@drawable/heart_empty" />
+
+                <Button
+                    android:id="@+id/comment_heart5BT"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginRight="4dp"
+                    android:background="@drawable/heart_empty" />
+            </LinearLayout>
+        </RelativeLayout>
+        
+        <TextView 
+        	android:layout_below="@id/comment_liking_areaRL"
+        	android:layout_width="match_parent"
+       		android:layout_height="0.5dp"
+        	android:background="#d5d4d0"
+        />
+
+        <TextView
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="5dp"
+            android:layout_below="@+id/comment_liking_areaRL"
+            android:text="对讨厌的东西表达态度，\r\n对适合的东西表示喜欢。\r\n成为更好的自己。\r\n记录自己的生活，你会成长的更快。\r\n ————	To Nutters."
+            android:textColor="#b4b4b4" />
+        
+    </RelativeLayout>
+</RelativeLayout>

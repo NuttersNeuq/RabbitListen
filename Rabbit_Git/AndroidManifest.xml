@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.nut.activity"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk android:minSdkVersion="16" android:targetSdkVersion="19"/>
+    
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.INTERNET" />	<!-- 联网权限 -->
+
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>
+    
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />   <!-- 开机自启权限 -->
+    
+    <permission android:protectionLevel="normal" android:name="oem.permission.SENDMAIL"/>
+
+    <application android:allowBackup="true" android:icon="@drawable/ic_launcher" android:theme="@style/AppTheme" android:label="坚果听力">
+        <service android:name="com.lfl.service.PlayService"></service>
+        <service android:name="com.lz.service.NotifyService" android:permission="oem.permission.SENDMAIL">
+            <intent-filter>
+                <action android:name="nut.service.NotifyService" />
+            </intent-filter>
+		</service>
+        <receiver android:name="com.lz.broadcast.NotifyReceiver" > 
+            <intent-filter android:priority="1000">
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="nut.broadcast.NotifyReceiver" />
+            </intent-filter>
+        </receiver>
+        
+        <activity android:name="com.lz.activity.WelcomeActivity" android:theme="@android:style/Theme.Holo.Light.NoActionBar"><intent-filter><action android:name="android.intent.action.MAIN" /><category android:name="android.intent.category.LAUNCHER" /></intent-filter></activity>
+        <activity android:name="cn.sharesdk.framework.ShareSDKUIShell" android:configChanges="keyboardHidden|orientation|screenSize" android:screenOrientation="portrait" android:theme="@android:style/Theme.Translucent.NoTitleBar" android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity android:name="com.lz.activity.NoteListActivity" android:label="@string/title_activity_note_list" android:logo="@drawable/actionbar_back"/>
+        
+        <activity
+            android:name="com.lz.activity.NoteDetailMyActivity"
+            android:logo="@drawable/actionbar_back" >
+        </activity>
+        <!-- 笔记提交 -->
+        <activity
+            android:name="com.lz.activity.NotePostActivity"
+            android:logo="@drawable/actionbar_back" >
+        </activity>
+        <!-- 问答列表 -->
+        <activity
+            android:name="com.lz.activity.QuestionListActivity"
+            android:logo="@drawable/actionbar_back" >
+        </activity>
+        <!-- 问答详细 -->
+        <activity
+            android:name="com.lz.activity.QuestionDetailActivity"
+            android:logo="@drawable/actionbar_back" >
+        </activity>
+        
+        <activity android:name="com.lz.activity.QuestionPostActivity" android:logo="@drawable/actionbar_back" />	<!-- 问答提交 -->
+        <activity android:name="com.lz.activity.BlogListActivity" android:logo="@drawable/actionbar_back" />		<!-- 广场列表 -->
+        <activity android:name="com.lz.activity.BlogDetailActivity" android:logo="@drawable/actionbar_back" />		<!-- 广场详细 -->
+        <activity android:name="com.lz.activity.BlogPostActivity" android:logo="@drawable/actionbar_back"/>			<!-- 广场提交 -->
+        <activity android:name="com.lz.activity.PersonalInfoActivity" android:logo="@drawable/actionbar_back" /> 	<!-- 个人页面 -->
+        <activity android:name="com.lz.activity.MyBlogActivity" android:logo="@drawable/actionbar_back"/>  			<!-- 我的帖子 -->
+        <activity android:name="com.lz.activity.MyQuestionActivity" android:logo="@drawable/actionbar_back"/>  		<!-- 我的问题 -->
+        <activity android:name="com.lz.activity.MyNoteActivity" android:logo="@drawable/actionbar_back"/>  			<!-- 我的笔记 -->
+        <activity android:name="com.lz.activity.TreeActivity" android:logo="@drawable/actionbar_back"/>
+        <activity android:name="com.lz.activity.FanActivity" android:logo="@drawable/actionbar_back"/>
+        <activity android:name="com.lz.activity.TreeNoteActivity" android:logo="@drawable/actionbar_back"/>
+        <activity android:name="com.lz.activity.NoteDetailOtherActivity" android:logo="@drawable/actionbar_back"/>
+        <activity android:name="com.lz.activity.CommentActivity" android:logo="@drawable/actionbar_back"/>
+        <activity android:name="com.lz.activity.FeedBackActivity" android:logo="@drawable/actionbar_back"/>
+        <activity android:name="com.lz.activity.LoginActivity"/>
+        <activity android:name="com.lz.activity.ShareActivity"/> 													<!-- 分享页面 -->
+        <activity android:name="com.lz.activity.RegisterActivity"/>
+        <activity android:name="com.lz.activity.GuideOneActvity"/>
+        <activity android:name="com.lz.activity.GuideTwoActivity"/>
+        <activity android:name="com.lz.activity.GuideThreeActivity"/>
+        <activity android:name="com.lz.activity.PersonalInfoLabel" android:logo="@drawable/actionbar_back"/>
+        
+        
+        
+        <!-- =======================lfl======================== -->
+        
+        
+        <activity android:theme="@android:style/Theme.Holo.Light.NoActionBar" android:name="com.lfl.activity.Player"></activity>
+        <activity android:theme="@android:style/Theme.Holo.Light.NoActionBar" android:name="com.lfl.activity.JingTingActivity"></activity>
+        <activity android:theme="@android:style/Theme.Holo.Light.NoActionBar" android:name="com.lfl.activity.Diyijiemian"></activity>
+        <activity android:theme="@android:style/Theme.Holo.Light.NoActionBar" android:name="com.lfl.activity.Jinrituijian"></activity>
+        <activity android:theme="@android:style/Theme.Holo.Light.NoActionBar" android:name="com.lfl.activity.Danciben"></activity>
+        <activity android:theme="@android:style/Theme.Holo.Light.NoActionBar" android:name="com.lfl.activity.NewLocalPlayer"></activity>
+        <activity android:theme="@android:style/Theme.Holo.Light.NoActionBar" android:name="com.lfl.activity.Juku"></activity>
+        <activity android:theme="@android:style/Theme.Holo.Light.NoActionBar" android:name="com.lfl.activity.Fanting"></activity>
+        <activity android:theme="@android:style/Theme.Holo.Light.NoActionBar" android:name="com.lfl.activity.Fanting_dingyue"></activity>
+        <activity android:theme="@android:style/Theme.Holo.Light.NoActionBar" android:name="com.lfl.activity.Fanting_paihang"></activity>
+        <activity android:theme="@android:style/Theme.Holo.Light.NoActionBar" android:name="com.lfl.activity.Fanting_search"></activity>
+        <activity android:theme="@android:style/Theme.Holo.Light.NoActionBar" android:name="com.lfl.activity.Fanting_tuijian"></activity>
+        <activity android:theme="@android:style/Theme.Holo.Light.NoActionBar" android:name="com.lfl.activity.OnlinePlayer"></activity>
+        <activity android:theme="@android:style/Theme.Holo.Light.NoActionBar" android:name="com.lfl.activity.Tingliku_bendi"></activity>
+        <activity android:theme="@android:style/Theme.Holo.Light.NoActionBar" android:name="com.lfl.activity.MyMp3Store"></activity>
+        <activity android:theme="@android:style/Theme.Holo.Light.NoActionBar" android:name="com.lfl.activity.Tingliku_bendi_bianji"></activity>
+        <activity android:theme="@android:style/Theme.Holo.Light.NoActionBar" android:name="com.lfl.activity.Fanting_dingyue_add"></activity>
+        <activity android:theme="@android:style/Theme.Holo.Light.NoActionBar" android:name="com.lfl.activity.WordsBrowser"></activity>
+        <activity android:name="com.lfl.activity.Fanting_Paihang_Course_Details" android:theme="@android:style/Theme.Holo.Light.NoActionBar"></activity>
+        <activity android:theme="@android:style/Theme.Holo.Light.NoActionBar" android:name="com.lfl.activity.Tingliku_Shoucang"></activity>
+        <activity android:theme="@android:style/Theme.Holo.Light.NoActionBar" android:name="com.lfl.activity.Tingliku_JingTing"></activity>
+        <activity android:name="com.lfl.activity.Help" android:theme="@android:style/Theme.Holo.Light.NoActionBar"></activity>
+        
+    </application>
+</manifest>

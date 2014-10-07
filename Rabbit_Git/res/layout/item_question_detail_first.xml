@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="#f8f8f8"
+    android:descendantFocusability="blocksDescendants"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#dcdcdc"
+        android:padding="2dp" >
+
+        <ImageView
+            android:id="@+id/question_detail_portraitIV"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="8dp"
+            android:background="@null"
+            android:src="@drawable/portrait1" />
+
+        <TextView
+            android:id="@+id/question_detail_nicknameTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/question_detail_portraitIV"
+            android:layout_marginLeft="15dp"
+            android:layout_toRightOf="@+id/question_detail_portraitIV"
+            android:text="奔跑的大象"
+            android:textColor="#000000"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/question_detail_tiemTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/question_detail_nicknameTV"
+            android:layout_below="@+id/question_detail_nicknameTV"
+            android:text="一天前"
+            android:textColor="#b5b5b5"
+            android:textSize="10sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:text="楼主"
+            android:textColor="#b5b5b5" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/question_detail_titleTV"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:text="Take up的用法"
+            android:textColor="#000000"
+            android:textSize="18sp" />
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="0.8dp"
+            android:layout_marginTop="15dp"
+            android:background="#d5d4d0" />
+
+        <TextView
+            android:id="@+id/question_detail_contentTV"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="15dp"
+            android:inputType="textMultiLine"
+            android:text=" 1.开始从事When did he take up football?他是什么时候开始踢足球的\r\n2.占用；获取Tkhe work took up all his time.那工作花费了他所有的时间\r\ntake-up名词\r\n1.拿起；抬起；举起\r\n2.拉紧；收紧；卷紧\r\n3.卷片装置\r\n4.织缩；卷取"
+            android:textColor="#423e3e" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="0.8dp"
+        android:layout_marginTop="15dp"
+        android:background="#d5d4d0" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="45dp"
+        android:background="#f8f8f8"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/quesiton_detail_followBT"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:background="@drawable/selector_forbutton"
+            android:textColor="#423e3e"
+            android:text="关注问题"
+            android:textSize="13sp" />
+
+        <TextView
+            android:layout_width="0.8dp"
+            android:layout_height="fill_parent"
+            android:background="#d5d4d0" />
+
+        <Button
+            android:id="@+id/question_detail_replyBT"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:background="@drawable/selector_forbutton"
+            android:textColor="#423e3e"
+            android:text="回答问题"
+            android:textSize="13sp" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="0.8dp"
+        android:background="#d5d4d0" />
+
+</LinearLayout>

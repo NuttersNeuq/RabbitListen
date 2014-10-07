@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:descendantFocusability="blocksDescendants"
+    android:orientation="horizontal"
+    android:paddingTop="10dp"
+    android:paddingBottom="10dp"
+    android:paddingRight="0dp" >
+
+    <TextView
+        android:id="@+id/fanting_paihang_listitem_rank_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:text="8"
+        android:textColor="#42c0fb"
+        android:textSize="25sp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toLeftOf="@+id/fanting_paihang_listitem_menu_imageview"
+            android:gravity="center_vertical"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/fanting_paihang_title_textview"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_marginLeft="0dp"
+                android:layout_marginTop="5dp"
+                android:ellipsize="end"
+                android:paddingRight="5dp"
+                android:singleLine="true"
+                android:text="The Best Man Speech"
+                android:textColor="#000000"
+                android:textSize="15sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/fanting_paihang_listitem_duration_textview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="0dp"
+                    android:text="03:11"
+                    android:textColor="#979797"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/fanting_paihang_listitem_size_textview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:text="5.20MB"
+                    android:textColor="#979797"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/fanting_paihang_listitem_difficulty_textview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:text="Lev 4.5"
+                    android:textColor="#41557d"
+                    android:textSize="12sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/fanting_paihang_listitem_menu_imageview"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:paddingBottom="12dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="12dp"
+            android:src="@drawable/fanting_tuijian_listitem_menu" />
+    </RelativeLayout>
+
+</LinearLayout>
