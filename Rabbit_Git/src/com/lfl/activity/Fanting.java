@@ -74,7 +74,7 @@ public class Fanting extends TabActivity
 					secondButton.setCompoundDrawables(null, secondNDrawable, null, null);
 					thirdButton.setCompoundDrawables(null, thirdNDrawable, null, null);
 					forthButton.setCompoundDrawables(null, forthNDrawable, null, null);
-					firstButton.setTextColor(Color.parseColor("#ffffff"));
+					firstButton.setTextColor(Color.parseColor("#00bad2"));
 					secondButton.setTextColor(Color.parseColor("#8f8a8a"));
 					thirdButton.setTextColor(Color.parseColor("#8f8a8a"));
 					forthButton.setTextColor(Color.parseColor("#8f8a8a"));
@@ -86,7 +86,7 @@ public class Fanting extends TabActivity
 					thirdButton.setCompoundDrawables(null, thirdNDrawable, null, null);
 					forthButton.setCompoundDrawables(null, forthNDrawable, null, null);
 					firstButton.setTextColor(Color.parseColor("#8f8a8a"));
-					secondButton.setTextColor(Color.parseColor("#ffffff"));
+					secondButton.setTextColor(Color.parseColor("#00bad2"));
 					thirdButton.setTextColor(Color.parseColor("#8f8a8a"));
 					forthButton.setTextColor(Color.parseColor("#8f8a8a"));
 					tabHost.setCurrentTab(1);
@@ -98,7 +98,7 @@ public class Fanting extends TabActivity
 					forthButton.setCompoundDrawables(null, forthNDrawable, null, null);
 					firstButton.setTextColor(Color.parseColor("#8f8a8a"));
 					secondButton.setTextColor(Color.parseColor("#8f8a8a"));
-					thirdButton.setTextColor(Color.parseColor("#ffffff"));
+					thirdButton.setTextColor(Color.parseColor("#00bad2"));
 					forthButton.setTextColor(Color.parseColor("#8f8a8a"));
 					tabHost.setCurrentTab(2);
 					break;
@@ -110,7 +110,7 @@ public class Fanting extends TabActivity
 					firstButton.setTextColor(Color.parseColor("#8f8a8a"));
 					secondButton.setTextColor(Color.parseColor("#8f8a8a"));
 					thirdButton.setTextColor(Color.parseColor("#8f8a8a"));
-					forthButton.setTextColor(Color.parseColor("#ffffff"));
+					forthButton.setTextColor(Color.parseColor("#00bad2"));
 					tabHost.setCurrentTab(3); 
 					break;
 				}

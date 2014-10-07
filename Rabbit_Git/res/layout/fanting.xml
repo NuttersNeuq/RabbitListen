@@ -8,6 +8,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical" >
+        
 
         <FrameLayout
             android:id="@android:id/tabcontent"
@@ -21,6 +22,12 @@
             android:layout_height="wrap_content"
             android:layout_weight="0"
             android:visibility="gone" />
+        
+        <ImageView 
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#e08f8a8a"
+            />
 
         <RadioGroup
             android:id="@+id/fanting_tab_radiogroup"
@@ -28,7 +35,7 @@
             android:layout_height="wrap_content"
             android:paddingLeft="0dp"
             android:layout_gravity="bottom"
-            android:background="#A1C6D0"
+            android:background="#eaedef"
             android:gravity="center_vertical"
             android:orientation="horizontal" >
 
@@ -37,7 +44,7 @@
                 style="@style/fanting_tab_style"
                 android:layout_marginTop="2dp"
                 android:drawableTop="@drawable/fanting_tab_tuijian_selected"
-                android:textColor="#ffffff"
+                android:textColor="#00bad2"
                 android:text="推荐" />
 
             <RadioButton
