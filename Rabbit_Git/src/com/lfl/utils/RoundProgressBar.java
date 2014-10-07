@@ -43,9 +43,9 @@ public class RoundProgressBar extends View
 
 		TypedArray mTypedArray = context.obtainStyledAttributes(attrs, R.styleable.RoundProgressBar);
 		roundColor = mTypedArray.getColor(R.styleable.RoundProgressBar_roundColor,
-				Color.parseColor("#" + alpha + "bc8f8f"));
+				Color.parseColor("#" + alpha + "00bad2"));
 		roundProgressColor = mTypedArray.getColor(R.styleable.RoundProgressBar_roundProgressColor,
-				Color.parseColor("#" + alpha + "cd5c5c"));
+				Color.parseColor("#" + alpha + "04a5ba"));
 		textColor = mTypedArray.getColor(R.styleable.RoundProgressBar_textColor, Color.WHITE);
 		textSize = mTypedArray.getDimension(R.styleable.RoundProgressBar_textSize, 15);
 		roundWidth = mTypedArray.getDimension(R.styleable.RoundProgressBar_roundWidth, 45);

@@ -3,12 +3,14 @@
     android:id="@+id/slideMenu_linearLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background"
+    android:background="#00bad2"
     android:orientation="vertical" >
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" >
+        android:layout_height="wrap_content"
+        android:paddingBottom="10dp"
+        android:background="#eaedef" >
 
         <ImageView
             android:id="@+id/cehua_touxiang_imageView"
@@ -18,8 +20,7 @@
             android:layout_marginLeft="15dp"
             android:layout_marginTop="20dp"
             android:contentDescription="@null"
-            android:src="#ffffff" 
-            />
+            android:src="#ffffff" />
 
         <TextView
             android:id="@+id/cehua_user_name_textview"
@@ -29,7 +30,7 @@
             android:layout_marginTop="30dp"
             android:layout_toRightOf="@+id/cehua_touxiang_imageView"
             android:text="坚果"
-            android:textColor="#ffffff"
+            android:textColor="#455569"
             android:textSize="25sp" />
 
         <TextView
@@ -40,14 +41,13 @@
             android:layout_below="@+id/cehua_user_name_textview"
             android:layout_marginTop="5dp"
             android:text="竭尽全力看起来毫不费力"
-            android:textColor="#ffffff" />
+            android:textColor="#455569" />
     </RelativeLayout>
 
     <RelativeLayout
         android:id="@+id/cehua_danciben_relativeLayout"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:layout_marginTop="5dp"
         android:background="@drawable/lfl_cehua_selector"
         android:clickable="true"
         android:gravity="center_vertical"
@@ -209,57 +209,7 @@
             android:layout_centerVertical="true"
             android:layout_marginLeft="23dp"
             android:layout_toRightOf="@+id/imageView1"
-            android:text="坚果树"
-            android:textColor="#ffffff"
-            android:textSize="17sp"
-            android:textStyle="bold" />
-    </RelativeLayout>
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="#30000000"
-        android:gravity="center_vertical"
-        android:paddingBottom="10dp"
-        android:paddingLeft="20dp"
-        android:paddingTop="10dp"
-        android:text="SETTINGS"
-        android:textColor="#ffffff"
-        android:textSize="17sp"
-        android:textStyle="normal" />
-
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:gravity="center_vertical"
-        android:paddingBottom="10dp"
-        android:paddingLeft="20dp"
-        android:paddingTop="10dp" >
-
-        <ImageView
-            android:id="@+id/imageView1"
-            android:layout_width="25dp"
-            android:layout_height="25dp"
-            android:contentDescription="@null"
-            android:src="@drawable/cehua_bell" />
-
-        <Button
-            android:id="@+id/slideMenu_switch_button"
-            android:layout_width="45dp"
-            android:layout_height="35dp"
-            android:layout_alignParentRight="true"
-            android:layout_centerVertical="true"
-            android:layout_marginRight="15dp"
-            android:background="@drawable/slidemenu_switch_off" />
-
-        <TextView
-            android:id="@+id/textView1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
-            android:layout_marginLeft="23dp"
-            android:layout_toRightOf="@+id/imageView1"
-            android:text="学习提醒"
+            android:text="讨论组"
             android:textColor="#ffffff"
             android:textSize="17sp"
             android:textStyle="bold" />
@@ -313,45 +263,6 @@
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:src="#10000000" />
-
-    <RelativeLayout
-        android:id="@+id/cehua_bangzhu_relativeLayout"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:background="@drawable/lfl_cehua_selector"
-        android:clickable="true"
-        android:gravity="center_vertical"
-        android:paddingBottom="10dp"
-        android:paddingLeft="20dp"
-        android:paddingTop="10dp" >
-
-        <ImageView
-            android:id="@+id/imageView1"
-            android:layout_width="25dp"
-            android:layout_height="25dp"
-            android:contentDescription="@null"
-            android:src="@drawable/cehua_help" />
-
-        <ImageView
-            android:layout_width="15dp"
-            android:layout_height="15dp"
-            android:layout_alignParentRight="true"
-            android:layout_centerVertical="true"
-            android:layout_marginRight="15dp"
-            android:src="@drawable/cehua_sanjiao" />
-
-        <TextView
-            android:id="@+id/textView1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
-            android:layout_marginLeft="23dp"
-            android:layout_toRightOf="@+id/imageView1"
-            android:text="帮助"
-            android:textColor="#ffffff"
-            android:textSize="17sp"
-            android:textStyle="bold" />
-    </RelativeLayout>
 
     <RelativeLayout
         android:id="@+id/cehua_dengchu_relativeLayout"

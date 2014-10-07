@@ -1,8 +1,9 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/diyijiemian_background" >
+    android:background="@drawable/diyijiemian_background"
+    android:orientation="vertical" >
 
     <RelativeLayout
         android:id="@+id/diyijiemian_shangtiao_relativelayout"
@@ -39,87 +40,81 @@
             android:src="@drawable/diyijiemian_cehua_button" />
     </RelativeLayout>
 
-    <!-- 大小别改了~只可动Max和setText -->
-
-    <com.lfl.utils.RoundProgressBar
-        android:id="@+id/diyijiemian_progressBar"
-        android:layout_width="240dp"
-        android:layout_height="240dp"
-        android:layout_below="@+id/diyijiemian_shangtiao_relativelayout"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="23dp" />
-    <!-- max -->
-
-    <TextView
-        android:id="@+id/diyijiemian_saying_textview"
+    <RelativeLayout
+        android:id="@+id/diyijiemian_widgets_bar"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/diyijiemian_progressBar"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="26dp"
-        android:paddingLeft="10dp"
-        android:gravity="center_horizontal"
-        android:paddingRight="10dp"
-        android:text="BE THE CHANGE YOU WANT TO SEE IN THE WORLD  --- GANDI"
-        android:textColor="#ffffff"
-        android:textSize="15sp"
-        android:textStyle="bold" />
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:layout_weight="2" >
 
-    <LinearLayout
-        android:id="@+id/diyijiemian_fanting_linearLayout"
-        android:layout_width="match_parent"
-        android:layout_height="45dp"
-        android:layout_alignParentLeft="true"
-        android:layout_below="@+id/diyijiemian_saying_textview"
-        android:layout_marginTop="22dp"
-        android:background="@drawable/lfl_cehua_selector"
-        android:clickable="true"
-        android:orientation="horizontal" >
-
-        <ImageView
-            android:layout_width="50dp"
-            android:layout_height="match_parent"
-            android:src="@drawable/diyi_fangtingbutton" />
+        <com.lfl.utils.RoundProgressBar
+            android:id="@+id/diyijiemian_progressBar"
+            android:layout_width="240dp"
+            android:layout_height="240dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="23dp" />
 
         <TextView
+            android:id="@+id/diyijiemian_saying_textview"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginLeft="10dp"
-            android:background="@drawable/fantingda"
-            android:gravity="center_vertical"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/diyijiemian_progressBar"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="26dp"
+            android:gravity="center_horizontal"
             android:paddingLeft="10dp"
-            android:text="泛 听"
+            android:paddingRight="10dp"
+            android:text="BE THE CHANGE YOU WANT TO SEE IN THE WORLD  --- GANDI"
             android:textColor="#ffffff"
-            android:textSize="25sp" />
-    </LinearLayout>
+            android:textSize="15sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
 
     <LinearLayout
-        android:id="@+id/diyijiemian_jingting_linearLayout"
+        android:id="@+id/diyijiemian_button_bar"
         android:layout_width="match_parent"
-        android:layout_height="45dp"
-        android:layout_alignParentLeft="true"
-        android:layout_below="@+id/diyijiemian_fanting_linearLayout"
-        android:layout_marginTop="5dp"
-        android:background="@drawable/lfl_cehua_selector"
-        android:clickable="true"
+        android:layout_height="0dp"
+        android:layout_marginTop="22dp"
+        android:layout_weight="1"
+        android:background="#c0eaedef"
+        android:gravity="center_vertical"
         android:orientation="horizontal" >
 
-        <TextView
+        <LinearLayout
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_marginRight="10dp"
-            android:layout_weight="0.99"
-            android:background="@drawable/fantingda"
-            android:gravity="center_vertical|right"
-            android:paddingRight="10dp"
-            android:text="精 听"
-            android:textColor="#ffffff"
-            android:textSize="25sp" />
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="15dp" >
 
-        <ImageView
-            android:layout_width="50dp"
+            <Button
+                android:id="@+id/diyijiemian_fanting_button"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/lfl_diyijiemian_buttons_selector"
+                android:text="泛听"
+                android:textColor="#ffffff"
+                android:textSize="40sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:src="@drawable/diyi_jingtingbutton" />
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="15dp" >
+
+            <Button
+                android:id="@+id/diyijiemian_jingting_button"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/lfl_diyijiemian_buttons_selector"
+                android:text="精听"
+                android:textColor="#ffffff"
+                android:textSize="40sp" />
+        </LinearLayout>
     </LinearLayout>
 
-</RelativeLayout>
+</LinearLayout>

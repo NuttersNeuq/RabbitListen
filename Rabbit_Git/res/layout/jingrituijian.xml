@@ -8,7 +8,7 @@
         android:id="@+id/linearLayout1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#a5c8e9"
+        android:background="#00bad2"
         android:orientation="vertical" >
 
         <RelativeLayout
@@ -66,7 +66,7 @@
                 android:singleLine="false"
                 android:gravity="left"
                 android:text="WHAT HURTS MORE ,THE PAIN OF HARD WORK OR THE PAIN OF REGRET?"
-                android:textColor="#41557d"
+                android:textColor="#ffffff"
                 android:textSize="15sp"
                 android:textStyle="bold" />
         </LinearLayout>
@@ -100,7 +100,7 @@
                 android:layout_height="wrap_content"
                 android:paddingLeft="20dp"
                 android:text="一筐新鲜的坚果出炉了"
-                android:textColor="#41557d" />
+                android:textColor="#ffffff" />
         </LinearLayout>
     </LinearLayout>
 

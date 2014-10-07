@@ -65,10 +65,9 @@ public class Diyijiemian extends Activity
 	private NetService netService;
 
 	private SlidingMenu slidingMenu;
-	private Button menuSwitchButton;
+//	private Button menuSwitchButton;
 	private View slideMenuView;
-	private LinearLayout jingtingLinearLayout;
-	private LinearLayout fantingLinearLayout;
+	private Button jingtingButton,fantingButton;
 	private ImageView headsetImageView;
 	private RelativeLayout jukuLayout;
 	private RelativeLayout dancibenLayout;
@@ -77,7 +76,7 @@ public class Diyijiemian extends Activity
 	private RoundProgressBar progressBar;
 	private ImageView menuImageView;
 	private RelativeLayout jianguoshuLayout;
-	private RelativeLayout helpLayout;
+//	private RelativeLayout helpLayout;
 	private Context mContext;
 
 	private ImageView userPortraitImageView;
@@ -164,6 +163,8 @@ public class Diyijiemian extends Activity
 		headsetImageView = (ImageView) findViewById(R.id.diyijiemian_headset_imageview);
 		progressBar = (RoundProgressBar) findViewById(R.id.diyijiemian_progressBar);
 		menuImageView = (ImageView) findViewById(R.id.diyijiemian_menu_imageview);
+		jingtingButton = (Button) findViewById(R.id.diyijiemian_jingting_button);
+		fantingButton = (Button) findViewById(R.id.diyijiemian_fanting_button);
 
 		progressBar.setOnClickListener(new OnClickListener()
 		{
@@ -324,14 +325,12 @@ public class Diyijiemian extends Activity
 		slidingMenu.setMenu(R.layout.cehua_menu);
 		slideMenuView = slidingMenu.getMenu();
 
-		jingtingLinearLayout = (LinearLayout) findViewById(R.id.diyijiemian_jingting_linearLayout);
-		fantingLinearLayout = (LinearLayout) findViewById(R.id.diyijiemian_fanting_linearLayout);
-		menuSwitchButton = (Button) slideMenuView.findViewById(R.id.slideMenu_switch_button);
+//		menuSwitchButton = (Button) slideMenuView.findViewById(R.id.slideMenu_switch_button);
 		jukuLayout = (RelativeLayout) slideMenuView.findViewById(R.id.cehua_shoucangdejuzi_relativeLayout);
 		dancibenLayout = (RelativeLayout) slideMenuView.findViewById(R.id.cehua_danciben_relativeLayout);
 		tinglikuLayout = (RelativeLayout) slideMenuView.findViewById(R.id.cehua_wodetingliku_relativeLayout);
 		logoutLayout = (RelativeLayout) slideMenuView.findViewById(R.id.cehua_dengchu_relativeLayout);
-		helpLayout = (RelativeLayout) slideMenuView.findViewById(R.id.cehua_bangzhu_relativeLayout);
+//		helpLayout = (RelativeLayout) slideMenuView.findViewById(R.id.cehua_bangzhu_relativeLayout);
 
 		jianguoshuLayout = (RelativeLayout) slideMenuView.findViewById(R.id.cehua_jianguoshu_relativeLayout);
 		userPortraitImageView = (ImageView) slideMenuView.findViewById(R.id.cehua_touxiang_imageView);
@@ -339,16 +338,16 @@ public class Diyijiemian extends Activity
 		userMottoTextView = (TextView) slideMenuView.findViewById(R.id.cehua_user_motto_textview);
 		cehuaMenuFeedbackLL=(RelativeLayout) slideMenuView.findViewById(R.id.cehua_fankui_relativeLayout);
 		
-		helpLayout.setOnClickListener(new OnClickListener()
-		{
-			
-			@Override
-			public void onClick(View v)
-			{
-				Intent intent = new Intent(mContext, Help.class);
-				startActivity(intent); 
-			}
-		});
+//		helpLayout.setOnClickListener(new OnClickListener()
+//		{
+//			
+//			@Override
+//			public void onClick(View v)
+//			{
+//				Intent intent = new Intent(mContext, Help.class);
+//				startActivity(intent); 
+//			}
+//		});
 		
 		logoutLayout.setOnClickListener(new OnClickListener()
 		{
@@ -379,13 +378,13 @@ public class Diyijiemian extends Activity
 			}
 		});
 		
-		//根据是否打开学习提醒设置状态
-		if(isSwitchOn)
-			//开启了
-			menuSwitchButton.setBackgroundResource(R.drawable.slidemenu_switch_on);
-		else
-			//没有开启
-			menuSwitchButton.setBackgroundResource(R.drawable.slidemenu_switch_off);
+//		//根据是否打开学习提醒设置状态
+//		if(isSwitchOn)
+//			//开启了
+//			menuSwitchButton.setBackgroundResource(R.drawable.slidemenu_switch_on);
+//		else
+//			//没有开启
+//			menuSwitchButton.setBackgroundResource(R.drawable.slidemenu_switch_off);
 		
 		cehuaMenuFeedbackLL.setOnClickListener(new OnClickListener() {
 			public void onClick(View v) {
@@ -468,7 +467,7 @@ public class Diyijiemian extends Activity
 			}
 		});
 
-		fantingLinearLayout.setOnClickListener(new OnClickListener()
+		fantingButton.setOnClickListener(new OnClickListener()
 		{
 
 			@Override
@@ -490,7 +489,7 @@ public class Diyijiemian extends Activity
 			}
 		});
 
-		jingtingLinearLayout.setOnClickListener(new OnClickListener()
+		jingtingButton.setOnClickListener(new OnClickListener()
 		{
 
 			@Override
@@ -502,69 +501,69 @@ public class Diyijiemian extends Activity
 			}
 		});
 
-		menuSwitchButton.setOnClickListener(new OnClickListener()
-		{
-
-			public void onClick(View v)
-			{
-				if (!isSwitchOn)
-				{
-					//开启
-					menuSwitchButton.setBackgroundResource(R.drawable.slidemenu_switch_on);
-					isSwitchOn = true;
-					//将状态写回到本地文件
-					FileWriter fw;
-					try {
-						File notifyToggleFile=new File(Environment.getExternalStorageDirectory()+"/nut/notifytoggle.nut");
-						fw = new FileWriter(notifyToggleFile);
-						fw.write("true");
-						fw.flush();
-					} catch (IOException e1) {
-						e1.printStackTrace();
-						System.out.println("打开");
-					}
-					//将状态保存到服务器
-					new Thread(){
-						public void run(){
-							try {
-								netService.getNotifyToggle(true);
-								StaticInfos.notifyToggle="true";
-							} catch (Exception e) {
-								e.printStackTrace();
-							
-							}
-						}
-					}.start();
-				}
-				else
-				{	//关闭
-					menuSwitchButton.setBackgroundResource(R.drawable.slidemenu_switch_off);
-					isSwitchOn = false;
-					//将状态协会到本地文件
-					FileWriter fw;
-					try {
-						File notifyToggleFile=new File(Environment.getExternalStorageDirectory()+"/nut/notifytoggle.nut");
-						fw = new FileWriter(notifyToggleFile);
-						fw.write("false");
-						fw.flush();
-					} catch (IOException e1) {
-						System.out.println("取消");
-						e1.printStackTrace();
-					}
-					//将状态保存到服务器
-					new Thread(){
-						public void run(){
-							try {
-								netService.getNotifyToggle(false);
-								StaticInfos.notifyToggle="false";
-							} catch (Exception e) {
-								e.printStackTrace();
-							}
-						}
-					}.start();
-				}
-			}
-		});
+//		menuSwitchButton.setOnClickListener(new OnClickListener()
+//		{
+//
+//			public void onClick(View v)
+//			{
+//				if (!isSwitchOn)
+//				{
+//					//开启
+//					menuSwitchButton.setBackgroundResource(R.drawable.slidemenu_switch_on);
+//					isSwitchOn = true;
+//					//将状态写回到本地文件
+//					FileWriter fw;
+//					try {
+//						File notifyToggleFile=new File(Environment.getExternalStorageDirectory()+"/nut/notifytoggle.nut");
+//						fw = new FileWriter(notifyToggleFile);
+//						fw.write("true");
+//						fw.flush();
+//					} catch (IOException e1) {
+//						e1.printStackTrace();
+//						System.out.println("打开");
+//					}
+//					//将状态保存到服务器
+//					new Thread(){
+//						public void run(){
+//							try {
+//								netService.getNotifyToggle(true);
+//								StaticInfos.notifyToggle="true";
+//							} catch (Exception e) {
+//								e.printStackTrace();
+//							
+//							}
+//						}
+//					}.start();
+//				}
+//				else
+//				{	//关闭
+//					menuSwitchButton.setBackgroundResource(R.drawable.slidemenu_switch_off);
+//					isSwitchOn = false;
+//					//将状态协会到本地文件
+//					FileWriter fw;
+//					try {
+//						File notifyToggleFile=new File(Environment.getExternalStorageDirectory()+"/nut/notifytoggle.nut");
+//						fw = new FileWriter(notifyToggleFile);
+//						fw.write("false");
+//						fw.flush();
+//					} catch (IOException e1) {
+//						System.out.println("取消");
+//						e1.printStackTrace();
+//					}
+//					//将状态保存到服务器
+//					new Thread(){
+//						public void run(){
+//							try {
+//								netService.getNotifyToggle(false);
+//								StaticInfos.notifyToggle="false";
+//							} catch (Exception e) {
+//								e.printStackTrace();
+//							}
+//						}
+//					}.start();
+//				}
+//			}
+//		});
 	}
 
 	private void fetchDataOfProgressBar()
