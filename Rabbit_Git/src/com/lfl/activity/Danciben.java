@@ -28,6 +28,7 @@ import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.PopupWindow;
 import android.widget.RelativeLayout;
+import android.widget.PopupWindow.OnDismissListener;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -60,9 +61,40 @@ public class Danciben extends Activity
 		public void onItemClick(AdapterView<?> arg0, View arg1, int position, long arg3)
 		{
 			View jieshiView = getLayoutInflater().inflate(R.layout.danciben_jieshi_popview, null);
+			View menuBackgroundView = getLayoutInflater().inflate(R.layout.popupmenu_black_background, null);
+			RelativeLayout jieshiBlankLayout = (RelativeLayout) jieshiView
+					.findViewById(R.id.danciben_jieshi_popview_blank_relativelayout);
+			final PopupWindow backgroundWindow = new PopupWindow(menuBackgroundView,
+					LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.MATCH_PARENT);
 			final PopupWindow jieshiPopupWindow = new PopupWindow(jieshiView, LayoutParams.MATCH_PARENT,
 					LayoutParams.MATCH_PARENT, true);
+			jieshiPopupWindow.setAnimationStyle(R.style.AnimBottom);
 			jieshiPopupWindow.setTouchable(true);
+			backgroundWindow.setAnimationStyle(R.style.AnimPopupMenuBackground);
+
+			jieshiPopupWindow.setOnDismissListener(new OnDismissListener()
+			{
+
+				@Override
+				public void onDismiss()
+				{
+					backgroundWindow.dismiss();
+					mediaPlayer.stop();
+					mediaPlayer.releaseAudioPlayer();
+				}
+			});
+			
+			jieshiBlankLayout.setOnClickListener(new OnClickListener()
+			{
+				
+				@Override
+				public void onClick(View v)
+				{
+					jieshiPopupWindow.dismiss();
+				}
+			});
+
+			backgroundWindow.showAtLocation(arg1, Gravity.CENTER, 0, 0);
 			jieshiPopupWindow.showAtLocation(arg1, Gravity.BOTTOM, 0, 0);
 
 			TextView wordTextView = (TextView) jieshiView.findViewById(R.id.word_textview);
@@ -70,7 +102,6 @@ public class Danciben extends Activity
 			final TextView sentenceTextView = (TextView) jieshiView
 					.findViewById(R.id.sentence_and_translation_textview);
 			TextView positionTextView = (TextView) jieshiView.findViewById(R.id.position_textview);
-			RelativeLayout blankLayout = (RelativeLayout) jieshiView.findViewById(R.id.layout1);
 
 			final WordInfo wInfo = wordInfos.get(position);
 			wordTextView.setTypeface(Typeface.createFromAsset(getAssets(), "font/segoeui.ttf"));
@@ -79,17 +110,6 @@ public class Danciben extends Activity
 			sentenceTextView.setText(wInfo.getSentenceInfo().getSentence() + "\n"
 					+ wInfo.getSentenceInfo().getTranslation());
 			positionTextView.setText(wInfo.getSentenceInfo().getMp3Name());
-			blankLayout.setOnClickListener(new OnClickListener()
-			{
-
-				@Override
-				public void onClick(View v)
-				{
-					jieshiPopupWindow.dismiss();
-					mediaPlayer.stop();
-					mediaPlayer.releaseAudioPlayer();
-				}
-			});
 			sentenceTextView.setOnClickListener(new OnClickListener()
 			{
 				int stopPos = wInfo.getSentenceInfo().getEndPos();
