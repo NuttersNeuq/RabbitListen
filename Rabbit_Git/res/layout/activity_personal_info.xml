@@ -168,7 +168,7 @@
                     android:layout_height="80dp"
                     android:layout_marginLeft="5dp"
                     android:layout_marginTop="5dp"
-                    android:src="@drawable/moerduo" />
+                    android:src="@drawable/moerduo_new" />
 
                 <TextView
                     android:id="@+id/personal_info_moerduo_timefromTV"
@@ -201,7 +201,7 @@
                     android:layout_alignParentRight="true"
                     android:text="minutes"
                     android:layout_marginRight="10dp"
-                    android:textColor="#42c0fb"
+                    android:textColor="#00bad2"
                     android:textSize="18sp"
                     android:textStyle="bold" />
 
@@ -215,7 +215,7 @@
                     <TextView
                     	android:id="@+id/personal_info_moerduo_timeallTV"
                    		android:text="4"
-                   		android:textColor="#42c0fb"
+                   		android:textColor="#00bad2"
                     	android:textSize="35sp"
                     	android:layout_width="wrap_content"
                     	android:layout_height="wrap_content"
@@ -265,7 +265,7 @@
                     android:layout_marginTop="12dp"
                     android:layout_marginRight="5dp"
                     android:text="42min"
-                    android:textColor="#42c0fb"
+                    android:textColor="#00bad2"
                     android:textSize="35sp"
                     android:textStyle="bold" />
 
@@ -277,7 +277,7 @@
                     android:layout_alignBottom="@+id/personal_info_moerduo_timetodayTV"
                     android:layout_alignRight="@+id/personal_info_jingting_countwordTV"
                     android:text="8+6"
-                    android:textColor="#42c0fb"
+                    android:textColor="#00bad2"
                     android:textSize="35sp"
                     android:textStyle="bold" />
 
@@ -312,7 +312,7 @@
                     android:layout_alignRight="@+id/personal_info_fanting_countwordTV"
                     android:layout_marginRight="12dp"
                     android:text="16"
-                    android:textColor="#42c0fb"
+                    android:textColor="#00bad2"
                     android:textSize="35sp"
                     android:textStyle="bold" />
 
@@ -325,7 +325,7 @@
                     android:layout_alignRight="@+id/personal_info_resist_dayswordTV"
                     android:layout_marginRight="12dp"
                     android:text="15"
-                    android:textColor="#42c0fb"
+                    android:textColor="#00bad2"
                     android:textSize="35sp"
                     android:textStyle="bold" />
             </RelativeLayout>

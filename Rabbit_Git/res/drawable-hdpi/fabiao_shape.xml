@@ -8,8 +8,10 @@
         android:topLeftRadius="15dp"
         android:topRightRadius="15dp" />
 
-    <solid android:color="#40bff5" />
-
+    <solid android:color="#20bcd2" />
+    
+ <!--     <solid android:color="#40bff5" />
+ -->
     <size
         android:height="60dp"
         android:width="40dp" />

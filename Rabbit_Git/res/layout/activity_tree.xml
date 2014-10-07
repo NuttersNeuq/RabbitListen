@@ -14,7 +14,7 @@
             <RelativeLayout
                 android:layout_width="fill_parent"
                 android:layout_height="120dp"
-                android:background="#95bfcd" >
+                android:background="#00bad2" >
 
                 <ImageButton
                     android:id="@+id/tree_noteBT"

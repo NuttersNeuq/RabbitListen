@@ -77,7 +77,7 @@
             android:layout_marginRight="25dp"
             android:layout_toLeftOf="@+id/question_list_rcountTV"
             android:text="关注"
-           android:textColor="#adcdd5"
+           android:textColor="#00bad2"
             android:textSize="11sp" />
 
         <TextView
@@ -88,7 +88,7 @@
             android:layout_alignParentTop="true"
             android:layout_marginRight="15dp"
             android:text="回复"
-            android:textColor="#adcdd5"
+            android:textColor="#00bad2"
             android:textSize="11sp" />
 
         <TextView
@@ -99,7 +99,7 @@
             android:layout_alignParentTop="true"
             android:layout_marginLeft="20dp"
             android:text="奔跑的大象"
-            android:textColor="#adcdd5"
+            android:textColor="#00bad2"
             android:textSize="11sp" />
     </RelativeLayout>
     <TextView 

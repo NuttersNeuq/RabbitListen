@@ -107,7 +107,7 @@ public class TreeActivity extends Activity {
 
 	private void initData() {
 		// 设置标题
-		Util.setTitle(context, actionBar, "坚果树");
+		Util.setTitle(context, actionBar, "讨论组");
 		//设置监听器
 		treeNoteIB.setOnClickListener(new OnClickListener() {
 			public void onClick(View v) {

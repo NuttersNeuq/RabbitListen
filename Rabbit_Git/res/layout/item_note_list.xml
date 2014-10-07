@@ -40,7 +40,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
             android:text="奔跑的大象"
-            android:textColor="#a1c6d0"
+            android:textColor="#00bad2"
             android:textSize="11sp" />
 
         <TextView
@@ -61,7 +61,7 @@
             android:layout_alignParentRight="true"
             android:layout_marginRight="4dp"
             android:text="赞"
-            android:textColor="#adcdd5"
+            android:textColor="#00bad2"
             android:textSize="11sp" />
 
         <TextView
