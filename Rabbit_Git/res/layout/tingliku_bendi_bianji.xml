@@ -9,7 +9,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        android:background="#A1C6D0"
+        android:background="#00bad2"
         android:gravity="center_vertical"
         android:paddingBottom="10dp"
         android:paddingLeft="10dp"
