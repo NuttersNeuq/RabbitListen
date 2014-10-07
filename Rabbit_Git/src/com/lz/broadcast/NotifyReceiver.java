@@ -10,5 +10,5 @@ public class NotifyReceiver extends BroadcastReceiver {
 		//开启NotifyService
 		context.startService(new Intent("nut.service.NotifyService"));
 	}
-
+	
 }
