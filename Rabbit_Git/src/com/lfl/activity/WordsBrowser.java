@@ -23,7 +23,7 @@ import android.widget.Toast;
 import com.lfl.model.WordInfo;
 import com.lfl.opensl.audio.OSLESMediaPlayer;
 import com.lfl.utils.AppConstant;
-import com.nut.activity.R;
+import com.hare.activity.R;
 
 /**
  * 默认为统一来源、离线

@@ -49,7 +49,7 @@ import com.lz.my.service.NetService;
 import com.lz.service.NotifyService;
 import com.lz.utils.HttpRequestUtil;
 import com.lz.utils.StaticInfos;
-import com.nut.activity.R;
+import com.hare.activity.R;
 
 /**
  * 在此界面退出程序，释放资源

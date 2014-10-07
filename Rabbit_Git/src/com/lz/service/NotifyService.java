@@ -26,7 +26,7 @@ import com.lz.my.service.LoginService;
 import com.lz.my.service.NetService;
 import com.lz.utils.Encrypt;
 import com.lz.utils.StaticInfos;
-import com.nut.activity.R;
+import com.hare.activity.R;
 
 public class NotifyService extends Service {
 	private String studyNum="0";

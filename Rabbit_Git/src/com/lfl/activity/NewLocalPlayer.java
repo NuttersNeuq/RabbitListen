@@ -61,7 +61,7 @@ import com.lz.activity.QuestionListActivity;
 import com.lz.utils.HttpRequestUtil;
 import com.lz.utils.StaticInfos;
 import com.lz.utils.Util;
-import com.nut.activity.R;
+import com.hare.activity.R;
 
 /**
  * ¾«Ìý²¥·ÅÆ÷

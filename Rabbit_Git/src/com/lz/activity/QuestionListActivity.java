@@ -27,7 +27,7 @@ import com.lz.my.service.QuestionService;
 import com.lz.mylistview.MyListView;
 import com.lz.mylistview.MyListView.OnRefreshListener;
 import com.lz.utils.Util;
-import com.nut.activity.R;
+import com.hare.activity.R;
 
 public class QuestionListActivity extends Activity {
 	private ActionBar actionBar;

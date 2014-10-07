@@ -8,7 +8,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.LinearLayout;
-import com.nut.activity.R;
+import com.hare.activity.R;
 
 @SuppressLint("HandlerLeak")
 public class MyMp3Store extends Activity

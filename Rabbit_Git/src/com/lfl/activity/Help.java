@@ -18,7 +18,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 
 import com.lz.activity.LoginActivity;
-import com.nut.activity.R;
+import com.hare.activity.R;
 
 public class Help extends Activity
 {

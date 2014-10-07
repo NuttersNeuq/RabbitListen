@@ -10,7 +10,7 @@ import android.graphics.Typeface;
 import android.util.AttributeSet;
 import android.view.View;
 
-import com.nut.activity.R;
+import com.hare.activity.R;
 
 public class RoundProgressBar extends View
 {

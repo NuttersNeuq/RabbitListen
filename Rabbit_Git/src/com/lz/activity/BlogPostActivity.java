@@ -12,7 +12,7 @@ import android.widget.EditText;
 
 import com.lz.my.service.BlogService;
 import com.lz.utils.Util;
-import com.nut.activity.R;
+import com.hare.activity.R;
 
 public class BlogPostActivity extends Activity {
 	private ActionBar actionBar;

@@ -1,6 +1,6 @@
 package com.lz.activity;
 
-import com.nut.activity.R;
+import com.hare.activity.R;
 
 import android.app.Activity;
 import android.content.Context;

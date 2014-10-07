@@ -11,7 +11,7 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import com.lz.utils.StaticInfos;
-import com.nut.activity.R;
+import com.hare.activity.R;
 
 public class GuideOneActvity extends Activity {
 	private Context context;

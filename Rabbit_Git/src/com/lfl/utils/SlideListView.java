@@ -10,7 +10,7 @@ import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.Scroller;
 
-import com.nut.activity.R;
+import com.hare.activity.R;
 
 /**
  * 侧向滑出菜单的ListView 使用请注意与ListView的Item的布局配合，

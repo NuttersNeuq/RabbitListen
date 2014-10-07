@@ -28,7 +28,7 @@ import android.widget.Toast;
 import com.lfl.activity.Diyijiemian;
 import com.lz.my.service.NetService;
 import com.lz.utils.Util;
-import com.nut.activity.R;
+import com.hare.activity.R;
 
 public class GuideThreeActivity extends Activity {
 	private Context context;

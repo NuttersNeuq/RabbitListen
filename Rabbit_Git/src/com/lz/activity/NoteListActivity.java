@@ -16,7 +16,7 @@ import com.lz.fragment.AllNoteFragment;
 import com.lz.fragment.MyNoteFragment;
 import com.lz.listener.MyTabListener;
 import com.lz.utils.Util;
-import com.nut.activity.R;
+import com.hare.activity.R;
 
 public class NoteListActivity extends FragmentActivity{
 

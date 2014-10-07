@@ -18,7 +18,7 @@ import com.lfl.service.PlayService;
 import com.lfl.utils.AppConstant;
 import com.lfl.utils.FileUtils;
 import com.lfl.utils.Toolkits;
-import com.nut.activity.R;
+import com.hare.activity.R;
 
 /**
  * 此activity实际上仅仅负责初始化，对用户不可见，正式版中是否采用这种模式待定

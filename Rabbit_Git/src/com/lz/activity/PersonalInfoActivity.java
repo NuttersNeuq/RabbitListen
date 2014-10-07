@@ -44,7 +44,7 @@ import com.lz.my.service.NetService;
 import com.lz.utils.AppConstant;
 import com.lz.utils.StaticInfos;
 import com.lz.utils.Util;
-import com.nut.activity.R;
+import com.hare.activity.R;
 
 public class PersonalInfoActivity extends Activity {
 	private Context context;

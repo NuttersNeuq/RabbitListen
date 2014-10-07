@@ -28,7 +28,7 @@ import com.lz.my.service.LoginService;
 import com.lz.utils.Encrypt;
 import com.lz.utils.StaticInfos;
 import com.lz.utils.Util;
-import com.nut.activity.R;
+import com.hare.activity.R;
 
 public class LoginActivity extends Activity {
 	// 拿到各组组件的id

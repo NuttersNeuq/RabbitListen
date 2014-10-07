@@ -15,7 +15,7 @@ import android.widget.Toast;
 
 import com.lfl.model.Mp3Info;
 import com.lfl.utils.MillisecondConvert;
-import com.nut.activity.R;
+import com.hare.activity.R;
 
 public class Tingliku_bendi_bianji extends ListActivity
 {

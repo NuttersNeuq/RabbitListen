@@ -11,7 +11,7 @@ import android.widget.EditText;
 
 import com.lz.my.service.QuestionService;
 import com.lz.utils.Util;
-import com.nut.activity.R;
+import com.hare.activity.R;
 
 public class QuestionPostActivity extends Activity {
 	private ActionBar actionBar;

@@ -13,7 +13,7 @@ import android.widget.EditText;
 import com.lz.javabean.Note;
 import com.lz.my.service.NoteService;
 import com.lz.utils.Util;
-import com.nut.activity.R;
+import com.hare.activity.R;
 
 public class NotePostActivity extends Activity {
 	private ActionBar actionBar;

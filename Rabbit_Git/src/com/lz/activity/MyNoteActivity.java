@@ -14,7 +14,7 @@ import com.lz.fragment.CollectNoteFragment;
 import com.lz.fragment.MyNoteFragmentForPersonal;
 import com.lz.listener.MyTabListener;
 import com.lz.utils.Util;
-import com.nut.activity.R;
+import com.hare.activity.R;
 
 public class MyNoteActivity extends FragmentActivity {
 	private ActionBar actionBar;

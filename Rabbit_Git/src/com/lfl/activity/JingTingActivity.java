@@ -42,7 +42,7 @@ import com.lfl.utils.SlideListView;
 import com.lfl.utils.Toolkits;
 import com.lz.utils.HttpRequestUtil;
 import com.lz.utils.StaticInfos;
-import com.nut.activity.R;
+import com.hare.activity.R;
 
 @SuppressLint("HandlerLeak")
 public class JingTingActivity extends Activity

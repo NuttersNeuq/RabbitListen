@@ -13,7 +13,7 @@ import android.widget.TextView;
 
 import com.lz.my.service.NetService;
 import com.lz.utils.Util;
-import com.nut.activity.R;
+import com.hare.activity.R;
 
 public class CommentActivity extends Activity {
 	private ActionBar actionBar;

@@ -37,7 +37,7 @@ import com.lfl.utils.PullParseXML;
 import com.lfl.utils.Toolkits;
 import com.lz.utils.HttpRequestUtil;
 import com.lz.utils.StaticInfos;
-import com.nut.activity.R;
+import com.hare.activity.R;
 
 @SuppressLint("HandlerLeak")
 public class Fanting_dingyue_add extends ListActivity

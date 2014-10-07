@@ -10,7 +10,7 @@ import android.widget.RadioGroup;
 import android.widget.RadioGroup.OnCheckedChangeListener;
 import android.widget.TabHost;
 
-import com.nut.activity.R;
+import com.hare.activity.R;
 
 @SuppressWarnings("deprecation")
 public class Fanting extends TabActivity

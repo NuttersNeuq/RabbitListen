@@ -16,7 +16,7 @@ import android.widget.Toast;
 import cn.sharesdk.framework.ShareSDK;
 import cn.sharesdk.onekeyshare.OnekeyShare;
 
-import com.nut.activity.R;
+import com.hare.activity.R;
 
 public class Util {
 	/**

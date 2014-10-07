@@ -28,7 +28,7 @@ import com.lz.mylistview.MyListView;
 import com.lz.mylistview.MyListView.OnRefreshListener;
 import com.lz.utils.StaticInfos;
 import com.lz.utils.Util;
-import com.nut.activity.R;
+import com.hare.activity.R;
 /**
  * 
  * 用于我的主页中的界面

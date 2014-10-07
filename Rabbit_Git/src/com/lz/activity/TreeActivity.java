@@ -32,7 +32,7 @@ import com.lz.javabean.Notification;
 import com.lz.javabean.Question;
 import com.lz.utils.StaticInfos;
 import com.lz.utils.Util;
-import com.nut.activity.R;
+import com.hare.activity.R;
 
 public class TreeActivity extends Activity {
 	private ActionBar actionBar;

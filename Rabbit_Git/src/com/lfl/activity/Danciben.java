@@ -16,11 +16,11 @@ import android.os.Handler;
 import android.os.Message;
 import android.view.Gravity;
 import android.view.View;
-import android.view.Window;
-import android.view.WindowManager;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.view.ViewGroup.LayoutParams;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.BaseAdapter;
@@ -31,6 +31,7 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.hare.activity.R;
 import com.lfl.model.OnlineWordInfo;
 import com.lfl.model.WordInfo;
 import com.lfl.opensl.audio.OSLESMediaPlayer;
@@ -41,7 +42,6 @@ import com.lfl.utils.SlideListView;
 import com.lfl.utils.Toolkits;
 import com.lz.utils.HttpRequestUtil;
 import com.lz.utils.StaticInfos;
-import com.nut.activity.R;
 
 @SuppressLint("HandlerLeak")
 public class Danciben extends Activity

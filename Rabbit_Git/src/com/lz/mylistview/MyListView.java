@@ -20,7 +20,7 @@ import android.widget.ListView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
-import com.nut.activity.R;
+import com.hare.activity.R;
 
 public class MyListView extends ListView implements OnScrollListener {
 

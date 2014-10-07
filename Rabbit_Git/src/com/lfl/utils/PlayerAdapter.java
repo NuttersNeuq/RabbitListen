@@ -30,7 +30,7 @@ import android.widget.TextView.BufferType;
 import android.widget.Toast;
 
 import com.lfl.model.OnlineWordInfo;
-import com.nut.activity.R;
+import com.hare.activity.R;
 
 @SuppressLint("HandlerLeak")
 public class PlayerAdapter extends BaseAdapter
