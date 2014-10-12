@@ -99,7 +99,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:paddingLeft="20dp"
-                android:text="一筐新鲜的坚果出炉了"
+                android:text="萝卜白菜，各有所爱"
                 android:textColor="#ffffff" />
         </LinearLayout>
     </LinearLayout>

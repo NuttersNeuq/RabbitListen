@@ -363,7 +363,7 @@ public class JingTingActivity extends Activity
 				LinearLayout menuLayout = (LinearLayout) convertView.findViewById(R.id.llayout_right);
 				menuLayout.setLayoutParams(new LinearLayout.LayoutParams(0, 0));
 				holder.progress.setImageResource(R.drawable.ic_launcher);
-				holder.title.setText("精听推荐：一筐新鲜的坚果");
+				holder.title.setText("精听推荐：竖起你的耳朵");
 				holder.title.setTextColor(Color.parseColor("#42c0fb"));
 				holder.lrcLang.setText("From 你的喜欢和你的朋友");
 				holder.difficulty.setText("");

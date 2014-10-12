@@ -8,10 +8,12 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.SharedPreferences.Editor;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.os.Environment;
 import android.os.Handler;
 import android.os.Message;
+import android.widget.TextView;
 
 import com.lfl.service.PlayService;
 import com.lfl.utils.AppConstant;
@@ -99,6 +101,10 @@ public class WelcomeActivity extends Activity
 	{
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_welcome);
+		
+		TextView welcomeTextView = (TextView) findViewById(R.id.welcome_textview);
+		welcomeTextView.setTypeface(Typeface.createFromAsset(getAssets(), "font/CooperBlack.ttf"));
+		
 		context = getApplication();
 		isFirst = getSharedPreferences("isFirst", MODE_PRIVATE);
 		buildNUTDirs();
