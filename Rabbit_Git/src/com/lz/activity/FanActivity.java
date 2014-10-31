@@ -17,10 +17,11 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.BaseAdapter;
-import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.hare.activity.R;
 import com.lz.javabean.Fan;
 import com.lz.my.service.FanService;
 import com.lz.my.service.ImageService;
@@ -29,7 +30,6 @@ import com.lz.mylistview.MyListView.OnRefreshListener;
 import com.lz.utils.AppConstant;
 import com.lz.utils.StaticInfos;
 import com.lz.utils.Util;
-import com.hare.activity.R;
 
 public class FanActivity extends Activity {
 	private int fanTag;	//0为粉丝 1为关注
@@ -193,7 +193,7 @@ public class FanActivity extends Activity {
 		View view =convertView==null?View.inflate(context, R.layout.item_fan, null):convertView;
 		TextView nicknameTV=(TextView) view.findViewById(R.id.fan_nicknameTV);
 		TextView mottoTV=(TextView) view.findViewById(R.id.fan_motoTV);
-		ImageButton portraitIB=(ImageButton) view.findViewById(R.id.fan_portraitIB);
+		ImageView portraitIB=(ImageView) view.findViewById(R.id.fan_portraitIB);
 		//设置数据
 		nicknameTV.setText(fan.getNickname());
 		mottoTV.setText(fan.getMoto());

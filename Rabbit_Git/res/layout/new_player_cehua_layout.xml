@@ -2,13 +2,13 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/play_gaosimohu" >
+    android:background="@null" >
 
     <TextView
         android:id="@+id/new_player_cehua_layout_title_textview"
         android:layout_width="match_parent"
         android:layout_height="65dp"
-        android:background="#17000000"
+        android:background="#00bad2"
         android:gravity="center"
         android:text="VOCABULARY"
         android:textColor="#ffffff"
@@ -21,6 +21,13 @@
         android:layout_above="@+id/linearLayout1"
         android:layout_below="@+id/new_player_cehua_layout_title_textview" />
 
+   	<ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:background="#d6d4d4"
+            android:layout_above="@+id/linearLayout1"
+            android:contentDescription="@null" />
+    
     <LinearLayout
         android:id="@+id/linearLayout1"
         android:layout_width="match_parent"
@@ -36,12 +43,12 @@
             android:gravity="center"
             android:layout_weight="1"
             android:text="生词"
-            android:textColor="#62dee6"
+            android:textColor="#00bad2"
             android:textSize="20sp" />
 
         <ImageView
             android:layout_width="1dp"
-            android:layout_height="match_parent"
+            android:layout_height="48dp"
             android:background="#d6d4d4"
             android:contentDescription="@null" />
 
@@ -52,7 +59,7 @@
             android:gravity="center"
             android:layout_weight="1"
             android:text="难句"
-            android:textColor="#ffffff"
+            android:textColor="#c75f5f5f"
             android:textSize="20sp" />
     </LinearLayout>
 

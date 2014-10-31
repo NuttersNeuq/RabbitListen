@@ -6,13 +6,13 @@
     android:descendantFocusability="blocksDescendants"
     android:layout_height="60dp" >
 
-    <ImageButton
+    <ImageView
         android:id="@+id/fan_portraitIB"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_alignParentLeft="true"
         android:layout_centerVertical="true"
-        android:background="@null"
+        android:background="@android:drawable/stat_notify_sync"
         android:layout_marginLeft="5dp"/>
 
     <TextView

@@ -3,14 +3,14 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/play_gaosimohu" >
-
+    android:background="@null" >
+    
     <RelativeLayout
         android:id="@+id/player_control_bar"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="50dp"
         android:layout_alignParentBottom="true"
-        android:background="@drawable/play_playbacklong"
+        android:background="#eaedef"
         android:gravity="center_vertical"
         android:orientation="horizontal" >
 
@@ -21,7 +21,7 @@
             android:layout_centerVertical="true"
             android:layout_marginLeft="39dp"
             android:layout_toRightOf="@+id/player_start_pause_control_button"
-            android:background="@drawable/play_playbuttonhou"
+            android:background="@drawable/selector_play_playbuttonhou"
             android:contentDescription="@null" />
 
         <Button
@@ -31,7 +31,7 @@
             android:layout_centerVertical="true"
             android:layout_marginRight="39dp"
             android:layout_toLeftOf="@+id/player_start_pause_control_button"
-            android:background="@drawable/play_playbuttonqian"
+            android:background="@drawable/selector_play_playbuttonqian"
             android:contentDescription="@null" />
 
         <Button
@@ -43,23 +43,6 @@
             android:layout_marginLeft="16dp"
             android:background="@drawable/bofang_danju" />
 
-        <LinearLayout
-            android:id="@+id/player_gendu_linearlayout"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentTop="true"
-            android:background="@drawable/play_microback"
-            android:gravity="center"
-            android:orientation="horizontal" >
-
-            <Button
-                android:id="@+id/player_fenxiang_button"
-                android:layout_width="25dp"
-                android:layout_height="25dp"
-                android:layout_marginLeft="7dp"
-                android:background="@drawable/play_share" />
-        </LinearLayout>
 
         <Button
             android:id="@+id/player_start_pause_control_button"
@@ -68,15 +51,25 @@
             android:layout_centerHorizontal="true"
             android:layout_centerVertical="true"
             android:background="@drawable/player_pause" />
+
+        <Button
+            android:id="@+id/player_fenxiang_button"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_alignBottom="@+id/player_single_sentence_repeat_control_button"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="16dp"
+            android:background="@drawable/selector_play_share" />
+
     </RelativeLayout>
 
     <LinearLayout
         android:id="@+id/shangtiao_linearLayout"
         android:layout_width="match_parent"
-        android:layout_height="120dp"
+        android:layout_height="130dp"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        android:background="@drawable/play_shangtiao"
+        android:background="#00bad2"
         android:orientation="vertical" >
 
         <LinearLayout
@@ -177,6 +170,7 @@
             android:layout_weight="5"
             android:gravity="center_vertical"
             android:orientation="horizontal"
+            android:layout_marginBottom="5dp"
             android:paddingLeft="16dp"
             android:paddingRight="18dp"
             android:paddingTop="5dp" >
@@ -222,12 +216,20 @@
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>
+    <TextView 
+        android:id="@+id/player_control_bar_line"
+        android:layout_above="@+id/player_control_bar"
+        android:layout_width="fill_parent"
+        android:layout_height="0.8dp"
+        android:background="#afb1b3"
+        />
 
     <ListView
         android:id="@android:id/list"
+        android:background="#f6f6f6"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_above="@+id/player_control_bar"
+        android:layout_above="@+id/player_control_bar_line"
         android:layout_below="@+id/shangtiao_linearLayout" >
     </ListView>
 

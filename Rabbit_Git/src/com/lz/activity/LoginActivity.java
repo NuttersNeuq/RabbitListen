@@ -22,6 +22,7 @@ import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
+import android.widget.LinearLayout;
 
 import com.lfl.activity.Diyijiemian;
 import com.lz.my.service.LoginService;
@@ -33,6 +34,7 @@ import com.hare.activity.R;
 public class LoginActivity extends Activity {
 	// 拿到各组组件的id
 	private Button loginBT;
+	private LinearLayout loginBTLL;
 	private Button touristBT;
 	private Button registerBT;
 	private Dialog loadingDialog;
@@ -63,6 +65,7 @@ public class LoginActivity extends Activity {
 	private void initView() {
 		// 根据id拿到各种组件
 		loginBT = (Button) findViewById(R.id.loginBT);
+		loginBTLL=(LinearLayout) findViewById(R.id.loginBTLL);
 		registerBT = (Button) findViewById(R.id.login_registerBT);
 		usernameET = (EditText) findViewById(R.id.usernameET);
 		passwordET = (EditText) findViewById(R.id.passwordET);
@@ -82,7 +85,7 @@ public class LoginActivity extends Activity {
 			}
 		});
 		// 为loginBT设置监听器
-		loginBT.setOnClickListener(new OnClickListener() {
+		loginBTLL.setOnClickListener(new OnClickListener() {
 			String encryptedPassword;
 			public void onClick(View v) {
 				//弹出progressbar dialog

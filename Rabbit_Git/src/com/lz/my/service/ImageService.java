@@ -39,7 +39,7 @@ public class ImageService {
 		if (code == 200) {
 			byte[] data = Util.read(conn.getInputStream());							// 读取服务端写回的数据
 			Bitmap bm = BitmapFactory.decodeByteArray(data, 0, data.length);		// 把字节数据解码为图片
-			bm.compress(CompressFormat.JPEG, 100, new FileOutputStream(cacheFile));	// 存储图片到本地, 用作缓存. 建议新线程中处理
+			bm.compress(CompressFormat.PNG, 100, new FileOutputStream(cacheFile));	// 存储图片到本地, 用作缓存. 建议新线程中处理
 			return bm;	
 		}
 		else if (code == 304) {

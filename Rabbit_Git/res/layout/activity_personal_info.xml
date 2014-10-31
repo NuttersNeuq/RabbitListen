@@ -77,7 +77,7 @@
                         android:layout_alignParentLeft="true"
                         android:layout_alignParentTop="true"
                         android:background="@null"
-                        android:text="48"
+                        android:text="0"
                         android:textColor="#000000"
                         android:textSize="15sp" />
 
@@ -110,7 +110,7 @@
                         android:layout_above="@+id/personal_info_fanedTV"
                         android:layout_centerHorizontal="true"
                         android:background="@null"
-                        android:text="42"
+                        android:text="0"
                         android:textColor="#000000"
                         android:textSize="15sp" />
 
@@ -214,7 +214,7 @@
                     android:gravity="center" >
                     <TextView
                     	android:id="@+id/personal_info_moerduo_timeallTV"
-                   		android:text="4"
+                   		android:text="0"
                    		android:textColor="#00bad2"
                     	android:textSize="35sp"
                     	android:layout_width="wrap_content"
@@ -264,7 +264,7 @@
                     android:layout_alignRight="@+id/personal_info_moerduo_timetodaywordTV"
                     android:layout_marginTop="12dp"
                     android:layout_marginRight="5dp"
-                    android:text="42min"
+                    android:text="0min"
                     android:textColor="#00bad2"
                     android:textSize="35sp"
                     android:textStyle="bold" />
@@ -276,7 +276,7 @@
                     android:layout_alignBaseline="@+id/personal_info_moerduo_timetodayTV"
                     android:layout_alignBottom="@+id/personal_info_moerduo_timetodayTV"
                     android:layout_alignRight="@+id/personal_info_jingting_countwordTV"
-                    android:text="8+6"
+                    android:text="0+0"
                     android:textColor="#00bad2"
                     android:textSize="35sp"
                     android:textStyle="bold" />
@@ -311,7 +311,7 @@
                     android:layout_alignBottom="@+id/personal_info_jingting_countTV"
                     android:layout_alignRight="@+id/personal_info_fanting_countwordTV"
                     android:layout_marginRight="12dp"
-                    android:text="16"
+                    android:text="0"
                     android:textColor="#00bad2"
                     android:textSize="35sp"
                     android:textStyle="bold" />
@@ -324,7 +324,7 @@
                     android:layout_alignBottom="@+id/personal_info_fanting_countTV"
                     android:layout_alignRight="@+id/personal_info_resist_dayswordTV"
                     android:layout_marginRight="12dp"
-                    android:text="15"
+                    android:text="0"
                     android:textColor="#00bad2"
                     android:textSize="35sp"
                     android:textStyle="bold" />

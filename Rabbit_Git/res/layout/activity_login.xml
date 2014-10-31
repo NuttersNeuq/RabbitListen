@@ -7,7 +7,7 @@
 
     <RelativeLayout
         android:id="@+id/login_user_id_barRL"
-        android:layout_width="wrap_content"
+        android:layout_width="300dp"
         android:layout_height="40dp"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="50dp"
@@ -42,7 +42,7 @@
 
     <RelativeLayout
         android:id="@+id/login_password_barRL"
-        android:layout_width="wrap_content"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="10dp"
@@ -86,29 +86,29 @@
         android:layout_marginTop="90dp"
         android:src="@drawable/ic_launcher" />
 
-    <Button
-        android:id="@+id/loginBT"
-        android:layout_width="200dp"
-        android:layout_height="35dp"
+    <LinearLayout 
+        android:id="@+id/loginBTLL"
+        android:orientation="vertical"
         android:layout_below="@+id/login_password_barRL"
-        android:layout_marginTop="100dp"
-        android:layout_centerHorizontal="true"
-        android:background="@drawable/selector_login"
-        android:text="登陆"
-        android:textColor="#ffffff"
-        android:textSize="22sp" />
-
-    <Button
-        android:id="@+id/login_registerBT"
-        android:layout_width="200dp"
+        android:layout_width="280dp"
         android:layout_height="35dp"
-        android:layout_alignLeft="@+id/loginBT"
-        android:layout_below="@+id/loginBT"
-        android:background="@drawable/selector_register"
-        android:text="注 册"
-        android:layout_marginTop="20dp"
-        android:textColor="#ffffff"
-        android:textSize="22sp" />
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100dp"
+        android:background="@drawable/selector_login">
+	   	<Button
+	        android:layout_gravity="center_horizontal"
+	        android:id="@+id/loginBT"
+	        android:background="@null"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="登陆"
+	        android:textColor="#ffffff"
+	        android:textSize="20sp" />
+    </LinearLayout>
+    
+    
+    
+
 
     <CheckBox
         android:id="@+id/isRemenberedCB"
@@ -119,5 +119,16 @@
         android:layout_marginTop="20dp"
         android:text="记住我"
         android:textColor="#ffffff" />
+
+    <Button
+        android:id="@+id/login_registerBT"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:background="@null"
+        android:text="新用户"
+        android:textColor="#ffffff"
+        android:textSize="15sp" />
     
 </RelativeLayout>

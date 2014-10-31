@@ -881,14 +881,14 @@ public class NewLocalPlayer extends ListActivity
 	{
 		if (isShengciSelected)
 		{
-			shengciTextView.setTextColor(Color.parseColor("#62dee6"));
-			nanjuTextView.setTextColor(Color.parseColor("#ffffff"));
+			shengciTextView.setTextColor(Color.parseColor("#00bad2"));
+			nanjuTextView.setTextColor(Color.parseColor("#c75f5f5f"));
 			dancibenTitleTextView.setText("VOCABULARY");
 		}
 		else
 		{
-			shengciTextView.setTextColor(Color.parseColor("#ffffff"));
-			nanjuTextView.setTextColor(Color.parseColor("#62dee6"));
+			shengciTextView.setTextColor(Color.parseColor("#c75f5f5f"));
+			nanjuTextView.setTextColor(Color.parseColor("#00bad2"));
 			dancibenTitleTextView.setText("SENTENCE");
 		}
 		dancibenListView.setAdapter(new MyListAdapter());

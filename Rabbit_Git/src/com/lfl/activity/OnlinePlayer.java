@@ -848,6 +848,8 @@ public class OnlinePlayer extends ListActivity
 		dancibenListView = (ListView) dancibenMenu.getMenu().findViewById(R.id.danciben_listview);
 		shengciTextView = (TextView) dancibenMenu.getMenu().findViewById(R.id.new_player_cehua_shengci_textview);
 		nanjuTextView = (TextView) dancibenMenu.getMenu().findViewById(R.id.new_player_cehua_nanju_textview);
+		
+		
 		dancibenTitleTextView = (TextView) dancibenMenu.getMenu().findViewById(
 				R.id.new_player_cehua_layout_title_textview);
 
@@ -1202,14 +1204,14 @@ public class OnlinePlayer extends ListActivity
 	{
 		if (isShengciSelected)
 		{
-			shengciTextView.setTextColor(Color.parseColor("#62dee6"));
-			nanjuTextView.setTextColor(Color.parseColor("#ffffff"));
+			shengciTextView.setTextColor(Color.parseColor("#00bad2"));;
+			nanjuTextView.setTextColor(Color.parseColor("#c75f5f5f"));
 			dancibenTitleTextView.setText("VOCABULARY");
 		}
 		else
 		{
-			shengciTextView.setTextColor(Color.parseColor("#ffffff"));
-			nanjuTextView.setTextColor(Color.parseColor("#62dee6"));
+			shengciTextView.setTextColor(Color.parseColor("#c75f5f5f"));
+			nanjuTextView.setTextColor(Color.parseColor("#00bad2"));
 			dancibenTitleTextView.setText("SENTENCE");
 		}
 		dancibenListView.setAdapter(new MyListAdapter());
