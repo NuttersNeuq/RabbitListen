@@ -56,7 +56,6 @@ public class BlogDetailActivity extends Activity {
     private TextView moreTextView; //查看更多
     private LinearLayout loadProgressBar;//正在加载进度条
     private final int pageType=1;//msg的标签
-	
     
 	private Blog blog;
 	private List<Answer> answers;

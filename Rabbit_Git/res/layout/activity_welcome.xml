@@ -1,25 +1,30 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#00bad2"
-    android:gravity="center"
-    android:orientation="vertical"
     tools:context=".MainActivity" >
-
-    <ImageView
-        android:layout_width="60dp"
-        android:layout_height="100dp"
-        android:contentDescription="@null"
-        android:src="@drawable/welcome_icon" />
 
     <TextView
         android:id="@+id/welcome_textview"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/imageView1"
+        android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp"
+        android:gravity="center_horizontal"
         android:text="Hare"
         android:textColor="#ffffff"
         android:textSize="25sp" />
 
-</LinearLayout>
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="55dp"
+        android:layout_height="75dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="230dp"
+        android:contentDescription="@null"
+        android:src="@drawable/welcome_icon" />
+
+</RelativeLayout>

@@ -32,6 +32,7 @@
                 <action android:name="nut.service.NotifyService" />
             </intent-filter>
 		</service>
+		
         <receiver android:name="com.lz.broadcast.NotifyReceiver" > 
             <intent-filter android:priority="1000">
                 <action android:name="android.intent.action.BOOT_COMPLETED" />

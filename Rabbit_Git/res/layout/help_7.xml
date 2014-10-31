@@ -25,7 +25,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="20sp"
-        android:text="进入坚果的世界"
+        android:text="与兔子一起奔跑吧！"
         android:textColor="#ffffff"
 		android:background="@drawable/lfl_help_7_button_selector"        
         />

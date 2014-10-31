@@ -14,7 +14,7 @@
             android:layout_centerHorizontal="true"
             android:layout_centerVertical="true"
             android:lineSpacingExtra="15dp"
-            android:text="欢迎来到坚果的世界。"
+            android:text="与兔子一起奔跑吧！"
             android:textColor="#ffffff"
             android:textSize="25sp" />
     </RelativeLayout>

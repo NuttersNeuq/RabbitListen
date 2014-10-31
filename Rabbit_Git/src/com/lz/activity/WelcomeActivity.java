@@ -10,16 +10,16 @@ import android.content.SharedPreferences;
 import android.content.SharedPreferences.Editor;
 import android.graphics.Typeface;
 import android.os.Bundle;
-import android.os.Environment;
 import android.os.Handler;
 import android.os.Message;
 import android.widget.TextView;
 
+import com.hare.activity.R;
+import com.lfl.activity.Help;
 import com.lfl.service.PlayService;
 import com.lfl.utils.AppConstant;
 import com.lfl.utils.FileUtils;
 import com.lfl.utils.Toolkits;
-import com.hare.activity.R;
 
 /**
  * 此activity实际上仅仅负责初始化，对用户不可见，正式版中是否采用这种模式待定
@@ -37,21 +37,20 @@ public class WelcomeActivity extends Activity
 		{
 			if (msg.what == 1)
 			{
-//				if (isFirst.getString("isFirst", "false").equals("false"))
-//				{
-//					// Intent intent=new Intent(context,Help.class);
-//					// startActivity(intent);
-//					finish();
-//				}
-//				else
-//				{
+				if (isFirst.getString("isFirst","false").equals("false"))
+				{
+					 Intent intent=new Intent(context,Help.class);
+					 startActivity(intent);
+					 finish();
+				}
+				else
+				{
 					Intent intent = new Intent(context, LoginActivity.class);
 					startActivity(intent);
 					Intent startPlayServiceIntent = new Intent(context, PlayService.class);
 					startService(startPlayServiceIntent);
-
 					finish();
-//				}
+				}
 			}
 		}
 	};

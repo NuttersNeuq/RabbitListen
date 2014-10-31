@@ -17,3 +17,4 @@ public class StaticInfos {
 	public static String notifyToggle="false";
 	public static Bitmap portraitBm;
 }
+

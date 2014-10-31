@@ -30,10 +30,10 @@ import com.hare.activity.R;
 
 public class NotifyService extends Service {
 	private String studyNum="0";
-	private String username;
-	private String password;
-	private String encryptedPassword;
-	private SharedPreferences preferences;
+//	private String username;
+//	private String password;
+//	private String encryptedPassword;
+//	private SharedPreferences preferences;
 	private StudyNotifyTimerTask studyNotifyTimerTask;
 	private NotificationTimerTask notificationTimerTask;
 	private NetService netService;
@@ -46,11 +46,14 @@ public class NotifyService extends Service {
 	private SharedPreferences notifyPrefrences;
 
 	public void onCreate() {
-		preferences=getSharedPreferences("confige", MODE_PRIVATE);
-		netService=new NetService();
+//		preferences=getSharedPreferences("confige", MODE_PRIVATE);
+	
+			netService=new NetService();
+		
 		studyNotifyTimerTask=new StudyNotifyTimerTask();
 		notificationTimerTask=new NotificationTimerTask();
-		//判断是否登陆过
+
+		/*		//判断是否登陆过
 		if (!StaticInfos.isLogin){
 			//没有     则登陆
 			// 获取username和password
@@ -61,8 +64,9 @@ public class NotifyService extends Service {
 				encryptedPassword = Encrypt.Bit32(password);
 			} catch (NoSuchAlgorithmException e) {
 				e.printStackTrace();
-			}
-			// 开启新线程，进行联网验证操作
+			}*/
+
+		/*			// 开启新线程，进行联网验证操作
 			new Thread() {
 				public void run() {
 					// 获取flag
@@ -105,16 +109,17 @@ public class NotifyService extends Service {
 					}
 				}
 			}.start();
-		}
+		}*/
+
 	}
 	
 	public void onStart(Intent intent, int startId) {
 		Timer timer=new Timer(true);
 		// 定时向服务器发请求获取notification
-		timer.scheduleAtFixedRate(notificationTimerTask,0,20* 1000);
+		timer.scheduleAtFixedRate(notificationTimerTask,60*1,20* 1000);
 		// 定时进行学习提醒服务
 		if (StaticInfos.notifyToggle.equals("true")) {
-			timer.scheduleAtFixedRate(studyNotifyTimerTask, 4 * 60 * 60 * 1000,4 * 60 * 60 * 1000);
+			timer.scheduleAtFixedRate(studyNotifyTimerTask,4 * 60 * 60 * 1000,4 * 60 * 60 * 1000);
 		}
 	}
 	
@@ -131,7 +136,7 @@ public class NotifyService extends Service {
 					//发送通知，提示用户学习
 					if(!studyNum.equals("0")){
 						 Intent resultIntent = new Intent(NotifyService.this, Diyijiemian.class);
-						 ShowNotification("坚果听力","还有"+studyNum+"篇精听听力没有完成，赶快去学习吧！","你还有没有完成的学习任务",resultIntent,studyNotificationNum++,0);
+						 ShowNotification("兔子听力","还有"+studyNum+"篇精听听力没有完成，赶快去学习吧！","你还有没有完成的学习任务",resultIntent,studyNotificationNum++,0);
 					}
 				}
 			}.start();
@@ -159,16 +164,16 @@ public class NotifyService extends Service {
 							//写入sharedPrefrence
 							Editor editor=notifyPrefrences.edit();
 							for(String notification:notifications){
-								System.out.println("notification:"+notification);
+								//System.out.println("notification:"+notification);
 								editor.putString(notification,"true");
 							}
 							editor.commit();
 							// 发送通知，提示用户查看
 							Intent resultIntent = new Intent(NotifyService.this, TreeActivity.class);
-							ShowNotification("坚果听力", "你有新的动态","你有新的动态", resultIntent,notificationNum, notificationNumCount);
+							ShowNotification("兔子听力", "你有新的动态","你有新的动态", resultIntent,notificationNum, notificationNumCount);
 						}
 					} catch (IOException e) {
-						System.out.println("异常"+e.toString());
+					//	System.out.println("异常"+e.toString());
 						e.printStackTrace();
 					}
 				}
@@ -192,6 +197,8 @@ public class NotifyService extends Service {
     	// 4.发送通知
     	manager.notify(mID, notification);
 	}
+	
+	
 	
 	public IBinder onBind(Intent intent) {
 		return null;

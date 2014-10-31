@@ -54,7 +54,7 @@ public class LoginActivity extends Activity {
 		if(StaticInfos.isLogin){
 			startActivity(new Intent(LoginActivity.this,Diyijiemian.class));// 开启新的activity
 			finish();
-		}else {
+		}else{
 			initView();
 		}
 	}
