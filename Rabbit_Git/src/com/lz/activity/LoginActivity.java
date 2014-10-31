@@ -22,19 +22,19 @@ import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
-import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 
+import com.hare.activity.R;
 import com.lfl.activity.Diyijiemian;
 import com.lz.my.service.LoginService;
 import com.lz.utils.Encrypt;
 import com.lz.utils.StaticInfos;
 import com.lz.utils.Util;
-import com.hare.activity.R;
 
 public class LoginActivity extends Activity {
 	// 拿到各组组件的id
-	private Button loginBT;
-	private LinearLayout loginBTLL;
+	//private Button loginBT;
+	private RelativeLayout loginBTLL;
 	private Button touristBT;
 	private Button registerBT;
 	private Dialog loadingDialog;
@@ -64,8 +64,8 @@ public class LoginActivity extends Activity {
 	// 初始化视图
 	private void initView() {
 		// 根据id拿到各种组件
-		loginBT = (Button) findViewById(R.id.loginBT);
-		loginBTLL=(LinearLayout) findViewById(R.id.loginBTLL);
+		//loginBT = (Button) findViewById(R.id.loginBT);
+		loginBTLL=(RelativeLayout) findViewById(R.id.loginBTLL);
 		registerBT = (Button) findViewById(R.id.login_registerBT);
 		usernameET = (EditText) findViewById(R.id.usernameET);
 		passwordET = (EditText) findViewById(R.id.passwordET);
