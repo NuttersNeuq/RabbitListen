@@ -85,14 +85,14 @@
                 android:id="@+id/player_exit_linearlayout"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:gravity="end"
+                android:layout_weight="2"
+                android:gravity="center"
                 android:background="@drawable/lfl_cehua_selector"
                 android:orientation="horizontal"
-                android:paddingLeft="10dp" >
+                android:paddingLeft="0dp" >
 
                 <Button
-                    android:layout_width="match_parent"
+                    android:layout_width="10dp"
                     android:layout_height="25dp"
                     android:background="@drawable/play_back" />
             </LinearLayout>
@@ -107,14 +107,14 @@
                 android:paddingLeft="20dp"
                 android:paddingRight="20dp"
                 android:singleLine="true"
-                android:text="Loading ... "
+                android:text="hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh"
                 android:textAppearance="?android:attr/textAppearanceLarge"
                 android:textColor="#ffffff" />
 
             <LinearLayout
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
+                android:layout_weight="2"
                 android:gravity="center"
                 android:orientation="horizontal" >
 
