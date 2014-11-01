@@ -2,7 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#95BFCD"
+    android:background="@null"
     android:orientation="vertical" >
 
     <LinearLayout
@@ -105,8 +105,8 @@
                 android:id="@+id/player_fenxiang_fenxiangjuzi_imageview"
                 android:layout_width="60dp"
                 android:layout_height="60dp"
-                android:contentDescription="@null"
                 android:background="@drawable/lfl_cehua_selector"
+                android:contentDescription="@null"
                 android:src="@drawable/player_fenxiang_fenxiangjuzi" />
 
             <TextView
@@ -130,8 +130,8 @@
                 android:id="@+id/player_fenxiang_shoucangjuzi_imageview"
                 android:layout_width="60dp"
                 android:layout_height="60dp"
-                android:contentDescription="@null"
                 android:background="@drawable/lfl_cehua_selector"
+                android:contentDescription="@null"
                 android:src="@drawable/player_fenxiang_shouchangjuzi" />
 
             <TextView

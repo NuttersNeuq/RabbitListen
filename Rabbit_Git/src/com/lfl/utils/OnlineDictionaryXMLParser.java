@@ -72,7 +72,7 @@ public class OnlineDictionaryXMLParser
 		{
 
 			e.printStackTrace();
-			wordInfo.setTranslation("没找到解释");
+			wordInfo.setTranslation("网络连接超时");
 		}
 		System.out.println("拿到的Word解释：" + wordInfo);
 		return wordInfo;

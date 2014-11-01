@@ -4,4 +4,5 @@
      <drawable name="popupwindow_selected_color">#17000000</drawable>
      <drawable name="cailiaoshanchu_act_color_selected">#a000bad2</drawable>
      <drawable name="cailiaoshanchu_act_color">#00bad2</drawable>
+     <drawable name="fenxiangdialog_background_color">#95BFCD</drawable>
 </resources>

@@ -498,7 +498,7 @@ public class OnlinePlayer extends ListActivity
 		loadingDialogWindow.setGravity(Gravity.CENTER);
 		lParams.alpha = 1f;
 		loadingDialogWindow.setAttributes(lParams);
-		loadingDialog.setCancelable(false);
+		loadingDialog.setCancelable(true);
 		loadingDialog.show();
 
 		mp3Info = (Mp3Info) getIntent().getSerializableExtra("mp3Info");
