@@ -63,7 +63,16 @@ public class Tingliku_Shoucang extends ListActivity
 					loadingDialog.dismiss();
 					if (msg.what == AppConstant.INTERACTION_STATUS.INTERACTION_SUCCESSFUL)
 					{
-						setListAdapter(new MyListAdapter());
+						if (mp3Infos.size() == 0)
+						{
+							TextView blankTextView = (TextView) findViewById(R.id.tingliku_shouchang_blank_textview);
+							blankTextView.setLayoutParams(new LinearLayout.LayoutParams(
+									LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.MATCH_PARENT));
+						}
+						else
+						{
+							setListAdapter(new MyListAdapter());
+						}
 					}
 					else if (msg.what == AppConstant.INTERACTION_STATUS.NETWORK_CONNECTION_EXCEPTION)
 					{
@@ -87,31 +96,43 @@ public class Tingliku_Shoucang extends ListActivity
 				headers.put("Cookie", "PHPSESSID=" + StaticInfos.phpsessid);
 
 				mp3Infos = PullParseXML.parseOnlineMp3XML(AppConstant.URL.MY_SHOUCANG_LIST_URL, params, true);
-				String result = mp3Infos.get(0).getName();
 
-				if (result.equals(AppConstant.INTERACTION_STATUS.NETWORK_CONNECTION_EXCEPTION + ""))
+				if (mp3Infos.size() != 0)
 				{
-					fetchHandler.sendEmptyMessage(AppConstant.INTERACTION_STATUS.NETWORK_CONNECTION_EXCEPTION);
-				}
-				else if (result.equals(AppConstant.INTERACTION_STATUS.SERVER_STATUS_EXCEPTION + ""))
-				{
-					fetchHandler.sendEmptyMessage(AppConstant.INTERACTION_STATUS.SERVER_STATUS_EXCEPTION);
+					String result = mp3Infos.get(0).getName();
+
+					if (result.equals(AppConstant.INTERACTION_STATUS.NETWORK_CONNECTION_EXCEPTION + ""))
+					{
+						fetchHandler.sendEmptyMessage(AppConstant.INTERACTION_STATUS.NETWORK_CONNECTION_EXCEPTION);
+					}
+					else if (result.equals(AppConstant.INTERACTION_STATUS.SERVER_STATUS_EXCEPTION + ""))
+					{
+						fetchHandler.sendEmptyMessage(AppConstant.INTERACTION_STATUS.SERVER_STATUS_EXCEPTION);
+					}
+					else
+					{
+						fetchHandler.sendEmptyMessage(AppConstant.INTERACTION_STATUS.INTERACTION_SUCCESSFUL);
+					}
 				}
 				else
 				{
 					/**
 					 * 屏蔽了听力图片的下载
 					 */
-//					for (int i = 0; i < mp3Infos.size(); i++)
-//					{
-//						Mp3Info currentMp3Info = mp3Infos.get(i);
-//						File picFile = new File(AppConstant.FilePath.PIC_FILE_PATH + currentMp3Info.getPic());
-//						if (picFile.exists() == false)
-//						{
-//							HttpDownloader.downloadFile(AppConstant.URL.NCC_NEUQ_PIC_URL + currentMp3Info.getPic(),
-//									AppConstant.FilePath.MP3_FILE_PATH, currentMp3Info.getPic());
-//						}
-//					}
+					// for (int i = 0; i < mp3Infos.size(); i++)
+					// {
+					// Mp3Info currentMp3Info = mp3Infos.get(i);
+					// File picFile = new
+					// File(AppConstant.FilePath.PIC_FILE_PATH +
+					// currentMp3Info.getPic());
+					// if (picFile.exists() == false)
+					// {
+					// HttpDownloader.downloadFile(AppConstant.URL.NCC_NEUQ_PIC_URL
+					// + currentMp3Info.getPic(),
+					// AppConstant.FilePath.MP3_FILE_PATH,
+					// currentMp3Info.getPic());
+					// }
+					// }
 					fetchHandler.sendEmptyMessage(AppConstant.INTERACTION_STATUS.INTERACTION_SUCCESSFUL);
 				}
 			}
@@ -125,7 +146,7 @@ public class Tingliku_Shoucang extends ListActivity
 		setContentView(R.layout.tingliku_shoucang);
 
 		mContext = this;
-		
+
 		loadingDialog = new Dialog(this, R.style.loading_dialog_style);
 		loadingDialog.setContentView(R.layout.loading_dialog);
 		Window loadingDialogWindow = loadingDialog.getWindow();
@@ -134,17 +155,17 @@ public class Tingliku_Shoucang extends ListActivity
 		lParams.alpha = 1f;
 		loadingDialogWindow.setAttributes(lParams);
 		loadingDialog.show();
-		
+
 		View menuBackgroundView = getLayoutInflater().inflate(R.layout.popupmenu_black_background, null);
 		View menuView = getLayoutInflater().inflate(R.layout.fanting_listitem_menu_collected, null);
-		
+
 		backgroundWindow = new PopupWindow(menuBackgroundView, LinearLayout.LayoutParams.MATCH_PARENT,
 				LinearLayout.LayoutParams.MATCH_PARENT);
 		menuWindow = new PopupWindow(menuView, RelativeLayout.LayoutParams.MATCH_PARENT,
 				RelativeLayout.LayoutParams.MATCH_PARENT);
 		menuWindow.setAnimationStyle(R.style.AnimBottom);
 		backgroundWindow.setAnimationStyle(R.style.AnimPopupMenuBackground);
-		
+
 		menuWindow.setOnDismissListener(new OnDismissListener()
 		{
 
@@ -166,7 +187,7 @@ public class Tingliku_Shoucang extends ListActivity
 		intent.putExtra("mp3Info", mp3Infos.get(position));
 		startActivity(intent);
 	}
-	
+
 	@Override
 	protected void onDestroy()
 	{
@@ -208,7 +229,8 @@ public class Tingliku_Shoucang extends ListActivity
 			TextView sizeTextView = (TextView) convertView.findViewById(R.id.fanting_tuijian_listitem_size_textview);
 			TextView difficultyTextView = (TextView) convertView
 					.findViewById(R.id.fanting_tuijian_listitem_difficulty_textview);
-//			ImageView imageView = (ImageView) convertView.findViewById(R.id.fanting_tuijian_listitem_imageview);
+			// ImageView imageView = (ImageView)
+			// convertView.findViewById(R.id.fanting_tuijian_listitem_imageview);
 			ImageView menuImageView = (ImageView) convertView
 					.findViewById(R.id.fanting_tuijian_listitem_menu_imageview);
 
@@ -217,11 +239,12 @@ public class Tingliku_Shoucang extends ListActivity
 			sizeTextView.setText(mp3Info.getSize());
 			difficultyTextView.setText(mp3Info.getDifficulty());
 
-//			String picPath = AppConstant.FilePath.PIC_FILE_PATH + mp3Info.getPic();
-//			BitmapFactory.Options options = new BitmapFactory.Options();
-//			options.inSampleSize = 1;
-//			Bitmap bm = BitmapFactory.decodeFile(picPath, options);
-//			imageView.setBackgroundDrawable(Drawable.createFromPath(picPath)); 
+			// String picPath = AppConstant.FilePath.PIC_FILE_PATH +
+			// mp3Info.getPic();
+			// BitmapFactory.Options options = new BitmapFactory.Options();
+			// options.inSampleSize = 1;
+			// Bitmap bm = BitmapFactory.decodeFile(picPath, options);
+			// imageView.setBackgroundDrawable(Drawable.createFromPath(picPath));
 
 			menuImageView.setOnClickListener(new OnClickListener()
 			{
@@ -240,8 +263,9 @@ public class Tingliku_Shoucang extends ListActivity
 					LinearLayout addLinearLayout = (LinearLayout) menuView
 							.findViewById(R.id.fanting_listitem_menu_add_to_jingting_linearlayout);
 					ImageView menuBackgroundImageView = (ImageView) menuView.findViewById(R.id.menu_background);
-					TextView shoucangTextView = (TextView) menuView.findViewById(R.id.fanting_listitem_menu_shoucang_textview);
-					shoucangTextView.setText("取消收藏"); 
+					TextView shoucangTextView = (TextView) menuView
+							.findViewById(R.id.fanting_listitem_menu_shoucang_textview);
+					shoucangTextView.setText("取消收藏");
 
 					fenxiangLayout.setOnClickListener(new OnClickListener()
 					{
@@ -250,7 +274,7 @@ public class Tingliku_Shoucang extends ListActivity
 						public void onClick(View v)
 						{
 							menuWindow.dismiss();
-							Util.showShare(Tingliku_Shoucang.this,"今天我在坚果听力上听了这边文章，顿时感觉神清气爽！ ——"+mp3Info.getCourse());
+							Util.showShare(Tingliku_Shoucang.this, "今天我在坚果听力上听了这边文章，顿时感觉神清气爽！ ——" + mp3Info.getCourse());
 						}
 					});
 					delShouchangLayout.setOnClickListener(new OnClickListener()
@@ -454,7 +478,7 @@ public class Tingliku_Shoucang extends ListActivity
 
 					downloadLayout.setOnClickListener(new OnClickListener()
 					{
-						
+
 						private Handler toastHandler = new Handler()
 						{
 

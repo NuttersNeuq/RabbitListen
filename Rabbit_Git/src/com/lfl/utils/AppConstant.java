@@ -100,10 +100,12 @@ public class AppConstant
 		 */
 		public static final int SERVER_STATUS_EXCEPTION = 0;
 		public static final int INTERACTION_SUCCESSFUL = 1;
+		
 
 		public static final String TOAST_NETWORK_CONNECTION_EXCEPTION = "网络似乎开小差叻";
 		public static final String TOAST_SERVER_STATUS_EXCEPTION = "服务器似乎开小差叻";
 		public static final String TOAST_INTERACTION_SUCCESSFUL = "提交成功";
+		
 	}
 
 	public static class PlayParms

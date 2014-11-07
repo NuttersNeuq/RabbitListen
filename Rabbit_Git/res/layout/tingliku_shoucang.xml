@@ -24,6 +24,15 @@
             android:textColor="#ffffff"
             android:textSize="25sp" />
     </RelativeLayout>
+    
+    <TextView
+        android:id="@+id/tingliku_shouchang_blank_textview"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:textColor="#000000"
+        android:gravity="center"
+        android:text="你还木有收藏听力哎 (⊙_⊙)"
+        />
 
     <ListView
         android:id="@+id/android:list"

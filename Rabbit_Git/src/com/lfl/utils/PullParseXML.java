@@ -129,6 +129,7 @@ public class PullParseXML
 			}
 			else
 			{
+				mp3Infos.clear();
 				Mp3Info info = new Mp3Info();
 				info.setName(AppConstant.INTERACTION_STATUS.NETWORK_CONNECTION_EXCEPTION + "");
 				mp3Infos.add(info);
@@ -141,7 +142,7 @@ public class PullParseXML
 			info.setName(AppConstant.INTERACTION_STATUS.SERVER_STATUS_EXCEPTION + "");
 			mp3Infos.add(info);
 		}
-
+		
 		return mp3Infos;
 	}
 	
@@ -234,6 +235,7 @@ public class PullParseXML
 			}
 			else
 			{
+				courseInfos.clear();
 				CourseInfo info = new CourseInfo();
 				info.setName(AppConstant.INTERACTION_STATUS.NETWORK_CONNECTION_EXCEPTION + "");
 				courseInfos.add(info);
@@ -361,6 +363,7 @@ public class PullParseXML
 			}
 			else
 			{
+				wordInfos.clear();
 				WordInfo info = new WordInfo();
 				info.setWord(AppConstant.INTERACTION_STATUS.NETWORK_CONNECTION_EXCEPTION + "");
 				wordInfos.add(info);
@@ -478,6 +481,7 @@ public class PullParseXML
 			}
 			else
 			{
+				sentenceInfos.clear();
 				SentenceInfo info = new SentenceInfo();
 				info.setSentence(AppConstant.INTERACTION_STATUS.NETWORK_CONNECTION_EXCEPTION + "");
 				sentenceInfos.add(info);
