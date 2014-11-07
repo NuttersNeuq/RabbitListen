@@ -110,13 +110,4 @@ public class WelcomeActivity extends Activity
 		handler.sendEmptyMessageDelayed(1, 2000);
 	}
 
-	protected void onDestroy()
-	{
-		super.onDestroy();
-		Editor editor = isFirst.edit();
-		editor.putString("isFirst", "true");
-		editor.commit();
-		finish();
-	}
-
 }

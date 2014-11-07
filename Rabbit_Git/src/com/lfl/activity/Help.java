@@ -5,6 +5,8 @@ import java.util.List;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.content.SharedPreferences.Editor;
 import android.os.Bundle;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
@@ -26,7 +28,10 @@ public class Help extends Activity
 	private List<View> viewList = new ArrayList<View>();
 	private ImageView[] spots;
 	private ViewGroup group;
+	private SharedPreferences isFirst;
 
+	
+	
 	/**
 	 * 设置选中的tip的背景
 	 * 
@@ -55,6 +60,7 @@ public class Help extends Activity
 
 		viewPager = (ViewPager) findViewById(R.id.help_viewpager);
 		group = (ViewGroup) findViewById(R.id.help_viewgroup);
+		isFirst=getSharedPreferences("isFirst", MODE_PRIVATE);
 
 		View helpView_1 = getLayoutInflater().inflate(R.layout.help_1, null);
 		View helpView_2 = getLayoutInflater().inflate(R.layout.help_2, null);
@@ -82,8 +88,11 @@ public class Help extends Activity
 				/**
 				 * 此处输入对button的处理
 				 */
-				Intent intent=new Intent(Help.this, LoginActivity.class);
-				startActivity(intent);
+				//第一次登陆需要开启LoginActivity
+				if(isFirst.getString("isFirst","false").equals("false")){
+					Intent intent=new Intent(Help.this, LoginActivity.class);
+					startActivity(intent);
+				}
 				finish();
 			}
 		});
@@ -169,5 +178,19 @@ public class Help extends Activity
 			((ViewPager) container).addView(viewList.get(position));
 			return viewList.get(position);
 		}
+		
+		
 	}
+	
+	protected void onDestroy()
+	{
+		super.onDestroy();
+		if(isFirst.getString("isFirst","false").equals("false")){
+			Editor editor = isFirst.edit();
+			editor.putString("isFirst", "true");
+			editor.commit();
+			finish();
+		}
+	}
+	
 }

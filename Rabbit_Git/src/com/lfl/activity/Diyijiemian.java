@@ -14,6 +14,7 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
+import android.content.SharedPreferences;
 import android.graphics.Bitmap;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo.State;
@@ -84,7 +85,8 @@ public class Diyijiemian extends Activity
 	private TextView userMottoTextView;
 	private RelativeLayout cehuaMenuFeedbackLL;
 	private Bitmap portraitBitmap;
-
+	private SharedPreferences isFirst;
+	
 	private Handler handler = new Handler()
 	{
 		public void handleMessage(Message msg)
@@ -345,7 +347,7 @@ public class Diyijiemian extends Activity
 			public void onClick(View v)
 			{
 				Intent intent = new Intent(mContext, Help.class);
-				startActivity(intent); 
+				startActivity(intent);
 			}
 		});
 		

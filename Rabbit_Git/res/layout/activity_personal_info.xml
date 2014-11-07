@@ -300,7 +300,7 @@
                     android:layout_alignBottom="@+id/personal_info_resist_dayswordTV"
                     android:layout_marginRight="25dp"
                     android:layout_toLeftOf="@+id/personal_info_resist_dayswordTV"
-                    android:text="范听篇数"
+                    android:text="泛听篇数"
                     android:textColor="#bebdbd" />
 
                 <TextView
