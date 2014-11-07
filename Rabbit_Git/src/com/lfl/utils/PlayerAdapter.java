@@ -89,7 +89,7 @@ public class PlayerAdapter extends BaseAdapter
 
 		if (currentLrcIndex == position)
 		{
-			innerImageView.setBackgroundColor(Color.parseColor("#94b2bb"));
+			innerImageView.setBackgroundColor(Color.parseColor("#9000bad2"));
 		}
 		else
 		{

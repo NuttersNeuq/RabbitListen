@@ -62,7 +62,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="W加为生词"
+                android:text="加为生词"
                 android:textColor="#605f5f"
                 android:textSize="20sp" />
         </LinearLayout>
@@ -80,7 +80,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@drawable/lfl_cehua_selector"
-                android:text="S加为难句"
+                android:text="加为难句"
                 android:textColor="#605f5f"
                 android:textSize="20sp" />
         </LinearLayout>

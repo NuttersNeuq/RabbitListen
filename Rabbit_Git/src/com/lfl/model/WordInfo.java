@@ -15,7 +15,7 @@ public class WordInfo implements Serializable
 	public WordInfo()
 	{
 		pronunciation = " ";
-		meaning = "单词解释载入中";
+		meaning = "......";
 	}
 
 	public String getId()
