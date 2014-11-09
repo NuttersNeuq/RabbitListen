@@ -19,6 +19,7 @@ public class Mp3Info implements Serializable
 
 	public Mp3Info()
 	{
+		id = "0";
 		startTime = "0";
 		round = "11";
 	}

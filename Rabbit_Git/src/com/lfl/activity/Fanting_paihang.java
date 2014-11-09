@@ -282,6 +282,19 @@ public class Fanting_paihang extends ListActivity
 		super.onResume();
 		fetchXMLsFromServer();
 	}
+	
+	
+
+	@Override
+	protected void onDestroy()
+	{
+		super.onDestroy();
+		menuWindow.dismiss();
+		backgroundWindow.dismiss();
+		loadingDialog.dismiss();
+	}
+
+
 
 	private class MyListAdapter extends BaseAdapter
 	{

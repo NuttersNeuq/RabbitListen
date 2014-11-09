@@ -225,6 +225,7 @@ public class Fanting_dingyue extends ListActivity
 	{
 		super.onDestroy();
 		menuWindow.dismiss();
+		loadingDialog.dismiss();
 	}
 
 	@Override

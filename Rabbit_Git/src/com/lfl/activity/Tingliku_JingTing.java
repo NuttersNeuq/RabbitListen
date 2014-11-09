@@ -9,6 +9,7 @@ import java.util.List;
 
 import android.annotation.SuppressLint;
 import android.app.AlertDialog;
+import android.app.Dialog;
 import android.app.ListActivity;
 import android.content.Context;
 import android.os.Bundle;
@@ -16,6 +17,8 @@ import android.os.Handler;
 import android.os.Message;
 import android.view.Gravity;
 import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
@@ -41,7 +44,7 @@ import com.hare.activity.R;
 @SuppressLint("HandlerLeak")
 public class Tingliku_JingTing extends ListActivity
 {
-
+	private Dialog loadingDialog;
 	private List<Mp3Info> mp3Infos;
 	private Context mContext;
 	private PopupWindow backgroundWindow;
@@ -67,6 +70,7 @@ public class Tingliku_JingTing extends ListActivity
 			public void handleMessage(Message msg)
 			{
 				super.handleMessage(msg);
+				loadingDialog.dismiss();
 				if (msg.what == AppConstant.INTERACTION_STATUS.INTERACTION_SUCCESSFUL)
 				{
 					Collections.sort(mp3Infos, comparator);
@@ -135,7 +139,7 @@ public class Tingliku_JingTing extends ListActivity
 		mContext = this;
 
 		View menuBackgroundView = getLayoutInflater().inflate(R.layout.popupmenu_black_background, null);
-		View menuView = getLayoutInflater().inflate(R.layout.fanting_listitem_menu_collected, null);
+		View menuView = getLayoutInflater().inflate(R.layout.tingliku_jingting_listitem_menu, null);
 
 		backgroundWindow = new PopupWindow(menuBackgroundView, LinearLayout.LayoutParams.MATCH_PARENT,
 				LinearLayout.LayoutParams.MATCH_PARENT);
@@ -143,6 +147,8 @@ public class Tingliku_JingTing extends ListActivity
 				RelativeLayout.LayoutParams.MATCH_PARENT);
 		menuWindow.setAnimationStyle(R.style.AnimBottom);
 		backgroundWindow.setAnimationStyle(R.style.AnimPopupMenuBackground);
+		
+		
 
 		menuWindow.setOnDismissListener(new OnDismissListener()
 		{
@@ -155,7 +161,27 @@ public class Tingliku_JingTing extends ListActivity
 		});
 
 		fetchMp3Infos();
+		
+		loadingDialog = new Dialog(this, R.style.loading_dialog_style);
+		loadingDialog.setContentView(R.layout.loading_dialog);
+		Window loadingDialogWindow = loadingDialog.getWindow();
+		WindowManager.LayoutParams lParams = loadingDialogWindow.getAttributes();
+		loadingDialogWindow.setGravity(Gravity.CENTER);
+		lParams.alpha = 1f;
+		loadingDialogWindow.setAttributes(lParams);
+		loadingDialog.show();
 	}
+	
+	
+
+	@Override
+	protected void onDestroy()
+	{
+		loadingDialog.dismiss();
+		super.onDestroy();
+	}
+
+
 
 	private class MyListAdapter extends BaseAdapter
 	{
@@ -184,6 +210,9 @@ public class Tingliku_JingTing extends ListActivity
 			convertView = getLayoutInflater().inflate(R.layout.standard_mp3_listitem_pic, null);
 			final int finalPosition = position;
 			final Mp3Info mp3Info = mp3Infos.get(position);
+			
+			System.out.println("听力库精听列表此时抓到的MP3INFO:" + mp3Info);
+			
 			TextView titleTextView = (TextView) convertView.findViewById(R.id.standard_mp3_title_textview);
 			TextView durationTextView = (TextView) convertView
 					.findViewById(R.id.standard_mp3_listitem_duration_textview);
@@ -267,6 +296,9 @@ public class Tingliku_JingTing extends ListActivity
 						@Override
 						public void onClick(View v)
 						{
+							menuWindow.dismiss();
+							backgroundWindow.dismiss();
+							
 							final AlertDialog.Builder builder = new AlertDialog.Builder(mContext);
 							View dialogView = getLayoutInflater().inflate(R.layout.custom_alert_dialog, null);
 							TextView descriptionTextView = (TextView) dialogView
@@ -319,32 +351,44 @@ public class Tingliku_JingTing extends ListActivity
 								@Override
 								public void onClick(View v)
 								{
+									dialog.dismiss();
 									menuWindow.dismiss();
-									HashMap<String, String> headers = new HashMap<String, String>();
-									HashMap<String, String> params = new HashMap<String, String>();
-									headers.put("Cookie", "PHPSESSID=" + StaticInfos.phpsessid);
-									params.put("lid", mp3Info.getId());
-
-									try
+									new Thread(new Runnable()
 									{
-										HttpURLConnection urlConnection = (HttpURLConnection) HttpRequestUtil
-												.sendGetRequest(AppConstant.URL.JINGTING_PASS_URL, params, headers);
-										responseCode = urlConnection.getResponseCode();
-										inputStream = urlConnection.getInputStream();
-										result = Integer.parseInt(Toolkits.convertStreamToString(inputStream));
-										if (responseCode != 200 || result == 0)
+										@Override
+										public void run()
 										{
-											delHandler.sendEmptyMessage(0);
+											try
+											{
+												System.out.println("传给曹爷的pass听力信息" + mp3Info);
+												
+												HashMap<String, String> headers = new HashMap<String, String>();
+												HashMap<String, String> params = new HashMap<String, String>();
+												headers.put("Cookie", "PHPSESSID=" + StaticInfos.phpsessid);
+												params.put("lid", mp3Info.getId());
+												HttpURLConnection urlConnection = (HttpURLConnection) HttpRequestUtil
+														.sendGetRequest(AppConstant.URL.JINGTING_PASS_URL, params, headers);
+												responseCode = urlConnection.getResponseCode();
+												inputStream = urlConnection.getInputStream();
+												result = Integer.parseInt(Toolkits.convertStreamToString(inputStream));
+												
+												System.out.println("pass的返回值" + result);
+												
+												if (responseCode != 200 || result == 0)
+												{
+													delHandler.sendEmptyMessage(0);
+												}
+												else
+												{
+													delHandler.sendEmptyMessage(1);
+												}
+											} catch (Exception e)
+											{
+												e.printStackTrace();
+												delHandler.sendEmptyMessage(0);
+											}
 										}
-										else
-										{
-											delHandler.sendEmptyMessage(1);
-										}
-									} catch (Exception e)
-									{
-										e.printStackTrace();
-										delHandler.sendEmptyMessage(0);
-									}
+									}).start();
 								}
 							});
 						}

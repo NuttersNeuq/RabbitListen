@@ -335,6 +335,8 @@ public class Fanting_tuijian extends Activity
 	protected void onDestroy()
 	{
 		menuWindow.dismiss();
+		backgroundWindow.dismiss();
+		loadingDialog.dismiss();
 		super.onDestroy();
 	}
 

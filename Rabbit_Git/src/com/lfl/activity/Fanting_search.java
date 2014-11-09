@@ -231,6 +231,8 @@ public class Fanting_search extends ListActivity implements OnScrollListener
 	{
 		super.onDestroy();
 		menuWindow.dismiss();
+		backgroundWindow.dismiss();
+		loadingDialog.dismiss();
 	}
 
 	private class MyListAdapter extends BaseAdapter
