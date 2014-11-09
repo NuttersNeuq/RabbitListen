@@ -107,7 +107,7 @@
                 android:paddingLeft="20dp"
                 android:paddingRight="20dp"
                 android:singleLine="true"
-                android:text="hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh"
+                android:text="Loading"
                 android:textAppearance="?android:attr/textAppearanceLarge"
                 android:textColor="#ffffff" />
 
