@@ -184,6 +184,7 @@ public class Tingliku_Shoucang extends ListActivity
 	{
 		super.onListItemClick(l, v, position, id);
 		Intent intent = new Intent(mContext, OnlinePlayer.class);
+		intent.putExtra("mode", "online");
 		intent.putExtra("mp3Info", mp3Infos.get(position));
 		startActivity(intent);
 	}
