@@ -9,6 +9,7 @@ import android.annotation.SuppressLint;
 import android.app.AlertDialog;
 import android.app.ListActivity;
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
@@ -22,6 +23,7 @@ import android.widget.BaseAdapter;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.ListView;
 import android.widget.PopupWindow;
 import android.widget.PopupWindow.OnDismissListener;
 import android.widget.RelativeLayout;
@@ -37,6 +39,7 @@ import com.lfl.utils.PullParseXML;
 import com.lfl.utils.Toolkits;
 import com.lz.utils.HttpRequestUtil;
 import com.lz.utils.StaticInfos;
+import com.lz.utils.Util;
 import com.hare.activity.R;
 
 @SuppressLint("HandlerLeak")
@@ -338,6 +341,17 @@ public class Fanting_Paihang_Course_Details extends ListActivity
 		fetchCourseDetails();
 	}
 
+	@Override
+	protected void onListItemClick(ListView l, View v, int position, long id)
+	{
+		System.out.println("抓到的听力：" + mp3Infos.get(position));
+		Intent intent = new Intent(mContext, OnlinePlayer.class);
+		intent.putExtra("mp3Info", mp3Infos.get(position));
+		intent.putExtra("mode", "online");
+		startActivity(intent);
+		super.onListItemClick(l, v, position, id);
+	}
+
 	private class MyListAdapter extends BaseAdapter
 	{
 
@@ -399,6 +413,16 @@ public class Fanting_Paihang_Course_Details extends ListActivity
 					View menuBackgroundView = getLayoutInflater().inflate(R.layout.popupmenu_black_background, null);
 					final PopupWindow backgroundWindow = new PopupWindow(menuBackgroundView,
 							LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.MATCH_PARENT);
+
+					LinearLayout downloadLayout = (LinearLayout) menuView
+							.findViewById(R.id.fanting_listitem_menu_download_linearlayout);
+					LinearLayout shoucangLayout = (LinearLayout) menuView
+							.findViewById(R.id.fanting_listitem_menu_shoucang_linearlayout);
+					LinearLayout addLinearLayout = (LinearLayout) menuView
+							.findViewById(R.id.fanting_listitem_menu_add_to_jingting_linearlayout);
+					LinearLayout fenxiangLayout = (LinearLayout) menuView
+							.findViewById(R.id.fanting_listitem_menu_share_linearlayout);
+
 					backgroundWindow.setAnimationStyle(R.style.AnimPopupMenuBackground);
 					menuWindow.setAnimationStyle(R.style.AnimBottom);
 					menuWindow.setOnDismissListener(new OnDismissListener()
@@ -411,8 +435,6 @@ public class Fanting_Paihang_Course_Details extends ListActivity
 						}
 					});
 
-					LinearLayout downloadLayout = (LinearLayout) menuView
-							.findViewById(R.id.fanting_listitem_menu_download_linearlayout);
 					ImageView menuBackgroundImageView = (ImageView) menuView.findViewById(R.id.menu_background);
 
 					menuBackgroundImageView.setOnClickListener(new OnClickListener()
@@ -422,6 +444,206 @@ public class Fanting_Paihang_Course_Details extends ListActivity
 						public void onClick(View v)
 						{
 							menuWindow.dismiss();
+						}
+					});
+
+					fenxiangLayout.setOnClickListener(new OnClickListener()
+					{
+
+						@Override
+						public void onClick(View v)
+						{
+							Util.showShare(mContext, "今天我在坚果听力上听了这边文章，顿时感觉神清气爽！ ——" + mp3Info.getCourse());
+						}
+					});
+
+					shoucangLayout.setOnClickListener(new OnClickListener()
+					{
+
+						@Override
+						public void onClick(View v)
+						{
+							menuWindow.dismiss();
+							new Thread(new Runnable()
+							{
+								private InputStream inputStream = null;
+								private int responseCode = 0;
+								private int result;
+								private Handler shoucangHandler = new Handler()
+								{
+
+									@Override
+									public void handleMessage(Message msg)
+									{
+										super.handleMessage(msg);
+										if (msg.what == 1)
+										{
+											Toast.makeText(mContext, "收藏成功", Toast.LENGTH_SHORT).show();
+										}
+										else
+										{
+											Toast.makeText(mContext, "收藏失败，服务器开小差叻", Toast.LENGTH_SHORT).show();
+										}
+									}
+
+								};
+
+								@Override
+								public void run()
+								{
+									HashMap<String, String> headers = new HashMap<String, String>();
+									HashMap<String, String> params = new HashMap<String, String>();
+									headers.put("Cookie", "PHPSESSID=" + StaticInfos.phpsessid);
+									params.put("lid", mp3Info.getId());
+									params.put("ifss", "1");
+									try
+									{
+										HttpURLConnection urlConnection = (HttpURLConnection) HttpRequestUtil
+												.sendGetRequest(AppConstant.URL.SHOUCANG_MP3_URL, params, headers);
+										responseCode = urlConnection.getResponseCode();
+										inputStream = urlConnection.getInputStream();
+										result = Integer.parseInt(Toolkits.convertStreamToString(inputStream));
+										if (responseCode != 200 || result == 0)
+										{
+											shoucangHandler.sendEmptyMessage(0);
+										}
+										else
+										{
+											shoucangHandler.sendEmptyMessage(1);
+										}
+									} catch (Exception e)
+									{
+										shoucangHandler.sendEmptyMessage(0);
+										e.printStackTrace();
+									}
+								}
+							}).start();
+						}
+					});
+
+					addLinearLayout.setOnClickListener(new OnClickListener()
+					{
+
+						private int responseCode;
+						private InputStream inputStream;
+						private Handler addJingtingHandler = new Handler()
+						{
+
+							@Override
+							public void handleMessage(Message msg)
+							{
+								super.handleMessage(msg);
+								switch (msg.what)
+								{
+								case AppConstant.INTERACTION_STATUS.INTERACTION_SUCCESSFUL:
+									Toast.makeText(mContext,
+											AppConstant.INTERACTION_STATUS.TOAST_INTERACTION_SUCCESSFUL,
+											Toast.LENGTH_SHORT).show();
+									break;
+
+								case AppConstant.INTERACTION_STATUS.NETWORK_CONNECTION_EXCEPTION:
+									Toast.makeText(mContext,
+											AppConstant.INTERACTION_STATUS.TOAST_NETWORK_CONNECTION_EXCEPTION,
+											Toast.LENGTH_SHORT).show();
+									break;
+								case AppConstant.INTERACTION_STATUS.SERVER_STATUS_EXCEPTION:
+									Toast.makeText(mContext,
+											AppConstant.INTERACTION_STATUS.TOAST_SERVER_STATUS_EXCEPTION,
+											Toast.LENGTH_SHORT).show();
+								}
+							}
+
+						};
+						private Handler downloadHandler = new Handler()
+						{
+
+							@Override
+							public void handleMessage(Message msg)
+							{
+								super.handleMessage(msg);
+								if (msg.what == -1)
+								{
+									Toast.makeText(mContext, "下载过程出问题了，请重新添加到精听", Toast.LENGTH_LONG).show();
+								}
+								else if (msg.what == 0)
+								{
+									Diyijiemian.offlineSaver.addMp3Info(mp3Info);
+								}
+							}
+
+						};
+
+						@Override
+						public void onClick(View v)
+						{
+							menuWindow.dismiss();
+
+							new Thread(new Runnable()
+							{
+
+								@Override
+								public void run()
+								{
+									HashMap<String, String> headers = new HashMap<String, String>();
+									HashMap<String, String> params = new HashMap<String, String>();
+									headers.put("Cookie", "PHPSESSID=" + StaticInfos.phpsessid);
+									params.put("lid", mp3Info.getId());
+
+									try
+									{
+										HttpURLConnection urlConnection = (HttpURLConnection) HttpRequestUtil
+												.sendGetRequest(AppConstant.URL.ADD_TO_JINGTING_URL, params, headers);
+										responseCode = urlConnection.getResponseCode();
+										inputStream = urlConnection.getInputStream();
+										String result = Toolkits.convertStreamToString(inputStream).trim();
+
+										if (responseCode != 200)
+										{
+											addJingtingHandler
+													.sendEmptyMessage(AppConstant.INTERACTION_STATUS.NETWORK_CONNECTION_EXCEPTION);
+										}
+										else
+										{
+											if (result.equals("0"))
+											{
+												addJingtingHandler
+														.sendEmptyMessage(AppConstant.INTERACTION_STATUS.SERVER_STATUS_EXCEPTION);
+											}
+											else
+											{
+												addJingtingHandler
+														.sendEmptyMessage(AppConstant.INTERACTION_STATUS.INTERACTION_SUCCESSFUL);
+
+												int mp3Ret = HttpDownloader.downloadFile(
+														AppConstant.URL.NCC_NEUQ_MP3_URL + mp3Info.getId() + ".mp3",
+														AppConstant.FilePath.MP3_FILE_PATH, mp3Info.getId() + ".mp3");
+												int lrcRet = HttpDownloader.downloadFile(
+														AppConstant.URL.NCC_NEUQ_LRC_URL + mp3Info.getId() + ".lrc",
+														AppConstant.FilePath.LRC_FILE_PATH, mp3Info.getId() + ".lrc");
+												// int picRet =
+												// HttpDownloader.downloadFile(
+												// AppConstant.URL.NCC_NEUQ_PIC_URL
+												// + mp3Info.getPic(),
+												// AppConstant.FilePath.PIC_FILE_PATH,
+												// mp3Info.getPic());
+												if (mp3Ret != -1 && lrcRet != -1)
+												{
+													downloadHandler.sendEmptyMessage(0);
+												}
+												else
+												{
+													downloadHandler.sendEmptyMessage(-1);
+												}
+											}
+										}
+									} catch (Exception e)
+									{
+										e.printStackTrace();
+										addJingtingHandler
+												.sendEmptyMessage(AppConstant.INTERACTION_STATUS.SERVER_STATUS_EXCEPTION);
+									}
+								}
+							}).start();
 						}
 					});
 
