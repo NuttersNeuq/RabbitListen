@@ -24,15 +24,12 @@ public class GuideOneActvity extends Activity {
 		setContentView(R.layout.activity_guide_one);
 		initView();
 		initData();
-		
-		
 	}
 
 	private void initView() {
 		context=getApplication();
 		guideOneNextBT=(Button) findViewById(R.id.guide_one_nextBT);
 		guideOneNicknameTV=(TextView) findViewById(R.id.guide_one_nicknameTV);
-		
 	}
 
 	private void initData() {

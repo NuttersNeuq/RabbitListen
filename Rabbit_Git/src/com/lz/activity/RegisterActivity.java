@@ -138,7 +138,6 @@ public class RegisterActivity extends Activity {
 											loadingDialog.cancel();
 											Util.showToast(context, "昵称已存在");
 										}else if(responseCode.equals("1")){
-											loadingDialog.cancel();
 											//注册成功
 											Util.showToast(context, "注册成功");
 											//登陆
@@ -148,6 +147,7 @@ public class RegisterActivity extends Activity {
 														int flag=LoginService.login(username,Encrypt.Bit32(password));
 														if(flag==1){
 															startActivity(new Intent(context, GuideOneActvity.class));
+															loadingDialog.cancel();
 															finish();
 															//失败，提示，return	
 														}else if(flag==-1){

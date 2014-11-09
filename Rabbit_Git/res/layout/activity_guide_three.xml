@@ -59,7 +59,8 @@
             android:layout_marginLeft="2dip"
             android:layout_marginRight="2dip"
             android:background="@drawable/dot_normal" />
-                <View
+
+        <View
             android:id="@+id/guide_three_dot_5"
             android:layout_width="5dip"
             android:layout_height="5dip"
@@ -67,5 +68,25 @@
             android:layout_marginRight="2dip"
             android:background="@drawable/dot_normal" />
     </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:text="选择你感兴趣的话题"
+        android:textColor="#ffffff" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="2dp"
+        android:textSize="10sp"
+        android:text="(最多10个)"
+        android:textColor="#ffffff" />
 
 </RelativeLayout>
