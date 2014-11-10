@@ -29,7 +29,7 @@
         android:gravity="left"
         android:paddingLeft="30dp"
         android:paddingRight="10dp"
-        android:text="坚果听力对于精听模式进行了精心的设计，为用户提高合适的听力材料之外，根据艾宾浩斯记忆曲线在最佳的时间提醒用户进行复习，让学习效率最大化。"
+        android:text="兔子听力对于精听模式进行了精心的设计，为用户提高合适的听力材料之外，根据艾宾浩斯记忆曲线在最佳的时间提醒用户进行复习，让学习效率最大化。"
         android:textColor="#000000"
         android:textSize="17sp" />
 
