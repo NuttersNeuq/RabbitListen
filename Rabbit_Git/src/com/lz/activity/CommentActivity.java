@@ -5,15 +5,19 @@ import android.app.Activity;
 import android.content.Context;
 import android.os.Bundle;
 import android.os.Handler;
+import android.provider.ContactsContract.CommonDataKinds.Nickname;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.lz.my.service.NetService;
-import com.lz.utils.Util;
 import com.hare.activity.R;
+import com.lz.my.service.ImageService;
+import com.lz.my.service.NetService;
+import com.lz.utils.StaticInfos;
+import com.lz.utils.Util;
 
 public class CommentActivity extends Activity {
 	private ActionBar actionBar;
@@ -36,6 +40,8 @@ public class CommentActivity extends Activity {
 	
 	private TextView commentDifficultyTV;
 	private TextView commentLikeTV;
+	private TextView nicknameTV;
+	private ImageView potraitIV;
 	
 	
 	private MyOnClickListener myOnClickListener;
@@ -90,6 +96,11 @@ public class CommentActivity extends Activity {
 		
 		myOnClickListener=new MyOnClickListener();
 		
+
+		nicknameTV=(TextView) findViewById(R.id.comment_info_areaLL_nickname);
+		potraitIV=(ImageView) findViewById(R.id.comment_info_areaLL_potrait);
+		
+		
 		//lid从上个页面获取lid
 		lid=getIntent().getStringExtra("lid");
 	}
@@ -98,6 +109,16 @@ public class CommentActivity extends Activity {
 	private void initData() {
 		Util.setTitle(context, actionBar, "评价");
 		actionBar.setBackgroundDrawable(getResources().getDrawable(R.drawable.actionbar_transparent_bg));
+		
+		nicknameTV.setText(StaticInfos.nickname);
+		
+		try {
+			potraitIV.setImageBitmap(StaticInfos.portraitBm);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+		
 		//添加监听器
 		commentHeart1BT.setOnClickListener(myOnClickListener);
 		commentHeart2BT.setOnClickListener(myOnClickListener);
