@@ -108,7 +108,6 @@ public class CommentActivity extends Activity {
 	
 	private void initData() {
 		Util.setTitle(context, actionBar, "评价");
-		actionBar.setBackgroundDrawable(getResources().getDrawable(R.drawable.actionbar_transparent_bg));
 		
 		nicknameTV.setText(StaticInfos.nickname);
 		

@@ -42,13 +42,14 @@ public class NotifyService extends Service {
 	private int notificationNum=0;					//有几条notification
 	private int notificationNumCount=0;            //notification上显示的数字
 	private String allNotification="";
+	Timer timer=null;
 	
 	private SharedPreferences notifyPrefrences;
 
 	public void onCreate() {
 //		preferences=getSharedPreferences("confige", MODE_PRIVATE);
 	
-			netService=new NetService();
+		netService=new NetService();
 		
 		studyNotifyTimerTask=new StudyNotifyTimerTask();
 		notificationTimerTask=new NotificationTimerTask();
@@ -114,7 +115,9 @@ public class NotifyService extends Service {
 	}
 	
 	public void onStart(Intent intent, int startId) {
-		Timer timer=new Timer(true);
+		if(timer==null){
+			timer=new Timer(true);
+		}
 		// 定时向服务器发请求获取notification
 		timer.scheduleAtFixedRate(notificationTimerTask,60*1,20* 1000);
 		// 定时进行学习提醒服务
@@ -198,13 +201,15 @@ public class NotifyService extends Service {
     	manager.notify(mID, notification);
 	}
 	
-	
-	
 	public IBinder onBind(Intent intent) {
 		return null;
 	}
-	
 	public void onDestroy() {
 		StaticInfos.isLogin=false;
+		timer.cancel();
+		timer=null;
+		notificationTimerTask.cancel();
+		studyNotifyTimerTask.cancel();
 	}
 }
+
